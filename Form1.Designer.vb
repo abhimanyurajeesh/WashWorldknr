@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,24 +20,16 @@ Partial Class Form1
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
-        Me.LoginPanel = New System.Windows.Forms.Panel()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBoxUsername = New System.Windows.Forms.TextBox()
-        Me.TextBoxPassword = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
-        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
-        Me.ClearButton = New System.Windows.Forms.Button()
-        Me.LoginButton = New System.Windows.Forms.Button()
         Me.PasswordResetPanel = New System.Windows.Forms.Panel()
         Me.PasswordResetBox = New System.Windows.Forms.GroupBox()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.PassInfo = New System.Windows.Forms.Button()
+        Me.PINInfo = New System.Windows.Forms.Button()
+        Me.Visiblityopen = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.BackButton = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -51,19 +43,31 @@ Partial Class Form1
         Me.Label8 = New System.Windows.Forms.Label()
         Me.ClearButton2 = New System.Windows.Forms.Button()
         Me.ResetButton = New System.Windows.Forms.Button()
+        Me.LoginPanel = New System.Windows.Forms.Panel()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.TextBoxUsername = New System.Windows.Forms.TextBox()
+        Me.TextBoxPassword = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
+        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
+        Me.ClearButton = New System.Windows.Forms.Button()
+        Me.LoginButton = New System.Windows.Forms.Button()
         Me.SplitContainer2 = New System.Windows.Forms.SplitContainer()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.BrushLogo = New System.Windows.Forms.Button()
+        Me.MiniButton = New System.Windows.Forms.Button()
+        Me.CloseButton = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
-        Me.LoginPanel.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
         Me.PasswordResetPanel.SuspendLayout()
         Me.PasswordResetBox.SuspendLayout()
+        Me.LoginPanel.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
         CType(Me.SplitContainer2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer2.Panel1.SuspendLayout()
         Me.SplitContainer2.Panel2.SuspendLayout()
@@ -81,6 +85,7 @@ Partial Class Form1
         'SplitContainer1.Panel1
         '
         Me.SplitContainer1.Panel1.BackColor = System.Drawing.Color.SkyBlue
+        Me.SplitContainer1.Panel1.BackgroundImage = Global.WashWorld.My.Resources.Resources.SMALL_WashworldLogo_Globe_ai
         Me.SplitContainer1.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.SplitContainer1.Panel1.Margin = New System.Windows.Forms.Padding(10, 0, 10, 0)
         '
@@ -92,6 +97,244 @@ Partial Class Form1
         Me.SplitContainer1.Size = New System.Drawing.Size(900, 309)
         Me.SplitContainer1.SplitterDistance = 310
         Me.SplitContainer1.TabIndex = 0
+        '
+        'PasswordResetPanel
+        '
+        Me.PasswordResetPanel.Controls.Add(Me.PasswordResetBox)
+        Me.PasswordResetPanel.Location = New System.Drawing.Point(21, 21)
+        Me.PasswordResetPanel.Name = "PasswordResetPanel"
+        Me.PasswordResetPanel.Size = New System.Drawing.Size(543, 260)
+        Me.PasswordResetPanel.TabIndex = 10
+        '
+        'PasswordResetBox
+        '
+        Me.PasswordResetBox.BackColor = System.Drawing.Color.PowderBlue
+        Me.PasswordResetBox.Controls.Add(Me.PassInfo)
+        Me.PasswordResetBox.Controls.Add(Me.PINInfo)
+        Me.PasswordResetBox.Controls.Add(Me.Visiblityopen)
+        Me.PasswordResetBox.Controls.Add(Me.Button1)
+        Me.PasswordResetBox.Controls.Add(Me.BackButton)
+        Me.PasswordResetBox.Controls.Add(Me.Label6)
+        Me.PasswordResetBox.Controls.Add(Me.NewPassTextBox)
+        Me.PasswordResetBox.Controls.Add(Me.UsernameTextBox)
+        Me.PasswordResetBox.Controls.Add(Me.PINTextBox)
+        Me.PasswordResetBox.Controls.Add(Me.Label10)
+        Me.PasswordResetBox.Controls.Add(Me.ConfPassTextBox)
+        Me.PasswordResetBox.Controls.Add(Me.Label9)
+        Me.PasswordResetBox.Controls.Add(Me.Label7)
+        Me.PasswordResetBox.Controls.Add(Me.Label8)
+        Me.PasswordResetBox.Controls.Add(Me.ClearButton2)
+        Me.PasswordResetBox.Controls.Add(Me.ResetButton)
+        Me.PasswordResetBox.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PasswordResetBox.Font = New System.Drawing.Font("Raleway", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PasswordResetBox.ForeColor = System.Drawing.SystemColors.GrayText
+        Me.PasswordResetBox.Location = New System.Drawing.Point(0, 0)
+        Me.PasswordResetBox.Margin = New System.Windows.Forms.Padding(0)
+        Me.PasswordResetBox.Name = "PasswordResetBox"
+        Me.PasswordResetBox.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.PasswordResetBox.Size = New System.Drawing.Size(543, 260)
+        Me.PasswordResetBox.TabIndex = 0
+        Me.PasswordResetBox.TabStop = False
+        Me.PasswordResetBox.UseCompatibleTextRendering = True
+        '
+        'PassInfo
+        '
+        Me.PassInfo.BackgroundImage = Global.WashWorld.My.Resources.Resources.information
+        Me.PassInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PassInfo.FlatAppearance.BorderSize = 0
+        Me.PassInfo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.PassInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.PassInfo.Location = New System.Drawing.Point(362, 154)
+        Me.PassInfo.Name = "PassInfo"
+        Me.PassInfo.Size = New System.Drawing.Size(15, 15)
+        Me.PassInfo.TabIndex = 10
+        Me.PassInfo.UseVisualStyleBackColor = True
+        '
+        'PINInfo
+        '
+        Me.PINInfo.BackgroundImage = Global.WashWorld.My.Resources.Resources.information
+        Me.PINInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PINInfo.FlatAppearance.BorderSize = 0
+        Me.PINInfo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.PINInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.PINInfo.Location = New System.Drawing.Point(362, 56)
+        Me.PINInfo.Name = "PINInfo"
+        Me.PINInfo.Size = New System.Drawing.Size(15, 15)
+        Me.PINInfo.TabIndex = 10
+        Me.PINInfo.UseVisualStyleBackColor = True
+        '
+        'Visiblityopen
+        '
+        Me.Visiblityopen.BackgroundImage = Global.WashWorld.My.Resources.Resources.visibility
+        Me.Visiblityopen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Visiblityopen.FlatAppearance.BorderSize = 0
+        Me.Visiblityopen.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Visiblityopen.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Visiblityopen.Location = New System.Drawing.Point(372, 198)
+        Me.Visiblityopen.Name = "Visiblityopen"
+        Me.Visiblityopen.Size = New System.Drawing.Size(28, 28)
+        Me.Visiblityopen.TabIndex = 9
+        Me.Visiblityopen.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.BackgroundImage = Global.WashWorld.My.Resources.Resources.visibility_locked
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Location = New System.Drawing.Point(372, 197)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(28, 28)
+        Me.Button1.TabIndex = 8
+        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.Visible = False
+        '
+        'BackButton
+        '
+        Me.BackButton.BackColor = System.Drawing.Color.LightGray
+        Me.BackButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.BackButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCyan
+        Me.BackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BackButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BackButton.Location = New System.Drawing.Point(418, 172)
+        Me.BackButton.Name = "BackButton"
+        Me.BackButton.Size = New System.Drawing.Size(101, 38)
+        Me.BackButton.TabIndex = 7
+        Me.BackButton.Text = "Back"
+        Me.BackButton.UseVisualStyleBackColor = False
+        '
+        'Label6
+        '
+        Me.Label6.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Raleway", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.LightSlateGray
+        Me.Label6.Location = New System.Drawing.Point(6, 4)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(208, 24)
+        Me.Label6.TabIndex = 9
+        Me.Label6.Text = "PASSWORD RESET PAGE"
+        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'NewPassTextBox
+        '
+        Me.NewPassTextBox.Font = New System.Drawing.Font("Raleway", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NewPassTextBox.Location = New System.Drawing.Point(198, 148)
+        Me.NewPassTextBox.MaxLength = 16
+        Me.NewPassTextBox.Name = "NewPassTextBox"
+        Me.NewPassTextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.NewPassTextBox.Size = New System.Drawing.Size(162, 27)
+        Me.NewPassTextBox.TabIndex = 3
+        '
+        'UsernameTextBox
+        '
+        Me.UsernameTextBox.Font = New System.Drawing.Font("Raleway", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.UsernameTextBox.Location = New System.Drawing.Point(198, 95)
+        Me.UsernameTextBox.MaxLength = 16
+        Me.UsernameTextBox.Name = "UsernameTextBox"
+        Me.UsernameTextBox.Size = New System.Drawing.Size(162, 27)
+        Me.UsernameTextBox.TabIndex = 2
+        '
+        'PINTextBox
+        '
+        Me.PINTextBox.Font = New System.Drawing.Font("Raleway", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PINTextBox.Location = New System.Drawing.Point(198, 50)
+        Me.PINTextBox.MaxLength = 4
+        Me.PINTextBox.Name = "PINTextBox"
+        Me.PINTextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.PINTextBox.Size = New System.Drawing.Size(162, 27)
+        Me.PINTextBox.TabIndex = 1
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.BackColor = System.Drawing.Color.Transparent
+        Me.Label10.Font = New System.Drawing.Font("Raleway SemiBold", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(25, 149)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(165, 24)
+        Me.Label10.TabIndex = 4
+        Me.Label10.Text = "New Password        :"
+        Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'ConfPassTextBox
+        '
+        Me.ConfPassTextBox.Font = New System.Drawing.Font("Raleway", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ConfPassTextBox.Location = New System.Drawing.Point(198, 197)
+        Me.ConfPassTextBox.MaxLength = 16
+        Me.ConfPassTextBox.Name = "ConfPassTextBox"
+        Me.ConfPassTextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.ConfPassTextBox.Size = New System.Drawing.Size(162, 27)
+        Me.ConfPassTextBox.TabIndex = 4
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.BackColor = System.Drawing.Color.Transparent
+        Me.Label9.Font = New System.Drawing.Font("Raleway SemiBold", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(25, 97)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(165, 24)
+        Me.Label9.TabIndex = 4
+        Me.Label9.Text = "Username                 :"
+        Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
+        Me.Label7.Font = New System.Drawing.Font("Raleway SemiBold", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(25, 197)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(167, 24)
+        Me.Label7.TabIndex = 3
+        Me.Label7.Text = "Confirm Password  :"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.BackColor = System.Drawing.Color.Transparent
+        Me.Label8.Font = New System.Drawing.Font("Raleway SemiBold", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(25, 52)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(164, 24)
+        Me.Label8.TabIndex = 4
+        Me.Label8.Text = "User PIN                    :"
+        Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'ClearButton2
+        '
+        Me.ClearButton2.BackColor = System.Drawing.Color.LightGray
+        Me.ClearButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.ClearButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCyan
+        Me.ClearButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ClearButton2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ClearButton2.Location = New System.Drawing.Point(418, 113)
+        Me.ClearButton2.Name = "ClearButton2"
+        Me.ClearButton2.Size = New System.Drawing.Size(101, 38)
+        Me.ClearButton2.TabIndex = 6
+        Me.ClearButton2.Text = "Clear"
+        Me.ClearButton2.UseVisualStyleBackColor = False
+        '
+        'ResetButton
+        '
+        Me.ResetButton.BackColor = System.Drawing.Color.LightGray
+        Me.ResetButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.ResetButton.Cursor = System.Windows.Forms.Cursors.Default
+        Me.ResetButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.ResetButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCyan
+        Me.ResetButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ResetButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ResetButton.ForeColor = System.Drawing.SystemColors.GrayText
+        Me.ResetButton.Location = New System.Drawing.Point(418, 55)
+        Me.ResetButton.Name = "ResetButton"
+        Me.ResetButton.Size = New System.Drawing.Size(101, 37)
+        Me.ResetButton.TabIndex = 5
+        Me.ResetButton.Text = "Reset"
+        Me.ResetButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
+        Me.ResetButton.UseVisualStyleBackColor = False
         '
         'LoginPanel
         '
@@ -232,214 +475,6 @@ Partial Class Form1
         Me.LoginButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
         Me.LoginButton.UseVisualStyleBackColor = False
         '
-        'PasswordResetPanel
-        '
-        Me.PasswordResetPanel.Controls.Add(Me.PasswordResetBox)
-        Me.PasswordResetPanel.Location = New System.Drawing.Point(21, 21)
-        Me.PasswordResetPanel.Name = "PasswordResetPanel"
-        Me.PasswordResetPanel.Size = New System.Drawing.Size(543, 260)
-        Me.PasswordResetPanel.TabIndex = 10
-        '
-        'PasswordResetBox
-        '
-        Me.PasswordResetBox.BackColor = System.Drawing.Color.PowderBlue
-        Me.PasswordResetBox.Controls.Add(Me.Button2)
-        Me.PasswordResetBox.Controls.Add(Me.Button1)
-        Me.PasswordResetBox.Controls.Add(Me.BackButton)
-        Me.PasswordResetBox.Controls.Add(Me.Label6)
-        Me.PasswordResetBox.Controls.Add(Me.NewPassTextBox)
-        Me.PasswordResetBox.Controls.Add(Me.UsernameTextBox)
-        Me.PasswordResetBox.Controls.Add(Me.PINTextBox)
-        Me.PasswordResetBox.Controls.Add(Me.Label10)
-        Me.PasswordResetBox.Controls.Add(Me.ConfPassTextBox)
-        Me.PasswordResetBox.Controls.Add(Me.Label9)
-        Me.PasswordResetBox.Controls.Add(Me.Label7)
-        Me.PasswordResetBox.Controls.Add(Me.Label8)
-        Me.PasswordResetBox.Controls.Add(Me.ClearButton2)
-        Me.PasswordResetBox.Controls.Add(Me.ResetButton)
-        Me.PasswordResetBox.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PasswordResetBox.Font = New System.Drawing.Font("Raleway", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PasswordResetBox.ForeColor = System.Drawing.SystemColors.GrayText
-        Me.PasswordResetBox.Location = New System.Drawing.Point(0, 0)
-        Me.PasswordResetBox.Margin = New System.Windows.Forms.Padding(0)
-        Me.PasswordResetBox.Name = "PasswordResetBox"
-        Me.PasswordResetBox.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.PasswordResetBox.Size = New System.Drawing.Size(543, 260)
-        Me.PasswordResetBox.TabIndex = 0
-        Me.PasswordResetBox.TabStop = False
-        Me.PasswordResetBox.UseCompatibleTextRendering = True
-        '
-        'Button2
-        '
-        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Location = New System.Drawing.Point(417, 213)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(28, 28)
-        Me.Button2.TabIndex = 9
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Location = New System.Drawing.Point(417, 213)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(28, 28)
-        Me.Button1.TabIndex = 8
-        Me.Button1.UseVisualStyleBackColor = True
-        Me.Button1.Visible = False
-        '
-        'BackButton
-        '
-        Me.BackButton.BackColor = System.Drawing.Color.LightGray
-        Me.BackButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.BackButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCyan
-        Me.BackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BackButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BackButton.Location = New System.Drawing.Point(417, 154)
-        Me.BackButton.Name = "BackButton"
-        Me.BackButton.Size = New System.Drawing.Size(101, 38)
-        Me.BackButton.TabIndex = 7
-        Me.BackButton.Text = "Back"
-        Me.BackButton.UseVisualStyleBackColor = False
-        '
-        'Label6
-        '
-        Me.Label6.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Raleway", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.LightSlateGray
-        Me.Label6.Location = New System.Drawing.Point(6, 4)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(208, 24)
-        Me.Label6.TabIndex = 9
-        Me.Label6.Text = "PASSWORD RESET PAGE"
-        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'NewPassTextBox
-        '
-        Me.NewPassTextBox.Font = New System.Drawing.Font("Raleway", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NewPassTextBox.Location = New System.Drawing.Point(218, 148)
-        Me.NewPassTextBox.MaxLength = 16
-        Me.NewPassTextBox.Name = "NewPassTextBox"
-        Me.NewPassTextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.NewPassTextBox.Size = New System.Drawing.Size(162, 27)
-        Me.NewPassTextBox.TabIndex = 3
-        '
-        'UsernameTextBox
-        '
-        Me.UsernameTextBox.Font = New System.Drawing.Font("Raleway", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UsernameTextBox.Location = New System.Drawing.Point(218, 95)
-        Me.UsernameTextBox.MaxLength = 16
-        Me.UsernameTextBox.Name = "UsernameTextBox"
-        Me.UsernameTextBox.Size = New System.Drawing.Size(162, 27)
-        Me.UsernameTextBox.TabIndex = 2
-        '
-        'PINTextBox
-        '
-        Me.PINTextBox.Font = New System.Drawing.Font("Raleway", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PINTextBox.Location = New System.Drawing.Point(218, 50)
-        Me.PINTextBox.MaxLength = 4
-        Me.PINTextBox.Name = "PINTextBox"
-        Me.PINTextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.PINTextBox.Size = New System.Drawing.Size(162, 27)
-        Me.PINTextBox.TabIndex = 1
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.BackColor = System.Drawing.Color.Transparent
-        Me.Label10.Font = New System.Drawing.Font("Raleway SemiBold", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(45, 149)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(165, 24)
-        Me.Label10.TabIndex = 4
-        Me.Label10.Text = "New Password        :"
-        Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'ConfPassTextBox
-        '
-        Me.ConfPassTextBox.Font = New System.Drawing.Font("Raleway", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ConfPassTextBox.Location = New System.Drawing.Point(218, 197)
-        Me.ConfPassTextBox.MaxLength = 16
-        Me.ConfPassTextBox.Name = "ConfPassTextBox"
-        Me.ConfPassTextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.ConfPassTextBox.Size = New System.Drawing.Size(162, 27)
-        Me.ConfPassTextBox.TabIndex = 4
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.BackColor = System.Drawing.Color.Transparent
-        Me.Label9.Font = New System.Drawing.Font("Raleway SemiBold", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(45, 97)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(165, 24)
-        Me.Label9.TabIndex = 4
-        Me.Label9.Text = "Username                 :"
-        Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.BackColor = System.Drawing.Color.Transparent
-        Me.Label7.Font = New System.Drawing.Font("Raleway SemiBold", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(45, 197)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(167, 24)
-        Me.Label7.TabIndex = 3
-        Me.Label7.Text = "Confirm Password  :"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.BackColor = System.Drawing.Color.Transparent
-        Me.Label8.Font = New System.Drawing.Font("Raleway SemiBold", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(45, 52)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(164, 24)
-        Me.Label8.TabIndex = 4
-        Me.Label8.Text = "User PIN                    :"
-        Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'ClearButton2
-        '
-        Me.ClearButton2.BackColor = System.Drawing.Color.LightGray
-        Me.ClearButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.ClearButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCyan
-        Me.ClearButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ClearButton2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ClearButton2.Location = New System.Drawing.Point(417, 95)
-        Me.ClearButton2.Name = "ClearButton2"
-        Me.ClearButton2.Size = New System.Drawing.Size(101, 38)
-        Me.ClearButton2.TabIndex = 6
-        Me.ClearButton2.Text = "Clear"
-        Me.ClearButton2.UseVisualStyleBackColor = False
-        '
-        'ResetButton
-        '
-        Me.ResetButton.BackColor = System.Drawing.Color.LightGray
-        Me.ResetButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.ResetButton.Cursor = System.Windows.Forms.Cursors.Default
-        Me.ResetButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.ResetButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCyan
-        Me.ResetButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ResetButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ResetButton.ForeColor = System.Drawing.SystemColors.GrayText
-        Me.ResetButton.Location = New System.Drawing.Point(417, 37)
-        Me.ResetButton.Name = "ResetButton"
-        Me.ResetButton.Size = New System.Drawing.Size(101, 37)
-        Me.ResetButton.TabIndex = 5
-        Me.ResetButton.Text = "Reset"
-        Me.ResetButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
-        Me.ResetButton.UseVisualStyleBackColor = False
-        '
         'SplitContainer2
         '
         Me.SplitContainer2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
@@ -453,9 +488,9 @@ Partial Class Form1
         '
         Me.SplitContainer2.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(212, Byte), Integer))
         Me.SplitContainer2.Panel1.Controls.Add(Me.Label3)
-        Me.SplitContainer2.Panel1.Controls.Add(Me.Button5)
-        Me.SplitContainer2.Panel1.Controls.Add(Me.Button4)
-        Me.SplitContainer2.Panel1.Controls.Add(Me.Button3)
+        Me.SplitContainer2.Panel1.Controls.Add(Me.BrushLogo)
+        Me.SplitContainer2.Panel1.Controls.Add(Me.MiniButton)
+        Me.SplitContainer2.Panel1.Controls.Add(Me.CloseButton)
         Me.SplitContainer2.Panel1.Controls.Add(Me.Label4)
         '
         'SplitContainer2.Panel2
@@ -479,63 +514,64 @@ Partial Class Form1
         Me.Label3.Text = "WASH"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
-        'Button5
+        'BrushLogo
         '
-        Me.Button5.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.BrushLogo.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button5.Enabled = False
-        Me.Button5.FlatAppearance.BorderColor = System.Drawing.Color.Black
-        Me.Button5.FlatAppearance.BorderSize = 0
-        Me.Button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver
-        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button5.Font = New System.Drawing.Font("Microsoft YaHei", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.ForeColor = System.Drawing.Color.Black
-        Me.Button5.Location = New System.Drawing.Point(6, 4)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(29, 23)
-        Me.Button5.TabIndex = 7
-        Me.Button5.TabStop = False
-        Me.Button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.BrushLogo.BackgroundImage = Global.WashWorld.My.Resources.Resources.brush_machine
+        Me.BrushLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.BrushLogo.Enabled = False
+        Me.BrushLogo.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.BrushLogo.FlatAppearance.BorderSize = 0
+        Me.BrushLogo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver
+        Me.BrushLogo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BrushLogo.Font = New System.Drawing.Font("Microsoft YaHei", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BrushLogo.ForeColor = System.Drawing.Color.Black
+        Me.BrushLogo.Location = New System.Drawing.Point(6, 4)
+        Me.BrushLogo.Name = "BrushLogo"
+        Me.BrushLogo.Size = New System.Drawing.Size(29, 23)
+        Me.BrushLogo.TabIndex = 7
+        Me.BrushLogo.TabStop = False
+        Me.BrushLogo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.BrushLogo.UseVisualStyleBackColor = True
         '
-        'Button4
+        'MiniButton
         '
-        Me.Button4.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.MiniButton.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-
-        Me.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button4.FlatAppearance.BorderColor = System.Drawing.Color.Black
-        Me.Button4.FlatAppearance.BorderSize = 0
-        Me.Button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.Font = New System.Drawing.Font("Microsoft YaHei", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.ForeColor = System.Drawing.Color.Black
-        Me.Button4.Location = New System.Drawing.Point(832, 4)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(24, 20)
-        Me.Button4.TabIndex = 10
-        Me.Button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.MiniButton.BackgroundImage = Global.WashWorld.My.Resources.Resources.mini
+        Me.MiniButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.MiniButton.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.MiniButton.FlatAppearance.BorderSize = 0
+        Me.MiniButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke
+        Me.MiniButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.MiniButton.Font = New System.Drawing.Font("Microsoft YaHei", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MiniButton.ForeColor = System.Drawing.Color.Black
+        Me.MiniButton.Location = New System.Drawing.Point(833, 5)
+        Me.MiniButton.Name = "MiniButton"
+        Me.MiniButton.Size = New System.Drawing.Size(24, 20)
+        Me.MiniButton.TabIndex = 10
+        Me.MiniButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.MiniButton.UseVisualStyleBackColor = True
         '
-        'Button3
+        'CloseButton
         '
-        Me.Button3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.CloseButton.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-
-        Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button3.FlatAppearance.BorderColor = System.Drawing.Color.Black
-        Me.Button3.FlatAppearance.BorderSize = 0
-        Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Arial Rounded MT Bold", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.ForeColor = System.Drawing.Color.Transparent
-        Me.Button3.Location = New System.Drawing.Point(865, 4)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(24, 20)
-        Me.Button3.TabIndex = 11
-        Me.Button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.CloseButton.BackgroundImage = Global.WashWorld.My.Resources.Resources.Close
+        Me.CloseButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.CloseButton.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.CloseButton.FlatAppearance.BorderSize = 0
+        Me.CloseButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer))
+        Me.CloseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.CloseButton.Font = New System.Drawing.Font("Arial Rounded MT Bold", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CloseButton.ForeColor = System.Drawing.Color.Transparent
+        Me.CloseButton.Location = New System.Drawing.Point(866, 5)
+        Me.CloseButton.Name = "CloseButton"
+        Me.CloseButton.Size = New System.Drawing.Size(24, 20)
+        Me.CloseButton.TabIndex = 11
+        Me.CloseButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.CloseButton.UseVisualStyleBackColor = True
         '
         'Label4
         '
@@ -570,12 +606,12 @@ Partial Class Form1
         Me.SplitContainer1.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
-        Me.LoginPanel.ResumeLayout(False)
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
         Me.PasswordResetPanel.ResumeLayout(False)
         Me.PasswordResetBox.ResumeLayout(False)
         Me.PasswordResetBox.PerformLayout()
+        Me.LoginPanel.ResumeLayout(False)
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.SplitContainer2.Panel1.ResumeLayout(False)
         Me.SplitContainer2.Panel1.PerformLayout()
         Me.SplitContainer2.Panel2.ResumeLayout(False)
@@ -595,12 +631,12 @@ Partial Class Form1
     Friend WithEvents LoginButton As Button
     Friend WithEvents ProgressBar1 As ProgressBar
     Friend WithEvents LinkLabel1 As LinkLabel
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button3 As Button
+    Friend WithEvents MiniButton As Button
+    Friend WithEvents CloseButton As Button
     Friend WithEvents SplitContainer2 As SplitContainer
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents Button5 As Button
+    Friend WithEvents BrushLogo As Button
     Friend WithEvents LoginPanel As Panel
     Friend WithEvents Label5 As Label
     Friend WithEvents PasswordResetPanel As Panel
@@ -617,6 +653,9 @@ Partial Class Form1
     Friend WithEvents Label10 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents BackButton As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents Visiblityopen As Button
     Friend WithEvents Button1 As Button
+    Friend WithEvents ToolTip1 As ToolTip
+    Friend WithEvents PINInfo As Button
+    Friend WithEvents PassInfo As Button
 End Class

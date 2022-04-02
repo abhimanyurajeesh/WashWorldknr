@@ -10,6 +10,11 @@ Public Class Form1
         ProgressBar1.Visible = False
         con.ConnectionString = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\abhim\Desktop\WashWorld\Database1.mdf;Integrated Security=True"
         PasswordResetPanel.Visible = False
+        ToolTip1.SetToolTip(CloseButton, "Click to Close")
+        ToolTip1.SetToolTip(MiniButton, "Click to Minimize")
+        ToolTip1.SetToolTip(PINInfo, "It's a 4 digit Number")
+        ToolTip1.SetToolTip(PassInfo, "The max character is 16")
+
     End Sub
 
 
@@ -56,6 +61,7 @@ Public Class Form1
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles ClearButton.Click
+        ToolTip1.SetToolTip(ClearButton, "Click here to clear the text feild")
         If TextBoxUsername.Text = "" And TextBoxPassword.Text = "" Then
             MessageBox.Show("There is nothing to clear, TextBoxs are empty", "TextBox Already Cleared", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Else
@@ -68,12 +74,13 @@ Public Class Form1
 
 
     'close button
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles CloseButton.Click
+
         Me.Close()
     End Sub
 
     'minimize button
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles MiniButton.Click
         Me.WindowState = FormWindowState.Minimized
     End Sub
 
@@ -125,12 +132,14 @@ Public Class Form1
 
     'Back button for Password Reset
     Private Sub Back_Click(sender As Object, e As EventArgs) Handles BackButton.Click
+        ToolTip1.SetToolTip(BackButton, "Back to Login Page")
         LoginPanel.Visible = True
         PasswordResetPanel.Visible = False
     End Sub
 
     'Clear button for Password Reset
     Private Sub ClearButton2_Click(sender As Object, e As EventArgs) Handles ClearButton2.Click
+        ToolTip1.SetToolTip(ClearButton2, "Click to clear the text feild")
         If PINTextBox.Text = "" And UsernameTextBox.Text = "" And NewPassTextBox.Text = "" And ConfPassTextBox.Text = "" Then
             MessageBox.Show("There is nothing to clear, TextBoxs are empty", "TextBox Already Cleared", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Else
@@ -143,6 +152,7 @@ Public Class Form1
 
     'rest button
     Private Sub ResetButton_Click(sender As Object, e As EventArgs) Handles ResetButton.Click
+        ToolTip1.SetToolTip(ResetButton, "Click to Reset Password")
         If Not CheckResetCredentials() Then
             MessageBox.Show("Crosscheck the PIN & Username", "Wrong Credentials", 0, MessageBoxIcon.Error)
         Else
@@ -181,27 +191,23 @@ Public Class Form1
 
     'Password Visibility
     Private Sub Lock_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+        ToolTip1.SetToolTip(Visiblityopen, "Click here to Show the Password")
         NewPassTextBox.PasswordChar = "*"
         ConfPassTextBox.PasswordChar = "*"
         PINTextBox.PasswordChar = "*"
-        Button2.Visible = True
+        Visiblityopen.Visible = True
         Button1.Visible = False
 
     End Sub
 
-    Private Sub Lockopen_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Lockopen_Click_1(sender As Object, e As EventArgs) Handles Visiblityopen.Click
+        ToolTip1.SetToolTip(Button1, "Click here to hide the Password")
         NewPassTextBox.PasswordChar = ""
         ConfPassTextBox.PasswordChar = ""
         PINTextBox.PasswordChar = ""
-        Button2.Visible = False
+        Visiblityopen.Visible = False
         Button1.Visible = True
     End Sub
 
-    Private Sub NewPassTextBox_TextChanged(sender As Object, e As EventArgs) Handles NewPassTextBox.TextChanged
 
-    End Sub
-
-    Private Sub ConfPassTextBox_TextChanged(sender As Object, e As EventArgs) Handles ConfPassTextBox.TextChanged
-
-    End Sub
 End Class
