@@ -163,7 +163,7 @@ Partial Class Form2
         'Custglow
         '
         Me.Custglow.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.Custglow.BackgroundImage = Global.WashWorld.My.Resources.Resources.Cust
+        'Me.Custglow.BackgroundImage = Global.WashWorld.My.Resources.Resources.Cust
         Me.Custglow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.Custglow.Location = New System.Drawing.Point(2, 257)
         Me.Custglow.Name = "Custglow"
@@ -187,7 +187,7 @@ Partial Class Form2
         'PictureBox1
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.LightBlue
-        Me.PictureBox1.BackgroundImage = Global.WashWorld.My.Resources.Resources.brush_machine
+        ' Me.PictureBox1.BackgroundImage = Global.WashWorld.My.Resources.Resources.brush_machine
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Top
         Me.PictureBox1.Location = New System.Drawing.Point(0, 0)

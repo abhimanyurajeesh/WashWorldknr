@@ -503,7 +503,7 @@ Partial Class Form1
         '
         Me.Button4.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button4.BackgroundImage = Global.WashWorld.My.Resources.Resources.mini
+
         Me.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.Button4.FlatAppearance.BorderColor = System.Drawing.Color.Black
         Me.Button4.FlatAppearance.BorderSize = 0
@@ -522,7 +522,7 @@ Partial Class Form1
         '
         Me.Button3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button3.BackgroundImage = Global.WashWorld.My.Resources.Resources.Close
+
         Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.Button3.FlatAppearance.BorderColor = System.Drawing.Color.Black
         Me.Button3.FlatAppearance.BorderSize = 0
