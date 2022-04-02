@@ -25,6 +25,17 @@ Partial Class Form1
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
+        Me.LoginPanel = New System.Windows.Forms.Panel()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.TextBoxUsername = New System.Windows.Forms.TextBox()
+        Me.TextBoxPassword = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
+        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
+        Me.ClearButton = New System.Windows.Forms.Button()
+        Me.LoginButton = New System.Windows.Forms.Button()
         Me.PasswordResetPanel = New System.Windows.Forms.Panel()
         Me.PasswordResetBox = New System.Windows.Forms.GroupBox()
         Me.PassInfo = New System.Windows.Forms.Button()
@@ -43,17 +54,6 @@ Partial Class Form1
         Me.Label8 = New System.Windows.Forms.Label()
         Me.ClearButton2 = New System.Windows.Forms.Button()
         Me.ResetButton = New System.Windows.Forms.Button()
-        Me.LoginPanel = New System.Windows.Forms.Panel()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBoxUsername = New System.Windows.Forms.TextBox()
-        Me.TextBoxPassword = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
-        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
-        Me.ClearButton = New System.Windows.Forms.Button()
-        Me.LoginButton = New System.Windows.Forms.Button()
         Me.SplitContainer2 = New System.Windows.Forms.SplitContainer()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.BrushLogo = New System.Windows.Forms.Button()
@@ -64,10 +64,10 @@ Partial Class Form1
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
-        Me.PasswordResetPanel.SuspendLayout()
-        Me.PasswordResetBox.SuspendLayout()
         Me.LoginPanel.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
+        Me.PasswordResetPanel.SuspendLayout()
+        Me.PasswordResetBox.SuspendLayout()
         CType(Me.SplitContainer2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer2.Panel1.SuspendLayout()
         Me.SplitContainer2.Panel2.SuspendLayout()
@@ -97,6 +97,147 @@ Partial Class Form1
         Me.SplitContainer1.Size = New System.Drawing.Size(900, 309)
         Me.SplitContainer1.SplitterDistance = 310
         Me.SplitContainer1.TabIndex = 0
+        '
+        'LoginPanel
+        '
+        Me.LoginPanel.Controls.Add(Me.GroupBox1)
+        Me.LoginPanel.Location = New System.Drawing.Point(21, 21)
+        Me.LoginPanel.Name = "LoginPanel"
+        Me.LoginPanel.Size = New System.Drawing.Size(543, 260)
+        Me.LoginPanel.TabIndex = 9
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.BackColor = System.Drawing.Color.PowderBlue
+        Me.GroupBox1.Controls.Add(Me.Label5)
+        Me.GroupBox1.Controls.Add(Me.TextBoxUsername)
+        Me.GroupBox1.Controls.Add(Me.TextBoxPassword)
+        Me.GroupBox1.Controls.Add(Me.Label2)
+        Me.GroupBox1.Controls.Add(Me.Label1)
+        Me.GroupBox1.Controls.Add(Me.LinkLabel1)
+        Me.GroupBox1.Controls.Add(Me.ProgressBar1)
+        Me.GroupBox1.Controls.Add(Me.ClearButton)
+        Me.GroupBox1.Controls.Add(Me.LoginButton)
+        Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.GroupBox1.Font = New System.Drawing.Font("Raleway", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.ForeColor = System.Drawing.SystemColors.GrayText
+        Me.GroupBox1.Location = New System.Drawing.Point(0, 0)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(0)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.GroupBox1.Size = New System.Drawing.Size(543, 260)
+        Me.GroupBox1.TabIndex = 0
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.UseCompatibleTextRendering = True
+        '
+        'Label5
+        '
+        Me.Label5.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Raleway", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.LightSlateGray
+        Me.Label5.Location = New System.Drawing.Point(6, 4)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(109, 24)
+        Me.Label5.TabIndex = 9
+        Me.Label5.Text = "LOGIN PAGE"
+        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'TextBoxUsername
+        '
+        Me.TextBoxUsername.Font = New System.Drawing.Font("MS PGothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBoxUsername.Location = New System.Drawing.Point(179, 78)
+        Me.TextBoxUsername.Name = "TextBoxUsername"
+        Me.TextBoxUsername.Size = New System.Drawing.Size(162, 24)
+        Me.TextBoxUsername.TabIndex = 1
+        Me.TextBoxUsername.Text = "Abhimanyu"
+        '
+        'TextBoxPassword
+        '
+        Me.TextBoxPassword.Font = New System.Drawing.Font("MS PGothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBoxPassword.Location = New System.Drawing.Point(179, 137)
+        Me.TextBoxPassword.Name = "TextBoxPassword"
+        Me.TextBoxPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.TextBoxPassword.Size = New System.Drawing.Size(162, 24)
+        Me.TextBoxPassword.TabIndex = 2
+        Me.TextBoxPassword.Text = "12345"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Raleway SemiBold", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(56, 138)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(100, 24)
+        Me.Label2.TabIndex = 3
+        Me.Label2.Text = "Password  :"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Raleway SemiBold", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(56, 77)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(101, 24)
+        Me.Label1.TabIndex = 4
+        Me.Label1.Text = "Username :"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'LinkLabel1
+        '
+        Me.LinkLabel1.AutoSize = True
+        Me.LinkLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LinkLabel1.Location = New System.Drawing.Point(168, 214)
+        Me.LinkLabel1.Name = "LinkLabel1"
+        Me.LinkLabel1.Size = New System.Drawing.Size(197, 18)
+        Me.LinkLabel1.TabIndex = 8
+        Me.LinkLabel1.TabStop = True
+        Me.LinkLabel1.Text = "Click here to reset password"
+        '
+        'ProgressBar1
+        '
+        Me.ProgressBar1.BackColor = System.Drawing.Color.GreenYellow
+        Me.ProgressBar1.ForeColor = System.Drawing.SystemColors.HighlightText
+        Me.ProgressBar1.Location = New System.Drawing.Point(11, 213)
+        Me.ProgressBar1.Name = "ProgressBar1"
+        Me.ProgressBar1.Size = New System.Drawing.Size(517, 21)
+        Me.ProgressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous
+        Me.ProgressBar1.TabIndex = 7
+        '
+        'ClearButton
+        '
+        Me.ClearButton.BackColor = System.Drawing.Color.LightGray
+        Me.ClearButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red
+        Me.ClearButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Honeydew
+        Me.ClearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ClearButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ClearButton.Location = New System.Drawing.Point(372, 131)
+        Me.ClearButton.Name = "ClearButton"
+        Me.ClearButton.Size = New System.Drawing.Size(101, 38)
+        Me.ClearButton.TabIndex = 4
+        Me.ClearButton.Text = "Clear"
+        Me.ClearButton.UseVisualStyleBackColor = False
+        '
+        'LoginButton
+        '
+        Me.LoginButton.BackColor = System.Drawing.Color.LightGray
+        Me.LoginButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.LoginButton.Cursor = System.Windows.Forms.Cursors.Default
+        Me.LoginButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red
+        Me.LoginButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Honeydew
+        Me.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.LoginButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LoginButton.ForeColor = System.Drawing.SystemColors.GrayText
+        Me.LoginButton.Location = New System.Drawing.Point(372, 71)
+        Me.LoginButton.Name = "LoginButton"
+        Me.LoginButton.Size = New System.Drawing.Size(101, 37)
+        Me.LoginButton.TabIndex = 3
+        Me.LoginButton.Text = "Login"
+        Me.LoginButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
+        Me.LoginButton.UseVisualStyleBackColor = False
         '
         'PasswordResetPanel
         '
@@ -336,145 +477,6 @@ Partial Class Form1
         Me.ResetButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
         Me.ResetButton.UseVisualStyleBackColor = False
         '
-        'LoginPanel
-        '
-        Me.LoginPanel.Controls.Add(Me.GroupBox1)
-        Me.LoginPanel.Location = New System.Drawing.Point(21, 21)
-        Me.LoginPanel.Name = "LoginPanel"
-        Me.LoginPanel.Size = New System.Drawing.Size(543, 260)
-        Me.LoginPanel.TabIndex = 9
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.BackColor = System.Drawing.Color.PowderBlue
-        Me.GroupBox1.Controls.Add(Me.Label5)
-        Me.GroupBox1.Controls.Add(Me.TextBoxUsername)
-        Me.GroupBox1.Controls.Add(Me.TextBoxPassword)
-        Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Controls.Add(Me.LinkLabel1)
-        Me.GroupBox1.Controls.Add(Me.ProgressBar1)
-        Me.GroupBox1.Controls.Add(Me.ClearButton)
-        Me.GroupBox1.Controls.Add(Me.LoginButton)
-        Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.GroupBox1.Font = New System.Drawing.Font("Raleway", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.ForeColor = System.Drawing.SystemColors.GrayText
-        Me.GroupBox1.Location = New System.Drawing.Point(0, 0)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(0)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.GroupBox1.Size = New System.Drawing.Size(543, 260)
-        Me.GroupBox1.TabIndex = 0
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.UseCompatibleTextRendering = True
-        '
-        'Label5
-        '
-        Me.Label5.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Raleway", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.LightSlateGray
-        Me.Label5.Location = New System.Drawing.Point(6, 4)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(109, 24)
-        Me.Label5.TabIndex = 9
-        Me.Label5.Text = "LOGIN PAGE"
-        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'TextBoxUsername
-        '
-        Me.TextBoxUsername.Font = New System.Drawing.Font("Raleway", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxUsername.Location = New System.Drawing.Point(179, 78)
-        Me.TextBoxUsername.Name = "TextBoxUsername"
-        Me.TextBoxUsername.Size = New System.Drawing.Size(162, 27)
-        Me.TextBoxUsername.TabIndex = 1
-        '
-        'TextBoxPassword
-        '
-        Me.TextBoxPassword.Font = New System.Drawing.Font("Raleway", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxPassword.Location = New System.Drawing.Point(179, 137)
-        Me.TextBoxPassword.Name = "TextBoxPassword"
-        Me.TextBoxPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TextBoxPassword.Size = New System.Drawing.Size(162, 27)
-        Me.TextBoxPassword.TabIndex = 2
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Raleway SemiBold", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(56, 138)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(100, 24)
-        Me.Label2.TabIndex = 3
-        Me.Label2.Text = "Password  :"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Raleway SemiBold", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(56, 77)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(101, 24)
-        Me.Label1.TabIndex = 4
-        Me.Label1.Text = "Username :"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'LinkLabel1
-        '
-        Me.LinkLabel1.AutoSize = True
-        Me.LinkLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LinkLabel1.Location = New System.Drawing.Point(168, 214)
-        Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(197, 18)
-        Me.LinkLabel1.TabIndex = 8
-        Me.LinkLabel1.TabStop = True
-        Me.LinkLabel1.Text = "Click here to reset password"
-        '
-        'ProgressBar1
-        '
-        Me.ProgressBar1.BackColor = System.Drawing.Color.GreenYellow
-        Me.ProgressBar1.ForeColor = System.Drawing.SystemColors.HighlightText
-        Me.ProgressBar1.Location = New System.Drawing.Point(11, 213)
-        Me.ProgressBar1.Name = "ProgressBar1"
-        Me.ProgressBar1.Size = New System.Drawing.Size(517, 21)
-        Me.ProgressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous
-        Me.ProgressBar1.TabIndex = 7
-        '
-        'ClearButton
-        '
-        Me.ClearButton.BackColor = System.Drawing.Color.LightGray
-        Me.ClearButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red
-        Me.ClearButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Honeydew
-        Me.ClearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ClearButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ClearButton.Location = New System.Drawing.Point(372, 131)
-        Me.ClearButton.Name = "ClearButton"
-        Me.ClearButton.Size = New System.Drawing.Size(101, 38)
-        Me.ClearButton.TabIndex = 4
-        Me.ClearButton.Text = "Clear"
-        Me.ClearButton.UseVisualStyleBackColor = False
-        '
-        'LoginButton
-        '
-        Me.LoginButton.BackColor = System.Drawing.Color.LightGray
-        Me.LoginButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.LoginButton.Cursor = System.Windows.Forms.Cursors.Default
-        Me.LoginButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red
-        Me.LoginButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Honeydew
-        Me.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.LoginButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LoginButton.ForeColor = System.Drawing.SystemColors.GrayText
-        Me.LoginButton.Location = New System.Drawing.Point(372, 71)
-        Me.LoginButton.Name = "LoginButton"
-        Me.LoginButton.Size = New System.Drawing.Size(101, 37)
-        Me.LoginButton.TabIndex = 3
-        Me.LoginButton.Text = "Login"
-        Me.LoginButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
-        Me.LoginButton.UseVisualStyleBackColor = False
-        '
         'SplitContainer2
         '
         Me.SplitContainer2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
@@ -606,12 +608,12 @@ Partial Class Form1
         Me.SplitContainer1.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
-        Me.PasswordResetPanel.ResumeLayout(False)
-        Me.PasswordResetBox.ResumeLayout(False)
-        Me.PasswordResetBox.PerformLayout()
         Me.LoginPanel.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        Me.PasswordResetPanel.ResumeLayout(False)
+        Me.PasswordResetBox.ResumeLayout(False)
+        Me.PasswordResetBox.PerformLayout()
         Me.SplitContainer2.Panel1.ResumeLayout(False)
         Me.SplitContainer2.Panel1.PerformLayout()
         Me.SplitContainer2.Panel2.ResumeLayout(False)
