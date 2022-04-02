@@ -121,7 +121,7 @@
   <data name="Paymglow.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEYAAABKCAYAAAAG7CL/AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EAAACxABrSO9dQAABMRJREFUeF7tm/1R3DAQxVMCJVACJdBAMlcCJVACJVACJaQESqAESkgHl/c0J89a
+        DwAACw8BkvkDpQAABMRJREFUeF7tm/1R3DAQxVMCJVACJdBAMlcCJVACJVACJaQESqAESkgHl/c0J89a
         frIl21oJkj9+c9xKtt6t9bFamR/X6/UQP39dnsDLYDwqrTVIYw0Q8Q6ug/GitNYgjTVAxH/HKCgiETUC
         T0prDdJYA0SM6Jgh5pjHRNQI3CmtNUhjDRBxn4jqzR+lsxZprIViEnE9+W103YFn8GD1liCNtVAMUCJ7
         8Gx02fnvYjVvIY21oFEGeVZcT0LvwCd7i+3JVROyNNaCRkeZZz6Npjdjf7d6S5DGPaDxDyOkF683LXal
@@ -147,7 +147,7 @@
   <data name="Button11.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EAAACxABrSO9dQAAAQ9JREFUSEvt1eENgjAQBWBGcARHYAQW0DgCIzCCIziCIzACIzCCI7hBvdf0yPV4
+        DwAACw8BkvkDpQAAAQ9JREFUSEvt1eENgjAQBWBGcARHYAQW0DgCIzCCIziCIzACIzCCI7hBvdf0yPV4
         jQXiP398Jl76XiMWaEIIRZfr7S1ChZblgQ4VKSrpWB7oUJGikt0bPMT0xShOLA90CAilMCu1RpZXdAgS
         7AS7HCs+a9EhSPC/QRQ/ZNFZoNAaBC0kfBbizYfyVtTesVugs/39BukS4SexRUf0y3+QNundgiMG7V02
         SJvg0cACWzxtZ7YBYIELbDH5vuwLyCI8g2YTqoXM6qGXfVFYKF4pWCOeGNa1GigEUpAVervfaDXHNx7H
