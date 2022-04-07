@@ -23,6 +23,7 @@ Public Class Form1
         UseWaitCursor = True
         Threading.Thread.Sleep(110)
 
+        'Login
         If CheckLoginCredentials() Then
             LinkLabel1.Visible = False
             Threading.Thread.Sleep(50)
@@ -33,7 +34,7 @@ Public Class Form1
                 Threading.Thread.Sleep(5)
             Next
             Threading.Thread.Sleep(50)
-            MessageBox.Show(TextBoxUsername.Text + ", you have logined in successfully", "Welcome :)", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            'MessageBox.Show(TextBoxUsername.Text + ", you have logined in successfully", "Welcome :)", MessageBoxButtons.OK, MessageBoxIcon.Information)
             ProgressBar1.Visible = False
             Threading.Thread.Sleep(100)
             Form2.Show()
@@ -42,7 +43,7 @@ Public Class Form1
             TextBoxPassword.Clear()
 
 
-        ElseIf TextBoxUsername.Text = "" And TextBoxPassword.Text = "" Then
+        ElseIf TextBoxUsername.Text = "" Or TextBoxPassword.Text = "" Then
             MessageBox.Show("Please enter the username & password", "No Value Entered", MessageBoxButtons.OK, MessageBoxIcon.Warning)
 
             ' ElseIf TextBox1.Text = Username And TextBox2.Text <> Pass Then
@@ -60,6 +61,7 @@ Public Class Form1
         Cursor = Cursors.Default
     End Sub
 
+    'clear button
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles ClearButton.Click
         ToolTip1.SetToolTip(ClearButton, "Click here to clear the text feild")
         If TextBoxUsername.Text = "" And TextBoxPassword.Text = "" Then
@@ -118,7 +120,7 @@ Public Class Form1
         Return Answer
     End Function
 
-    'Resting password
+    'Resting password link
     Private Sub Passwordrest_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
         LoginPanel.Visible = False
         PasswordResetPanel.Visible = True
@@ -155,7 +157,17 @@ Public Class Form1
         ToolTip1.SetToolTip(ResetButton, "Click to Reset Password")
         If Not CheckResetCredentials() Then
             MessageBox.Show("Crosscheck the PIN & Username", "Wrong Credentials", 0, MessageBoxIcon.Error)
-        Else
+
+        ElseIf UsernameTextBox.Text = "" Or PINTextBox.Text = "" Or NewPassTextBox.Text = "" Or ConfPassTextBox.Text = "" Then
+            MessageBox.Show("Enter all the details", "", 0, MessageBoxIcon.Warning)
+
+        ElseIf NewPassTextBox.Text <> ConfPassTextBox.Text Then
+            MessageBox.Show("The passwords doesnt match", "", 0, MessageBoxIcon.Error)
+
+        ElseIf CheckResetCredentials() And NewPassTextBox.Text = ConfPassTextBox.Text Then
+            con.Open()
+            cmd.Connection = con
+            cmd = New SqlCommand("UPDATE User SET Password = @pass", con)
 
         End If
 
@@ -184,7 +196,7 @@ Public Class Form1
 
     Private Sub PINTextBox_keypress(sender As Object, e As KeyPressEventArgs) Handles PINTextBox.KeyPress
         If Asc(e.KeyChar) <> 13 AndAlso Asc(e.KeyChar) <> 8 AndAlso Not IsNumeric(e.KeyChar) Then
-            MessageBox.Show(“Please enter numbers only”)
+            MsgBox(“Please enter numbers only”, 0, " ")
             e.Handled = True
         End If
     End Sub

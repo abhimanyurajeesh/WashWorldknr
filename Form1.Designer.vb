@@ -92,8 +92,8 @@ Partial Class Form1
         'SplitContainer1.Panel2
         '
         Me.SplitContainer1.Panel2.BackColor = System.Drawing.Color.SkyBlue
-        Me.SplitContainer1.Panel2.Controls.Add(Me.LoginPanel)
         Me.SplitContainer1.Panel2.Controls.Add(Me.PasswordResetPanel)
+        Me.SplitContainer1.Panel2.Controls.Add(Me.LoginPanel)
         Me.SplitContainer1.Size = New System.Drawing.Size(900, 309)
         Me.SplitContainer1.SplitterDistance = 310
         Me.SplitContainer1.TabIndex = 0
@@ -114,10 +114,10 @@ Partial Class Form1
         Me.GroupBox1.Controls.Add(Me.TextBoxPassword)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Controls.Add(Me.LinkLabel1)
         Me.GroupBox1.Controls.Add(Me.ProgressBar1)
         Me.GroupBox1.Controls.Add(Me.ClearButton)
         Me.GroupBox1.Controls.Add(Me.LoginButton)
+        Me.GroupBox1.Controls.Add(Me.LinkLabel1)
         Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GroupBox1.Font = New System.Drawing.Font("Raleway", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.SystemColors.GrayText

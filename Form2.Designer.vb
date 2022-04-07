@@ -40,95 +40,179 @@ Partial Class Form2
         Me.VehiButton = New System.Windows.Forms.Button()
         Me.CustButton = New System.Windows.Forms.Button()
         Me.CustPanel = New System.Windows.Forms.Panel()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.TextBoxCustName = New System.Windows.Forms.TextBox()
+        Me.CustDeleteBut = New System.Windows.Forms.Button()
+        Me.CustAddNewButt = New System.Windows.Forms.Button()
+        Me.CustSaveBUT = New System.Windows.Forms.Button()
+        Me.CustBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.CustBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Database1DataSet = New WashWorld.Database1DataSet()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
+        Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
+        Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.CustBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.CustIDTextBox = New System.Windows.Forms.TextBox()
+        Me.CustNameTextBox = New System.Windows.Forms.TextBox()
+        Me.CustPhoneTextBox = New System.Windows.Forms.TextBox()
+        Me.CustAddressTextBox = New System.Windows.Forms.RichTextBox()
+        Me.CustTableDataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.CustIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CustNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CustPhoneDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CustAddressDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PhoneInfo = New System.Windows.Forms.Button()
         Me.CustNameInfo = New System.Windows.Forms.Button()
         Me.CustIDInfo = New System.Windows.Forms.Button()
-        Me.RichTextBoxCustAddress = New System.Windows.Forms.RichTextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBoxCustID = New System.Windows.Forms.TextBox()
-        Me.TextBoxCustPhone = New System.Windows.Forms.TextBox()
-        Me.Button11 = New System.Windows.Forms.Button()
+        Me.LoadCustTableButton = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.MiniButton2 = New System.Windows.Forms.Button()
-        Me.MaxButton = New System.Windows.Forms.Button()
-        Me.CloseButton2 = New System.Windows.Forms.Button()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.WorkerPanel = New System.Windows.Forms.Panel()
-        Me.DataGridView3 = New System.Windows.Forms.DataGridView()
-        Me.WorkerNameTextBox = New System.Windows.Forms.TextBox()
-        Me.Button6 = New System.Windows.Forms.Button()
-        Me.Button7 = New System.Windows.Forms.Button()
-        Me.Button8 = New System.Windows.Forms.Button()
-        Me.WAddressRichTextBox = New System.Windows.Forms.RichTextBox()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.WorkerIDTextBox = New System.Windows.Forms.TextBox()
-        Me.WorkerPhoneTextBox = New System.Windows.Forms.TextBox()
-        Me.LoadWorkTable = New System.Windows.Forms.Button()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.JobTextBox = New System.Windows.Forms.TextBox()
-        Me.Label17 = New System.Windows.Forms.Label()
         Me.VehiclePanel = New System.Windows.Forms.Panel()
+        Me.CarRegNoTextBox = New System.Windows.Forms.TextBox()
+        Me.CarBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CustIDTextBox1 = New System.Windows.Forms.TextBox()
+        Me.CarBrandTextBox = New System.Windows.Forms.TextBox()
+        Me.CarModelTextBox = New System.Windows.Forms.TextBox()
+        Me.CarTypeComboBox = New System.Windows.Forms.ComboBox()
         Me.VehicleDataGridView = New System.Windows.Forms.DataGridView()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.CarModelInfo = New System.Windows.Forms.Button()
         Me.CarBrandInfo = New System.Windows.Forms.Button()
         Me.CarRegInfo = New System.Windows.Forms.Button()
         Me.CustIDInfo2 = New System.Windows.Forms.Button()
+        Me.Label18 = New System.Windows.Forms.Label()
         Me.Label19 = New System.Windows.Forms.Label()
-        Me.Label20 = New System.Windows.Forms.Label()
+        Me.ok = New System.Windows.Forms.Label()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.Label22 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.Button13 = New System.Windows.Forms.Button()
         Me.Label23 = New System.Windows.Forms.Label()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.CarTypePB = New System.Windows.Forms.PictureBox()
-        Me.CarModelInfo = New System.Windows.Forms.Button()
+        Me.PaymentPanel = New System.Windows.Forms.Panel()
+        Me.PaymentDateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.PaymentTypeComboBox = New System.Windows.Forms.ComboBox()
+        Me.PaymentDataGridView = New System.Windows.Forms.DataGridView()
+        Me.InvoiceIDTextBox2 = New System.Windows.Forms.TextBox()
+        Me.PaymentTypeInfo = New System.Windows.Forms.Button()
+        Me.InvoiceIDInfo = New System.Windows.Forms.Button()
+        Me.PaymentIDInfo = New System.Windows.Forms.Button()
+        Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
+        Me.Label28 = New System.Windows.Forms.Label()
+        Me.Label31 = New System.Windows.Forms.Label()
+        Me.Label32 = New System.Windows.Forms.Label()
+        Me.Label33 = New System.Windows.Forms.Label()
+        Me.Label34 = New System.Windows.Forms.Label()
+        Me.PaymentIDTextBox = New System.Windows.Forms.TextBox()
+        Me.ServiceChargTextBox = New System.Windows.Forms.TextBox()
+        Me.Label35 = New System.Windows.Forms.Label()
+        Me.LoadPaymentTableButton = New System.Windows.Forms.Button()
+        Me.Label36 = New System.Windows.Forms.Label()
+        Me.InvoicePanel = New System.Windows.Forms.Panel()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.Label27 = New System.Windows.Forms.Label()
+        Me.ServiceInvo = New System.Windows.Forms.Label()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.Label29 = New System.Windows.Forms.Label()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.Label30 = New System.Windows.Forms.Label()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.ServicePanel = New System.Windows.Forms.Panel()
+        Me.ServTypeComboBox = New System.Windows.Forms.ComboBox()
         Me.ServiceDataGridView = New System.Windows.Forms.DataGridView()
+        Me.WorkerIDTextBox2 = New System.Windows.Forms.TextBox()
         Me.ServIDTB = New System.Windows.Forms.TextBox()
+        Me.SeviceChargeInfo = New System.Windows.Forms.Button()
         Me.ServiceTypeInfo = New System.Windows.Forms.Button()
         Me.ServiceIDinfo = New System.Windows.Forms.Button()
         Me.RegInfo = New System.Windows.Forms.Button()
         Me.ServiceDesc = New System.Windows.Forms.RichTextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.RegNoTB = New System.Windows.Forms.TextBox()
+        Me.ServChargeTB = New System.Windows.Forms.TextBox()
+        Me.Label24 = New System.Windows.Forms.Label()
         Me.ServTableLoadButton = New System.Windows.Forms.Button()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.ServChargeTB = New System.Windows.Forms.TextBox()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.SeviceChargeInfo = New System.Windows.Forms.Button()
-        Me.Label24 = New System.Windows.Forms.Label()
-        Me.WorkerIDTextBox2 = New System.Windows.Forms.TextBox()
-        Me.ServTypeComboBox = New System.Windows.Forms.ComboBox()
+        Me.WorkerPanel = New System.Windows.Forms.Panel()
+        Me.WorkerTableDataGridView = New System.Windows.Forms.DataGridView()
+        Me.WorkerNameTextBox = New System.Windows.Forms.TextBox()
+        Me.WorkerPhonInfo = New System.Windows.Forms.Button()
+        Me.WokerNameInfo = New System.Windows.Forms.Button()
+        Me.WorkIDInfo = New System.Windows.Forms.Button()
+        Me.WAddressRichTextBox = New System.Windows.Forms.RichTextBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.JobTextBox = New System.Windows.Forms.TextBox()
+        Me.WorkerIDTextBox = New System.Windows.Forms.TextBox()
+        Me.WorkerPhoneTextBox = New System.Windows.Forms.TextBox()
+        Me.LoadWorkTable = New System.Windows.Forms.Button()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.MiniButton2 = New System.Windows.Forms.Button()
+        Me.MaxButton = New System.Windows.Forms.Button()
+        Me.CloseButton2 = New System.Windows.Forms.Button()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
+        Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
+        Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
+        Me.CustTableAdapter = New WashWorld.Database1DataSetTableAdapters.CustTableAdapter()
+        Me.TableAdapterManager = New WashWorld.Database1DataSetTableAdapters.TableAdapterManager()
+        Me.CarTableAdapter = New WashWorld.Database1DataSetTableAdapters.CarTableAdapter()
+        Me.Button7 = New System.Windows.Forms.Button()
+        Me.CarRegNoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CustIDDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CarBrandDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CarModelDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CarTypeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.CustPanel.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.WorkerPanel.SuspendLayout()
-        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CustBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.CustBindingNavigator.SuspendLayout()
+        CType(Me.CustBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Database1DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CustTableDataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.VehiclePanel.SuspendLayout()
+        CType(Me.CarBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VehicleDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CarTypePB, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PaymentPanel.SuspendLayout()
+        CType(Me.PaymentDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.InvoicePanel.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ServicePanel.SuspendLayout()
         CType(Me.ServiceDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.WorkerPanel.SuspendLayout()
+        CType(Me.WorkerTableDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button1
@@ -173,10 +257,12 @@ Partial Class Form2
         '
         'SplitContainer1.Panel2
         '
-        Me.SplitContainer1.Panel2.Controls.Add(Me.ServicePanel)
         Me.SplitContainer1.Panel2.Controls.Add(Me.VehiclePanel)
-        Me.SplitContainer1.Panel2.Controls.Add(Me.WorkerPanel)
         Me.SplitContainer1.Panel2.Controls.Add(Me.CustPanel)
+        Me.SplitContainer1.Panel2.Controls.Add(Me.WorkerPanel)
+        Me.SplitContainer1.Panel2.Controls.Add(Me.PaymentPanel)
+        Me.SplitContainer1.Panel2.Controls.Add(Me.InvoicePanel)
+        Me.SplitContainer1.Panel2.Controls.Add(Me.ServicePanel)
         Me.SplitContainer1.Panel2.Controls.Add(Me.MiniButton2)
         Me.SplitContainer1.Panel2.Controls.Add(Me.MaxButton)
         Me.SplitContainer1.Panel2.Controls.Add(Me.CloseButton2)
@@ -347,19 +433,23 @@ Partial Class Form2
         '
         'CustPanel
         '
-        Me.CustPanel.Controls.Add(Me.DataGridView1)
-        Me.CustPanel.Controls.Add(Me.TextBoxCustName)
+        Me.CustPanel.Controls.Add(Me.CustDeleteBut)
+        Me.CustPanel.Controls.Add(Me.CustAddNewButt)
+        Me.CustPanel.Controls.Add(Me.CustSaveBUT)
+        Me.CustPanel.Controls.Add(Me.CustBindingNavigator)
+        Me.CustPanel.Controls.Add(Me.CustIDTextBox)
+        Me.CustPanel.Controls.Add(Me.CustNameTextBox)
+        Me.CustPanel.Controls.Add(Me.CustPhoneTextBox)
+        Me.CustPanel.Controls.Add(Me.CustAddressTextBox)
+        Me.CustPanel.Controls.Add(Me.CustTableDataGridView1)
         Me.CustPanel.Controls.Add(Me.PhoneInfo)
         Me.CustPanel.Controls.Add(Me.CustNameInfo)
         Me.CustPanel.Controls.Add(Me.CustIDInfo)
-        Me.CustPanel.Controls.Add(Me.RichTextBoxCustAddress)
         Me.CustPanel.Controls.Add(Me.Label4)
         Me.CustPanel.Controls.Add(Me.Label3)
         Me.CustPanel.Controls.Add(Me.Label2)
         Me.CustPanel.Controls.Add(Me.Label5)
-        Me.CustPanel.Controls.Add(Me.TextBoxCustID)
-        Me.CustPanel.Controls.Add(Me.TextBoxCustPhone)
-        Me.CustPanel.Controls.Add(Me.Button11)
+        Me.CustPanel.Controls.Add(Me.LoadCustTableButton)
         Me.CustPanel.Controls.Add(Me.Label1)
         Me.CustPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.CustPanel.Location = New System.Drawing.Point(0, 49)
@@ -368,29 +458,272 @@ Partial Class Form2
         Me.CustPanel.TabIndex = 7
         Me.CustPanel.Visible = False
         '
-        'DataGridView1
+        'CustDeleteBut
         '
-        Me.DataGridView1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.CustDeleteBut.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.CustDeleteBut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
+        Me.CustDeleteBut.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.CustDeleteBut.Font = New System.Drawing.Font("Raleway Medium", 8.999999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CustDeleteBut.Location = New System.Drawing.Point(262, 515)
+        Me.CustDeleteBut.Name = "CustDeleteBut"
+        Me.CustDeleteBut.Size = New System.Drawing.Size(91, 34)
+        Me.CustDeleteBut.TabIndex = 22
+        Me.CustDeleteBut.Text = "Delete"
+        Me.CustDeleteBut.UseVisualStyleBackColor = True
+        '
+        'CustAddNewButt
+        '
+        Me.CustAddNewButt.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.DataGridView1.BackgroundColor = System.Drawing.Color.SkyBlue
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.GridColor = System.Drawing.Color.SkyBlue
-        Me.DataGridView1.Location = New System.Drawing.Point(395, 62)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(10)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowHeadersWidth = 51
-        Me.DataGridView1.Size = New System.Drawing.Size(686, 567)
-        Me.DataGridView1.TabIndex = 2
+        Me.CustAddNewButt.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
+        Me.CustAddNewButt.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.CustAddNewButt.Font = New System.Drawing.Font("Raleway Medium", 8.999999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CustAddNewButt.Location = New System.Drawing.Point(147, 515)
+        Me.CustAddNewButt.Name = "CustAddNewButt"
+        Me.CustAddNewButt.Size = New System.Drawing.Size(91, 34)
+        Me.CustAddNewButt.TabIndex = 22
+        Me.CustAddNewButt.Text = "Add New"
+        Me.CustAddNewButt.UseVisualStyleBackColor = True
         '
-        'TextBoxCustName
+        'CustSaveBUT
         '
-        Me.TextBoxCustName.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.CustSaveBUT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.CustSaveBUT.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
+        Me.CustSaveBUT.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.CustSaveBUT.Font = New System.Drawing.Font("Raleway Medium", 8.999999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CustSaveBUT.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.CustSaveBUT.Location = New System.Drawing.Point(36, 515)
+        Me.CustSaveBUT.Name = "CustSaveBUT"
+        Me.CustSaveBUT.Size = New System.Drawing.Size(91, 34)
+        Me.CustSaveBUT.TabIndex = 22
+        Me.CustSaveBUT.Text = "Save"
+        Me.CustSaveBUT.UseVisualStyleBackColor = True
+        '
+        'CustBindingNavigator
+        '
+        Me.CustBindingNavigator.AddNewItem = Me.BindingNavigatorAddNewItem
+        Me.CustBindingNavigator.BindingSource = Me.CustBindingSource
+        Me.CustBindingNavigator.CountItem = Me.BindingNavigatorCountItem
+        Me.CustBindingNavigator.DeleteItem = Me.BindingNavigatorDeleteItem
+        Me.CustBindingNavigator.Dock = System.Windows.Forms.DockStyle.None
+        Me.CustBindingNavigator.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
+        Me.CustBindingNavigator.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.CustBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorDeleteItem, Me.BindingNavigatorAddNewItem, Me.CustBindingNavigatorSaveItem, Me.ToolStripSeparator1})
+        Me.CustBindingNavigator.Location = New System.Drawing.Point(25, 62)
+        Me.CustBindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
+        Me.CustBindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem
+        Me.CustBindingNavigator.MoveNextItem = Me.BindingNavigatorMoveNextItem
+        Me.CustBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
+        Me.CustBindingNavigator.Name = "CustBindingNavigator"
+        Me.CustBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
+        Me.CustBindingNavigator.Size = New System.Drawing.Size(327, 27)
+        Me.CustBindingNavigator.TabIndex = 5
+        Me.CustBindingNavigator.Text = "BindingNavigator1"
+        '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = Global.WashWorld.My.Resources.Resources.plus
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(29, 24)
+        Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'CustBindingSource
+        '
+        Me.CustBindingSource.DataMember = "Cust"
+        Me.CustBindingSource.DataSource = Me.Database1DataSet
+        '
+        'Database1DataSet
+        '
+        Me.Database1DataSet.DataSetName = "Database1DataSet"
+        Me.Database1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(45, 24)
+        Me.BindingNavigatorCountItem.Text = "of {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = Global.WashWorld.My.Resources.Resources.remove
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(29, 24)
+        Me.BindingNavigatorDeleteItem.Text = "Delete"
+        '
+        'BindingNavigatorMoveFirstItem
+        '
+        Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
+        Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(29, 24)
+        Me.BindingNavigatorMoveFirstItem.Text = "Move first"
+        '
+        'BindingNavigatorMovePreviousItem
+        '
+        Me.BindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
+        Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(29, 24)
+        Me.BindingNavigatorMovePreviousItem.Text = "Move previous"
+        '
+        'BindingNavigatorSeparator
+        '
+        Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 27)
+        '
+        'BindingNavigatorPositionItem
+        '
+        Me.BindingNavigatorPositionItem.AccessibleName = "Position"
+        Me.BindingNavigatorPositionItem.AutoSize = False
+        Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
+        Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 27)
+        Me.BindingNavigatorPositionItem.Text = "0"
+        Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
+        '
+        'BindingNavigatorSeparator1
+        '
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 27)
+        '
+        'BindingNavigatorMoveNextItem
+        '
+        Me.BindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
+        Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(29, 24)
+        Me.BindingNavigatorMoveNextItem.Text = "Move next"
+        '
+        'BindingNavigatorMoveLastItem
+        '
+        Me.BindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
+        Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(29, 24)
+        Me.BindingNavigatorMoveLastItem.Text = "Move last"
+        '
+        'BindingNavigatorSeparator2
+        '
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 27)
+        '
+        'CustBindingNavigatorSaveItem
+        '
+        Me.CustBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.CustBindingNavigatorSaveItem.Image = Global.WashWorld.My.Resources.Resources.Save
+        Me.CustBindingNavigatorSaveItem.Name = "CustBindingNavigatorSaveItem"
+        Me.CustBindingNavigatorSaveItem.Size = New System.Drawing.Size(29, 24)
+        Me.CustBindingNavigatorSaveItem.Text = "Save Data"
+        '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 27)
+        '
+        'CustIDTextBox
+        '
+        Me.CustIDTextBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBoxCustName.Font = New System.Drawing.Font("MS PGothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxCustName.Location = New System.Drawing.Point(184, 245)
-        Me.TextBoxCustName.Name = "TextBoxCustName"
-        Me.TextBoxCustName.Size = New System.Drawing.Size(148, 24)
-        Me.TextBoxCustName.TabIndex = 1
+        Me.CustIDTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CustBindingSource, "CustID", True))
+        Me.CustIDTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CustIDTextBox.Location = New System.Drawing.Point(183, 205)
+        Me.CustIDTextBox.Name = "CustIDTextBox"
+        Me.CustIDTextBox.Size = New System.Drawing.Size(148, 27)
+        Me.CustIDTextBox.TabIndex = 15
+        '
+        'CustNameTextBox
+        '
+        Me.CustNameTextBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.CustNameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CustBindingSource, "CustName", True))
+        Me.CustNameTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CustNameTextBox.Location = New System.Drawing.Point(183, 245)
+        Me.CustNameTextBox.Name = "CustNameTextBox"
+        Me.CustNameTextBox.Size = New System.Drawing.Size(148, 27)
+        Me.CustNameTextBox.TabIndex = 17
+        '
+        'CustPhoneTextBox
+        '
+        Me.CustPhoneTextBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.CustPhoneTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CustBindingSource, "CustPhone", True))
+        Me.CustPhoneTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CustPhoneTextBox.Location = New System.Drawing.Point(183, 291)
+        Me.CustPhoneTextBox.MaxLength = 10
+        Me.CustPhoneTextBox.Name = "CustPhoneTextBox"
+        Me.CustPhoneTextBox.Size = New System.Drawing.Size(148, 27)
+        Me.CustPhoneTextBox.TabIndex = 19
+        '
+        'CustAddressTextBox
+        '
+        Me.CustAddressTextBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.CustAddressTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.CustAddressTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CustBindingSource, "CustAddress", True))
+        Me.CustAddressTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CustAddressTextBox.Location = New System.Drawing.Point(184, 343)
+        Me.CustAddressTextBox.Name = "CustAddressTextBox"
+        Me.CustAddressTextBox.Size = New System.Drawing.Size(149, 95)
+        Me.CustAddressTextBox.TabIndex = 21
+        Me.CustAddressTextBox.Text = ""
+        '
+        'CustTableDataGridView1
+        '
+        Me.CustTableDataGridView1.AllowUserToOrderColumns = True
+        Me.CustTableDataGridView1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.CustTableDataGridView1.AutoGenerateColumns = False
+        Me.CustTableDataGridView1.BackgroundColor = System.Drawing.Color.SkyBlue
+        Me.CustTableDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.CustTableDataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CustIDDataGridViewTextBoxColumn, Me.CustNameDataGridViewTextBoxColumn, Me.CustPhoneDataGridViewTextBoxColumn, Me.CustAddressDataGridViewTextBoxColumn})
+        Me.CustTableDataGridView1.DataSource = Me.CustBindingSource
+        Me.CustTableDataGridView1.GridColor = System.Drawing.Color.SkyBlue
+        Me.CustTableDataGridView1.Location = New System.Drawing.Point(395, 62)
+        Me.CustTableDataGridView1.Margin = New System.Windows.Forms.Padding(10)
+        Me.CustTableDataGridView1.Name = "CustTableDataGridView1"
+        Me.CustTableDataGridView1.RowHeadersWidth = 51
+        Me.CustTableDataGridView1.Size = New System.Drawing.Size(686, 567)
+        Me.CustTableDataGridView1.TabIndex = 2
+        '
+        'CustIDDataGridViewTextBoxColumn
+        '
+        Me.CustIDDataGridViewTextBoxColumn.DataPropertyName = "CustID"
+        Me.CustIDDataGridViewTextBoxColumn.HeaderText = "CustID"
+        Me.CustIDDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.CustIDDataGridViewTextBoxColumn.Name = "CustIDDataGridViewTextBoxColumn"
+        Me.CustIDDataGridViewTextBoxColumn.Width = 125
+        '
+        'CustNameDataGridViewTextBoxColumn
+        '
+        Me.CustNameDataGridViewTextBoxColumn.DataPropertyName = "CustName"
+        Me.CustNameDataGridViewTextBoxColumn.HeaderText = "CustName"
+        Me.CustNameDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.CustNameDataGridViewTextBoxColumn.Name = "CustNameDataGridViewTextBoxColumn"
+        Me.CustNameDataGridViewTextBoxColumn.Width = 125
+        '
+        'CustPhoneDataGridViewTextBoxColumn
+        '
+        Me.CustPhoneDataGridViewTextBoxColumn.DataPropertyName = "CustPhone"
+        Me.CustPhoneDataGridViewTextBoxColumn.HeaderText = "CustPhone"
+        Me.CustPhoneDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.CustPhoneDataGridViewTextBoxColumn.Name = "CustPhoneDataGridViewTextBoxColumn"
+        Me.CustPhoneDataGridViewTextBoxColumn.Width = 125
+        '
+        'CustAddressDataGridViewTextBoxColumn
+        '
+        Me.CustAddressDataGridViewTextBoxColumn.DataPropertyName = "CustAddress"
+        Me.CustAddressDataGridViewTextBoxColumn.HeaderText = "CustAddress"
+        Me.CustAddressDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.CustAddressDataGridViewTextBoxColumn.Name = "CustAddressDataGridViewTextBoxColumn"
+        Me.CustAddressDataGridViewTextBoxColumn.Width = 125
         '
         'PhoneInfo
         '
@@ -433,18 +766,6 @@ Partial Class Form2
         Me.CustIDInfo.Size = New System.Drawing.Size(15, 15)
         Me.CustIDInfo.TabIndex = 11
         Me.CustIDInfo.UseVisualStyleBackColor = True
-        '
-        'RichTextBoxCustAddress
-        '
-        Me.RichTextBoxCustAddress.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.RichTextBoxCustAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.RichTextBoxCustAddress.Font = New System.Drawing.Font("MS PGothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RichTextBoxCustAddress.Location = New System.Drawing.Point(184, 341)
-        Me.RichTextBoxCustAddress.Name = "RichTextBoxCustAddress"
-        Me.RichTextBoxCustAddress.Size = New System.Drawing.Size(148, 96)
-        Me.RichTextBoxCustAddress.TabIndex = 4
-        Me.RichTextBoxCustAddress.Text = ""
         '
         'Label4
         '
@@ -493,41 +814,21 @@ Partial Class Form2
         Me.Label5.TabIndex = 3
         Me.Label5.Text = "CUSTOMER DETAILS"
         '
-        'TextBoxCustID
+        'LoadCustTableButton
         '
-        Me.TextBoxCustID.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBoxCustID.Font = New System.Drawing.Font("MS PGothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxCustID.Location = New System.Drawing.Point(184, 200)
-        Me.TextBoxCustID.Name = "TextBoxCustID"
-        Me.TextBoxCustID.Size = New System.Drawing.Size(148, 24)
-        Me.TextBoxCustID.TabIndex = 1
-        '
-        'TextBoxCustPhone
-        '
-        Me.TextBoxCustPhone.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBoxCustPhone.Font = New System.Drawing.Font("MS PGothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxCustPhone.Location = New System.Drawing.Point(184, 289)
-        Me.TextBoxCustPhone.Name = "TextBoxCustPhone"
-        Me.TextBoxCustPhone.Size = New System.Drawing.Size(148, 24)
-        Me.TextBoxCustPhone.TabIndex = 1
-        '
-        'Button11
-        '
-        Me.Button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver
-        Me.Button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button11.Font = New System.Drawing.Font("Raleway Medium", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button11.Image = CType(resources.GetObject("Button11.Image"), System.Drawing.Image)
-        Me.Button11.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button11.Location = New System.Drawing.Point(184, 458)
-        Me.Button11.Name = "Button11"
-        Me.Button11.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Button11.Size = New System.Drawing.Size(148, 34)
-        Me.Button11.TabIndex = 0
-        Me.Button11.Text = "Load Table"
-        Me.Button11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button11.UseVisualStyleBackColor = True
+        Me.LoadCustTableButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver
+        Me.LoadCustTableButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.LoadCustTableButton.Font = New System.Drawing.Font("Raleway Medium", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LoadCustTableButton.Image = CType(resources.GetObject("LoadCustTableButton.Image"), System.Drawing.Image)
+        Me.LoadCustTableButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.LoadCustTableButton.Location = New System.Drawing.Point(184, 458)
+        Me.LoadCustTableButton.Name = "LoadCustTableButton"
+        Me.LoadCustTableButton.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.LoadCustTableButton.Size = New System.Drawing.Size(148, 34)
+        Me.LoadCustTableButton.TabIndex = 0
+        Me.LoadCustTableButton.Text = "Load Table"
+        Me.LoadCustTableButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LoadCustTableButton.UseVisualStyleBackColor = True
         '
         'Label1
         '
@@ -541,322 +842,26 @@ Partial Class Form2
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Customer Name"
         '
-        'ComboBox1
-        '
-        Me.ComboBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"MICRO", "SEDAN", "HATCHBACK", "ROADSTER", "COUPE", "CUV", "SUV", " "})
-        Me.ComboBox1.Location = New System.Drawing.Point(184, 378)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(148, 24)
-        Me.ComboBox1.TabIndex = 26
-        '
-        'MiniButton2
-        '
-        Me.MiniButton2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.MiniButton2.BackColor = System.Drawing.Color.Transparent
-        Me.MiniButton2.BackgroundImage = Global.WashWorld.My.Resources.Resources.mini
-        Me.MiniButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.MiniButton2.FlatAppearance.BorderColor = System.Drawing.Color.Black
-        Me.MiniButton2.FlatAppearance.BorderSize = 0
-        Me.MiniButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver
-        Me.MiniButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.MiniButton2.Font = New System.Drawing.Font("Microsoft YaHei", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MiniButton2.ForeColor = System.Drawing.Color.Black
-        Me.MiniButton2.Location = New System.Drawing.Point(985, 8)
-        Me.MiniButton2.Name = "MiniButton2"
-        Me.MiniButton2.Size = New System.Drawing.Size(37, 33)
-        Me.MiniButton2.TabIndex = 4
-        Me.MiniButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.MiniButton2.UseVisualStyleBackColor = False
-        '
-        'MaxButton
-        '
-        Me.MaxButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.MaxButton.BackColor = System.Drawing.Color.Transparent
-        Me.MaxButton.BackgroundImage = Global.WashWorld.My.Resources.Resources.max
-        Me.MaxButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.MaxButton.FlatAppearance.BorderColor = System.Drawing.Color.Black
-        Me.MaxButton.FlatAppearance.BorderSize = 0
-        Me.MaxButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver
-        Me.MaxButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.MaxButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MaxButton.ForeColor = System.Drawing.Color.Transparent
-        Me.MaxButton.Location = New System.Drawing.Point(1028, 8)
-        Me.MaxButton.Name = "MaxButton"
-        Me.MaxButton.Size = New System.Drawing.Size(37, 33)
-        Me.MaxButton.TabIndex = 3
-        Me.MaxButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.MaxButton.UseVisualStyleBackColor = False
-        '
-        'CloseButton2
-        '
-        Me.CloseButton2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.CloseButton2.BackColor = System.Drawing.Color.Transparent
-        Me.CloseButton2.BackgroundImage = Global.WashWorld.My.Resources.Resources.Close
-        Me.CloseButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.CloseButton2.FlatAppearance.BorderColor = System.Drawing.Color.Black
-        Me.CloseButton2.FlatAppearance.BorderSize = 0
-        Me.CloseButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
-        Me.CloseButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.CloseButton2.Font = New System.Drawing.Font("Arial Rounded MT Bold", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CloseButton2.ForeColor = System.Drawing.Color.Transparent
-        Me.CloseButton2.Location = New System.Drawing.Point(1071, 8)
-        Me.CloseButton2.Name = "CloseButton2"
-        Me.CloseButton2.Size = New System.Drawing.Size(37, 33)
-        Me.CloseButton2.TabIndex = 2
-        Me.CloseButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.CloseButton2.UseVisualStyleBackColor = False
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.LightBlue
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1120, 49)
-        Me.Panel1.TabIndex = 5
-        '
-        'WorkerPanel
-        '
-        Me.WorkerPanel.Controls.Add(Me.DataGridView3)
-        Me.WorkerPanel.Controls.Add(Me.WorkerNameTextBox)
-        Me.WorkerPanel.Controls.Add(Me.Button6)
-        Me.WorkerPanel.Controls.Add(Me.Button7)
-        Me.WorkerPanel.Controls.Add(Me.Button8)
-        Me.WorkerPanel.Controls.Add(Me.WAddressRichTextBox)
-        Me.WorkerPanel.Controls.Add(Me.Label12)
-        Me.WorkerPanel.Controls.Add(Me.Label13)
-        Me.WorkerPanel.Controls.Add(Me.Label17)
-        Me.WorkerPanel.Controls.Add(Me.Label14)
-        Me.WorkerPanel.Controls.Add(Me.Label15)
-        Me.WorkerPanel.Controls.Add(Me.JobTextBox)
-        Me.WorkerPanel.Controls.Add(Me.WorkerIDTextBox)
-        Me.WorkerPanel.Controls.Add(Me.WorkerPhoneTextBox)
-        Me.WorkerPanel.Controls.Add(Me.LoadWorkTable)
-        Me.WorkerPanel.Controls.Add(Me.Label16)
-        Me.WorkerPanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.WorkerPanel.Location = New System.Drawing.Point(0, 49)
-        Me.WorkerPanel.Name = "WorkerPanel"
-        Me.WorkerPanel.Size = New System.Drawing.Size(1120, 699)
-        Me.WorkerPanel.TabIndex = 14
-        Me.WorkerPanel.Visible = False
-        '
-        'DataGridView3
-        '
-        Me.DataGridView3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.DataGridView3.BackgroundColor = System.Drawing.Color.SkyBlue
-        Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView3.GridColor = System.Drawing.Color.SkyBlue
-        Me.DataGridView3.Location = New System.Drawing.Point(395, 62)
-        Me.DataGridView3.Margin = New System.Windows.Forms.Padding(10)
-        Me.DataGridView3.Name = "DataGridView3"
-        Me.DataGridView3.RowHeadersWidth = 51
-        Me.DataGridView3.Size = New System.Drawing.Size(686, 567)
-        Me.DataGridView3.TabIndex = 2
-        '
-        'WorkerNameTextBox
-        '
-        Me.WorkerNameTextBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.WorkerNameTextBox.Font = New System.Drawing.Font("MS PGothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.WorkerNameTextBox.Location = New System.Drawing.Point(184, 245)
-        Me.WorkerNameTextBox.Name = "WorkerNameTextBox"
-        Me.WorkerNameTextBox.Size = New System.Drawing.Size(148, 24)
-        Me.WorkerNameTextBox.TabIndex = 1
-        '
-        'Button6
-        '
-        Me.Button6.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button6.BackgroundImage = Global.WashWorld.My.Resources.Resources.information
-        Me.Button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button6.FlatAppearance.BorderSize = 0
-        Me.Button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button6.Location = New System.Drawing.Point(338, 295)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(15, 15)
-        Me.Button6.TabIndex = 11
-        Me.Button6.UseVisualStyleBackColor = True
-        '
-        'Button7
-        '
-        Me.Button7.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button7.BackgroundImage = Global.WashWorld.My.Resources.Resources.information
-        Me.Button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button7.FlatAppearance.BorderSize = 0
-        Me.Button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button7.Location = New System.Drawing.Point(338, 251)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(15, 15)
-        Me.Button7.TabIndex = 11
-        Me.Button7.UseVisualStyleBackColor = True
-        '
-        'Button8
-        '
-        Me.Button8.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button8.BackgroundImage = Global.WashWorld.My.Resources.Resources.information
-        Me.Button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button8.FlatAppearance.BorderSize = 0
-        Me.Button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button8.Location = New System.Drawing.Point(338, 205)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(15, 15)
-        Me.Button8.TabIndex = 11
-        Me.Button8.UseVisualStyleBackColor = True
-        '
-        'WAddressRichTextBox
-        '
-        Me.WAddressRichTextBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.WAddressRichTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.WAddressRichTextBox.Font = New System.Drawing.Font("MS PGothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.WAddressRichTextBox.Location = New System.Drawing.Point(184, 381)
-        Me.WAddressRichTextBox.Name = "WAddressRichTextBox"
-        Me.WAddressRichTextBox.Size = New System.Drawing.Size(148, 96)
-        Me.WAddressRichTextBox.TabIndex = 4
-        Me.WAddressRichTextBox.Text = ""
-        '
-        'Label12
-        '
-        Me.Label12.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Raleway", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(32, 378)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(81, 25)
-        Me.Label12.TabIndex = 3
-        Me.Label12.Text = "Address"
-        '
-        'Label13
-        '
-        Me.Label13.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Raleway", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(32, 200)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(96, 25)
-        Me.Label13.TabIndex = 3
-        Me.Label13.Text = "Worker ID"
-        '
-        'Label14
-        '
-        Me.Label14.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Raleway", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(32, 289)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(95, 25)
-        Me.Label14.TabIndex = 3
-        Me.Label14.Text = "Phone No"
-        '
-        'Label15
-        '
-        Me.Label15.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Raleway", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(67, 128)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(210, 32)
-        Me.Label15.TabIndex = 3
-        Me.Label15.Text = "WORKER DETAILS"
-        '
-        'WorkerIDTextBox
-        '
-        Me.WorkerIDTextBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.WorkerIDTextBox.Font = New System.Drawing.Font("MS PGothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.WorkerIDTextBox.Location = New System.Drawing.Point(184, 200)
-        Me.WorkerIDTextBox.Name = "WorkerIDTextBox"
-        Me.WorkerIDTextBox.Size = New System.Drawing.Size(148, 24)
-        Me.WorkerIDTextBox.TabIndex = 1
-        '
-        'WorkerPhoneTextBox
-        '
-        Me.WorkerPhoneTextBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.WorkerPhoneTextBox.Font = New System.Drawing.Font("MS PGothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.WorkerPhoneTextBox.Location = New System.Drawing.Point(184, 289)
-        Me.WorkerPhoneTextBox.Name = "WorkerPhoneTextBox"
-        Me.WorkerPhoneTextBox.Size = New System.Drawing.Size(148, 24)
-        Me.WorkerPhoneTextBox.TabIndex = 1
-        '
-        'LoadWorkTable
-        '
-        Me.LoadWorkTable.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver
-        Me.LoadWorkTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.LoadWorkTable.Font = New System.Drawing.Font("Raleway Medium", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LoadWorkTable.Image = CType(resources.GetObject("LoadWorkTable.Image"), System.Drawing.Image)
-        Me.LoadWorkTable.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.LoadWorkTable.Location = New System.Drawing.Point(184, 498)
-        Me.LoadWorkTable.Name = "LoadWorkTable"
-        Me.LoadWorkTable.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.LoadWorkTable.Size = New System.Drawing.Size(148, 34)
-        Me.LoadWorkTable.TabIndex = 0
-        Me.LoadWorkTable.Text = "Load Table"
-        Me.LoadWorkTable.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.LoadWorkTable.UseVisualStyleBackColor = True
-        '
-        'Label16
-        '
-        Me.Label16.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label16.AutoSize = True
-        Me.Label16.Font = New System.Drawing.Font("Raleway", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(32, 244)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(120, 25)
-        Me.Label16.TabIndex = 3
-        Me.Label16.Text = "WokerName"
-        '
-        'JobTextBox
-        '
-        Me.JobTextBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.JobTextBox.Font = New System.Drawing.Font("MS PGothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.JobTextBox.Location = New System.Drawing.Point(184, 330)
-        Me.JobTextBox.Name = "JobTextBox"
-        Me.JobTextBox.Size = New System.Drawing.Size(148, 24)
-        Me.JobTextBox.TabIndex = 1
-        '
-        'Label17
-        '
-        Me.Label17.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label17.AutoSize = True
-        Me.Label17.Font = New System.Drawing.Font("Raleway", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(32, 330)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(84, 25)
-        Me.Label17.TabIndex = 3
-        Me.Label17.Text = "Job Title"
-        '
         'VehiclePanel
         '
+        Me.VehiclePanel.Controls.Add(Me.Button7)
+        Me.VehiclePanel.Controls.Add(Me.CarRegNoTextBox)
+        Me.VehiclePanel.Controls.Add(Me.CustIDTextBox1)
+        Me.VehiclePanel.Controls.Add(Me.CarBrandTextBox)
+        Me.VehiclePanel.Controls.Add(Me.CarModelTextBox)
+        Me.VehiclePanel.Controls.Add(Me.CarTypeComboBox)
         Me.VehiclePanel.Controls.Add(Me.VehicleDataGridView)
-        Me.VehiclePanel.Controls.Add(Me.TextBox1)
         Me.VehiclePanel.Controls.Add(Me.CarModelInfo)
         Me.VehiclePanel.Controls.Add(Me.CarBrandInfo)
         Me.VehiclePanel.Controls.Add(Me.CarRegInfo)
         Me.VehiclePanel.Controls.Add(Me.CustIDInfo2)
         Me.VehiclePanel.Controls.Add(Me.Label18)
         Me.VehiclePanel.Controls.Add(Me.Label19)
-        Me.VehiclePanel.Controls.Add(Me.Label20)
+        Me.VehiclePanel.Controls.Add(Me.ok)
         Me.VehiclePanel.Controls.Add(Me.Label21)
         Me.VehiclePanel.Controls.Add(Me.Label22)
-        Me.VehiclePanel.Controls.Add(Me.TextBox2)
-        Me.VehiclePanel.Controls.Add(Me.TextBox3)
-        Me.VehiclePanel.Controls.Add(Me.TextBox4)
         Me.VehiclePanel.Controls.Add(Me.Button13)
         Me.VehiclePanel.Controls.Add(Me.Label23)
-        Me.VehiclePanel.Controls.Add(Me.ComboBox1)
         Me.VehiclePanel.Controls.Add(Me.CarTypePB)
         Me.VehiclePanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.VehiclePanel.Location = New System.Drawing.Point(0, 49)
@@ -865,12 +870,78 @@ Partial Class Form2
         Me.VehiclePanel.TabIndex = 16
         Me.VehiclePanel.Visible = False
         '
+        'CarRegNoTextBox
+        '
+        Me.CarRegNoTextBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.CarRegNoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CarBindingSource, "CarRegNo", True))
+        Me.CarRegNoTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CarRegNoTextBox.Location = New System.Drawing.Point(184, 244)
+        Me.CarRegNoTextBox.Name = "CarRegNoTextBox"
+        Me.CarRegNoTextBox.Size = New System.Drawing.Size(149, 27)
+        Me.CarRegNoTextBox.TabIndex = 2
+        '
+        'CarBindingSource
+        '
+        Me.CarBindingSource.DataMember = "Car"
+        Me.CarBindingSource.DataSource = Me.Database1DataSet
+        '
+        'CustIDTextBox1
+        '
+        Me.CustIDTextBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.CustIDTextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CarBindingSource, "CustID", True))
+        Me.CustIDTextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CustIDTextBox1.Location = New System.Drawing.Point(184, 199)
+        Me.CustIDTextBox1.Name = "CustIDTextBox1"
+        Me.CustIDTextBox1.Size = New System.Drawing.Size(149, 27)
+        Me.CustIDTextBox1.TabIndex = 1
+        '
+        'CarBrandTextBox
+        '
+        Me.CarBrandTextBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.CarBrandTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CarBindingSource, "CarBrand", True))
+        Me.CarBrandTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CarBrandTextBox.Location = New System.Drawing.Point(184, 286)
+        Me.CarBrandTextBox.Name = "CarBrandTextBox"
+        Me.CarBrandTextBox.Size = New System.Drawing.Size(149, 27)
+        Me.CarBrandTextBox.TabIndex = 3
+        '
+        'CarModelTextBox
+        '
+        Me.CarModelTextBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.CarModelTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CarBindingSource, "CarModel", True))
+        Me.CarModelTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CarModelTextBox.Location = New System.Drawing.Point(184, 331)
+        Me.CarModelTextBox.Name = "CarModelTextBox"
+        Me.CarModelTextBox.Size = New System.Drawing.Size(149, 27)
+        Me.CarModelTextBox.TabIndex = 4
+        '
+        'CarTypeComboBox
+        '
+        Me.CarTypeComboBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.CarTypeComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CarBindingSource, "CarType", True))
+        Me.CarTypeComboBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CarTypeComboBox.ItemHeight = 18
+        Me.CarTypeComboBox.Items.AddRange(New Object() {"MICRO", "SEDAN", "HATCHBACK", "ROADSTER", "COUPE", "CUV", "SUV", " "})
+        Me.CarTypeComboBox.Location = New System.Drawing.Point(184, 373)
+        Me.CarTypeComboBox.Name = "CarTypeComboBox"
+        Me.CarTypeComboBox.Size = New System.Drawing.Size(149, 26)
+        Me.CarTypeComboBox.TabIndex = 5
+        '
         'VehicleDataGridView
         '
+        Me.VehicleDataGridView.AllowUserToOrderColumns = True
         Me.VehicleDataGridView.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.VehicleDataGridView.AutoGenerateColumns = False
         Me.VehicleDataGridView.BackgroundColor = System.Drawing.Color.SkyBlue
         Me.VehicleDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.VehicleDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CarRegNoDataGridViewTextBoxColumn, Me.CustIDDataGridViewTextBoxColumn1, Me.CarBrandDataGridViewTextBoxColumn, Me.CarModelDataGridViewTextBoxColumn, Me.CarTypeDataGridViewTextBoxColumn})
+        Me.VehicleDataGridView.DataSource = Me.CarBindingSource
         Me.VehicleDataGridView.GridColor = System.Drawing.Color.SkyBlue
         Me.VehicleDataGridView.Location = New System.Drawing.Point(395, 62)
         Me.VehicleDataGridView.Margin = New System.Windows.Forms.Padding(10)
@@ -879,15 +950,19 @@ Partial Class Form2
         Me.VehicleDataGridView.Size = New System.Drawing.Size(686, 567)
         Me.VehicleDataGridView.TabIndex = 2
         '
-        'TextBox1
+        'CarModelInfo
         '
-        Me.TextBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox1.Font = New System.Drawing.Font("MS PGothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(184, 245)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(148, 24)
-        Me.TextBox1.TabIndex = 1
+        Me.CarModelInfo.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.CarModelInfo.BackgroundImage = Global.WashWorld.My.Resources.Resources.information
+        Me.CarModelInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.CarModelInfo.FlatAppearance.BorderSize = 0
+        Me.CarModelInfo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.CarModelInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.CarModelInfo.Location = New System.Drawing.Point(338, 338)
+        Me.CarModelInfo.Name = "CarModelInfo"
+        Me.CarModelInfo.Size = New System.Drawing.Size(15, 15)
+        Me.CarModelInfo.TabIndex = 11
+        Me.CarModelInfo.UseVisualStyleBackColor = True
         '
         'CarBrandInfo
         '
@@ -931,6 +1006,18 @@ Partial Class Form2
         Me.CustIDInfo2.TabIndex = 11
         Me.CustIDInfo2.UseVisualStyleBackColor = True
         '
+        'Label18
+        '
+        Me.Label18.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label18.AutoSize = True
+        Me.Label18.Font = New System.Drawing.Font("Raleway", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.Location = New System.Drawing.Point(32, 378)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(86, 25)
+        Me.Label18.TabIndex = 3
+        Me.Label18.Text = "Car Type"
+        '
         'Label19
         '
         Me.Label19.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
@@ -943,17 +1030,17 @@ Partial Class Form2
         Me.Label19.TabIndex = 3
         Me.Label19.Text = "Customer ID"
         '
-        'Label20
+        'ok
         '
-        Me.Label20.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.ok.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label20.AutoSize = True
-        Me.Label20.Font = New System.Drawing.Font("Raleway", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.Location = New System.Drawing.Point(32, 330)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(99, 25)
-        Me.Label20.TabIndex = 3
-        Me.Label20.Text = "Car Model"
+        Me.ok.AutoSize = True
+        Me.ok.Font = New System.Drawing.Font("Raleway", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ok.Location = New System.Drawing.Point(32, 330)
+        Me.ok.Name = "ok"
+        Me.ok.Size = New System.Drawing.Size(99, 25)
+        Me.ok.TabIndex = 3
+        Me.ok.Text = "Car Model"
         '
         'Label21
         '
@@ -977,26 +1064,6 @@ Partial Class Form2
         Me.Label22.Size = New System.Drawing.Size(207, 32)
         Me.Label22.TabIndex = 3
         Me.Label22.Text = "VEHICLE DETAILS"
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox3.Font = New System.Drawing.Font("MS PGothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(184, 200)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(148, 24)
-        Me.TextBox3.TabIndex = 1
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox4.Font = New System.Drawing.Font("MS PGothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(184, 289)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(148, 24)
-        Me.TextBox4.TabIndex = 1
         '
         'Button13
         '
@@ -1026,28 +1093,6 @@ Partial Class Form2
         Me.Label23.TabIndex = 3
         Me.Label23.Text = "Registration"
         '
-        'Label18
-        '
-        Me.Label18.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label18.AutoSize = True
-        Me.Label18.Font = New System.Drawing.Font("Raleway", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(32, 378)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(86, 25)
-        Me.Label18.TabIndex = 3
-        Me.Label18.Text = "Car Type"
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox2.Font = New System.Drawing.Font("MS PGothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(184, 333)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(148, 24)
-        Me.TextBox2.TabIndex = 1
-        '
         'CarTypePB
         '
         Me.CarTypePB.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
@@ -1060,19 +1105,507 @@ Partial Class Form2
         Me.CarTypePB.TabIndex = 27
         Me.CarTypePB.TabStop = False
         '
-        'CarModelInfo
+        'PaymentPanel
         '
-        Me.CarModelInfo.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.CarModelInfo.BackgroundImage = Global.WashWorld.My.Resources.Resources.information
-        Me.CarModelInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.CarModelInfo.FlatAppearance.BorderSize = 0
-        Me.CarModelInfo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.CarModelInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.CarModelInfo.Location = New System.Drawing.Point(338, 338)
-        Me.CarModelInfo.Name = "CarModelInfo"
-        Me.CarModelInfo.Size = New System.Drawing.Size(15, 15)
-        Me.CarModelInfo.TabIndex = 11
-        Me.CarModelInfo.UseVisualStyleBackColor = True
+        Me.PaymentPanel.Controls.Add(Me.PaymentDateTimePicker1)
+        Me.PaymentPanel.Controls.Add(Me.PaymentTypeComboBox)
+        Me.PaymentPanel.Controls.Add(Me.PaymentDataGridView)
+        Me.PaymentPanel.Controls.Add(Me.InvoiceIDTextBox2)
+        Me.PaymentPanel.Controls.Add(Me.PaymentTypeInfo)
+        Me.PaymentPanel.Controls.Add(Me.InvoiceIDInfo)
+        Me.PaymentPanel.Controls.Add(Me.PaymentIDInfo)
+        Me.PaymentPanel.Controls.Add(Me.RichTextBox2)
+        Me.PaymentPanel.Controls.Add(Me.Label28)
+        Me.PaymentPanel.Controls.Add(Me.Label31)
+        Me.PaymentPanel.Controls.Add(Me.Label32)
+        Me.PaymentPanel.Controls.Add(Me.Label33)
+        Me.PaymentPanel.Controls.Add(Me.Label34)
+        Me.PaymentPanel.Controls.Add(Me.PaymentIDTextBox)
+        Me.PaymentPanel.Controls.Add(Me.ServiceChargTextBox)
+        Me.PaymentPanel.Controls.Add(Me.Label35)
+        Me.PaymentPanel.Controls.Add(Me.LoadPaymentTableButton)
+        Me.PaymentPanel.Controls.Add(Me.Label36)
+        Me.PaymentPanel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PaymentPanel.Location = New System.Drawing.Point(0, 49)
+        Me.PaymentPanel.Name = "PaymentPanel"
+        Me.PaymentPanel.Size = New System.Drawing.Size(1120, 699)
+        Me.PaymentPanel.TabIndex = 19
+        Me.PaymentPanel.Visible = False
+        '
+        'PaymentDateTimePicker1
+        '
+        Me.PaymentDateTimePicker1.Font = New System.Drawing.Font("MS PGothic", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PaymentDateTimePicker1.Location = New System.Drawing.Point(184, 373)
+        Me.PaymentDateTimePicker1.MinDate = New Date(2012, 1, 1, 0, 0, 0, 0)
+        Me.PaymentDateTimePicker1.Name = "PaymentDateTimePicker1"
+        Me.PaymentDateTimePicker1.Size = New System.Drawing.Size(147, 20)
+        Me.PaymentDateTimePicker1.TabIndex = 5
+        '
+        'PaymentTypeComboBox
+        '
+        Me.PaymentTypeComboBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PaymentTypeComboBox.FormattingEnabled = True
+        Me.PaymentTypeComboBox.Items.AddRange(New Object() {"Cash", "Card", "UPI"})
+        Me.PaymentTypeComboBox.Location = New System.Drawing.Point(184, 328)
+        Me.PaymentTypeComboBox.Name = "PaymentTypeComboBox"
+        Me.PaymentTypeComboBox.Size = New System.Drawing.Size(149, 24)
+        Me.PaymentTypeComboBox.TabIndex = 4
+        '
+        'PaymentDataGridView
+        '
+        Me.PaymentDataGridView.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PaymentDataGridView.BackgroundColor = System.Drawing.Color.SkyBlue
+        Me.PaymentDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.PaymentDataGridView.GridColor = System.Drawing.Color.SkyBlue
+        Me.PaymentDataGridView.Location = New System.Drawing.Point(395, 62)
+        Me.PaymentDataGridView.Margin = New System.Windows.Forms.Padding(10)
+        Me.PaymentDataGridView.Name = "PaymentDataGridView"
+        Me.PaymentDataGridView.RowHeadersWidth = 51
+        Me.PaymentDataGridView.Size = New System.Drawing.Size(686, 567)
+        Me.PaymentDataGridView.TabIndex = 2
+        '
+        'InvoiceIDTextBox2
+        '
+        Me.InvoiceIDTextBox2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.InvoiceIDTextBox2.Font = New System.Drawing.Font("MS PGothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.InvoiceIDTextBox2.Location = New System.Drawing.Point(184, 245)
+        Me.InvoiceIDTextBox2.Name = "InvoiceIDTextBox2"
+        Me.InvoiceIDTextBox2.Size = New System.Drawing.Size(148, 24)
+        Me.InvoiceIDTextBox2.TabIndex = 2
+        '
+        'PaymentTypeInfo
+        '
+        Me.PaymentTypeInfo.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PaymentTypeInfo.BackgroundImage = Global.WashWorld.My.Resources.Resources.information
+        Me.PaymentTypeInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PaymentTypeInfo.FlatAppearance.BorderSize = 0
+        Me.PaymentTypeInfo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.PaymentTypeInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.PaymentTypeInfo.Location = New System.Drawing.Point(338, 332)
+        Me.PaymentTypeInfo.Name = "PaymentTypeInfo"
+        Me.PaymentTypeInfo.Size = New System.Drawing.Size(15, 15)
+        Me.PaymentTypeInfo.TabIndex = 11
+        Me.PaymentTypeInfo.UseVisualStyleBackColor = True
+        '
+        'InvoiceIDInfo
+        '
+        Me.InvoiceIDInfo.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.InvoiceIDInfo.BackgroundImage = Global.WashWorld.My.Resources.Resources.information
+        Me.InvoiceIDInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.InvoiceIDInfo.FlatAppearance.BorderSize = 0
+        Me.InvoiceIDInfo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.InvoiceIDInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.InvoiceIDInfo.Location = New System.Drawing.Point(338, 251)
+        Me.InvoiceIDInfo.Name = "InvoiceIDInfo"
+        Me.InvoiceIDInfo.Size = New System.Drawing.Size(15, 15)
+        Me.InvoiceIDInfo.TabIndex = 11
+        Me.InvoiceIDInfo.UseVisualStyleBackColor = True
+        '
+        'PaymentIDInfo
+        '
+        Me.PaymentIDInfo.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PaymentIDInfo.BackgroundImage = Global.WashWorld.My.Resources.Resources.information
+        Me.PaymentIDInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PaymentIDInfo.FlatAppearance.BorderSize = 0
+        Me.PaymentIDInfo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.PaymentIDInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.PaymentIDInfo.Location = New System.Drawing.Point(338, 205)
+        Me.PaymentIDInfo.Name = "PaymentIDInfo"
+        Me.PaymentIDInfo.Size = New System.Drawing.Size(15, 15)
+        Me.PaymentIDInfo.TabIndex = 11
+        Me.PaymentIDInfo.UseVisualStyleBackColor = True
+        '
+        'RichTextBox2
+        '
+        Me.RichTextBox2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.RichTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.RichTextBox2.Font = New System.Drawing.Font("MS PGothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RichTextBox2.Location = New System.Drawing.Point(184, 413)
+        Me.RichTextBox2.Name = "RichTextBox2"
+        Me.RichTextBox2.Size = New System.Drawing.Size(148, 96)
+        Me.RichTextBox2.TabIndex = 6
+        Me.RichTextBox2.Text = ""
+        '
+        'Label28
+        '
+        Me.Label28.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label28.AutoSize = True
+        Me.Label28.Font = New System.Drawing.Font("Raleway", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label28.Location = New System.Drawing.Point(32, 413)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(107, 25)
+        Me.Label28.TabIndex = 3
+        Me.Label28.Text = "Description"
+        '
+        'Label31
+        '
+        Me.Label31.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label31.AutoSize = True
+        Me.Label31.Font = New System.Drawing.Font("Raleway", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label31.Location = New System.Drawing.Point(32, 200)
+        Me.Label31.Name = "Label31"
+        Me.Label31.Size = New System.Drawing.Size(109, 25)
+        Me.Label31.TabIndex = 3
+        Me.Label31.Text = "Payment ID"
+        '
+        'Label32
+        '
+        Me.Label32.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label32.AutoSize = True
+        Me.Label32.Font = New System.Drawing.Font("Raleway", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label32.Location = New System.Drawing.Point(33, 288)
+        Me.Label32.Name = "Label32"
+        Me.Label32.Size = New System.Drawing.Size(140, 25)
+        Me.Label32.TabIndex = 3
+        Me.Label32.Text = "Service Charge"
+        '
+        'Label33
+        '
+        Me.Label33.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label33.AutoSize = True
+        Me.Label33.Font = New System.Drawing.Font("Raleway", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label33.Location = New System.Drawing.Point(32, 328)
+        Me.Label33.Name = "Label33"
+        Me.Label33.Size = New System.Drawing.Size(133, 25)
+        Me.Label33.TabIndex = 3
+        Me.Label33.Text = "Payment Type"
+        '
+        'Label34
+        '
+        Me.Label34.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label34.AutoSize = True
+        Me.Label34.Font = New System.Drawing.Font("Raleway", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label34.Location = New System.Drawing.Point(80, 128)
+        Me.Label34.Name = "Label34"
+        Me.Label34.Size = New System.Drawing.Size(218, 32)
+        Me.Label34.TabIndex = 3
+        Me.Label34.Text = "PAYMENT DETAILS"
+        '
+        'PaymentIDTextBox
+        '
+        Me.PaymentIDTextBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PaymentIDTextBox.Font = New System.Drawing.Font("MS PGothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PaymentIDTextBox.Location = New System.Drawing.Point(184, 200)
+        Me.PaymentIDTextBox.Name = "PaymentIDTextBox"
+        Me.PaymentIDTextBox.Size = New System.Drawing.Size(148, 24)
+        Me.PaymentIDTextBox.TabIndex = 1
+        '
+        'ServiceChargTextBox
+        '
+        Me.ServiceChargTextBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ServiceChargTextBox.Font = New System.Drawing.Font("MS PGothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ServiceChargTextBox.Location = New System.Drawing.Point(184, 290)
+        Me.ServiceChargTextBox.Name = "ServiceChargTextBox"
+        Me.ServiceChargTextBox.Size = New System.Drawing.Size(148, 24)
+        Me.ServiceChargTextBox.TabIndex = 3
+        '
+        'Label35
+        '
+        Me.Label35.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label35.AutoSize = True
+        Me.Label35.Font = New System.Drawing.Font("Raleway", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label35.Location = New System.Drawing.Point(32, 372)
+        Me.Label35.Name = "Label35"
+        Me.Label35.Size = New System.Drawing.Size(132, 25)
+        Me.Label35.TabIndex = 3
+        Me.Label35.Text = "Payment Date"
+        '
+        'LoadPaymentTableButton
+        '
+        Me.LoadPaymentTableButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver
+        Me.LoadPaymentTableButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.LoadPaymentTableButton.Font = New System.Drawing.Font("Raleway Medium", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LoadPaymentTableButton.Image = CType(resources.GetObject("LoadPaymentTableButton.Image"), System.Drawing.Image)
+        Me.LoadPaymentTableButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.LoadPaymentTableButton.Location = New System.Drawing.Point(184, 520)
+        Me.LoadPaymentTableButton.Name = "LoadPaymentTableButton"
+        Me.LoadPaymentTableButton.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.LoadPaymentTableButton.Size = New System.Drawing.Size(148, 34)
+        Me.LoadPaymentTableButton.TabIndex = 0
+        Me.LoadPaymentTableButton.Text = "Load Table"
+        Me.LoadPaymentTableButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LoadPaymentTableButton.UseVisualStyleBackColor = True
+        '
+        'Label36
+        '
+        Me.Label36.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label36.AutoSize = True
+        Me.Label36.Font = New System.Drawing.Font("Raleway", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label36.Location = New System.Drawing.Point(32, 244)
+        Me.Label36.Name = "Label36"
+        Me.Label36.Size = New System.Drawing.Size(94, 25)
+        Me.Label36.TabIndex = 3
+        Me.Label36.Text = "Invoice ID"
+        '
+        'InvoicePanel
+        '
+        Me.InvoicePanel.Controls.Add(Me.ComboBox2)
+        Me.InvoicePanel.Controls.Add(Me.TextBox2)
+        Me.InvoicePanel.Controls.Add(Me.TextBox5)
+        Me.InvoicePanel.Controls.Add(Me.Button2)
+        Me.InvoicePanel.Controls.Add(Me.Button3)
+        Me.InvoicePanel.Controls.Add(Me.Button4)
+        Me.InvoicePanel.Controls.Add(Me.Button5)
+        Me.InvoicePanel.Controls.Add(Me.RichTextBox1)
+        Me.InvoicePanel.Controls.Add(Me.Label20)
+        Me.InvoicePanel.Controls.Add(Me.Label25)
+        Me.InvoicePanel.Controls.Add(Me.Label26)
+        Me.InvoicePanel.Controls.Add(Me.Label27)
+        Me.InvoicePanel.Controls.Add(Me.ServiceInvo)
+        Me.InvoicePanel.Controls.Add(Me.TextBox6)
+        Me.InvoicePanel.Controls.Add(Me.TextBox7)
+        Me.InvoicePanel.Controls.Add(Me.Label29)
+        Me.InvoicePanel.Controls.Add(Me.Button6)
+        Me.InvoicePanel.Controls.Add(Me.Label30)
+        Me.InvoicePanel.Controls.Add(Me.PictureBox2)
+        Me.InvoicePanel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.InvoicePanel.Location = New System.Drawing.Point(0, 49)
+        Me.InvoicePanel.Name = "InvoicePanel"
+        Me.InvoicePanel.Size = New System.Drawing.Size(1120, 699)
+        Me.InvoicePanel.TabIndex = 18
+        Me.InvoicePanel.Visible = False
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Items.AddRange(New Object() {"Full Wash", "Body Wash", "Interior Cleaning", "Underchase Wash", "Polishing"})
+        Me.ComboBox2.Location = New System.Drawing.Point(183, 289)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(149, 24)
+        Me.ComboBox2.TabIndex = 12
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextBox2.Font = New System.Drawing.Font("MS PGothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox2.Location = New System.Drawing.Point(184, 373)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(148, 24)
+        Me.TextBox2.TabIndex = 1
+        '
+        'TextBox5
+        '
+        Me.TextBox5.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextBox5.Font = New System.Drawing.Font("MS PGothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox5.Location = New System.Drawing.Point(184, 245)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(148, 24)
+        Me.TextBox5.TabIndex = 1
+        '
+        'Button2
+        '
+        Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button2.BackgroundImage = Global.WashWorld.My.Resources.Resources.information
+        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Button2.FlatAppearance.BorderSize = 0
+        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Location = New System.Drawing.Point(338, 335)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(15, 15)
+        Me.Button2.TabIndex = 11
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button3
+        '
+        Me.Button3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button3.BackgroundImage = Global.WashWorld.My.Resources.Resources.information
+        Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Button3.FlatAppearance.BorderSize = 0
+        Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Location = New System.Drawing.Point(338, 295)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(15, 15)
+        Me.Button3.TabIndex = 11
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button4
+        '
+        Me.Button4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button4.BackgroundImage = Global.WashWorld.My.Resources.Resources.information
+        Me.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Button4.FlatAppearance.BorderSize = 0
+        Me.Button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button4.Location = New System.Drawing.Point(338, 251)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(15, 15)
+        Me.Button4.TabIndex = 11
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'Button5
+        '
+        Me.Button5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button5.BackgroundImage = Global.WashWorld.My.Resources.Resources.information
+        Me.Button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Button5.FlatAppearance.BorderSize = 0
+        Me.Button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button5.Location = New System.Drawing.Point(338, 205)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(15, 15)
+        Me.Button5.TabIndex = 11
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'RichTextBox1
+        '
+        Me.RichTextBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.RichTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.RichTextBox1.Font = New System.Drawing.Font("MS PGothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RichTextBox1.Location = New System.Drawing.Point(184, 413)
+        Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.Size = New System.Drawing.Size(148, 96)
+        Me.RichTextBox1.TabIndex = 4
+        Me.RichTextBox1.Text = ""
+        '
+        'Label20
+        '
+        Me.Label20.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label20.AutoSize = True
+        Me.Label20.Font = New System.Drawing.Font("Raleway", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label20.Location = New System.Drawing.Point(32, 413)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(107, 25)
+        Me.Label20.TabIndex = 3
+        Me.Label20.Text = "Description"
+        '
+        'Label25
+        '
+        Me.Label25.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label25.AutoSize = True
+        Me.Label25.Font = New System.Drawing.Font("Raleway", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label25.Location = New System.Drawing.Point(32, 200)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(142, 25)
+        Me.Label25.TabIndex = 3
+        Me.Label25.Text = "Registration No"
+        '
+        'Label26
+        '
+        Me.Label26.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label26.AutoSize = True
+        Me.Label26.Font = New System.Drawing.Font("Raleway", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label26.Location = New System.Drawing.Point(32, 329)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(140, 25)
+        Me.Label26.TabIndex = 3
+        Me.Label26.Text = "Service Charge"
+        '
+        'Label27
+        '
+        Me.Label27.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label27.AutoSize = True
+        Me.Label27.Font = New System.Drawing.Font("Raleway", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label27.Location = New System.Drawing.Point(32, 289)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(121, 25)
+        Me.Label27.TabIndex = 3
+        Me.Label27.Text = "Service Type"
+        '
+        'ServiceInvo
+        '
+        Me.ServiceInvo.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.ServiceInvo.AutoSize = True
+        Me.ServiceInvo.Font = New System.Drawing.Font("Raleway", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ServiceInvo.Location = New System.Drawing.Point(544, 84)
+        Me.ServiceInvo.Name = "ServiceInvo"
+        Me.ServiceInvo.Size = New System.Drawing.Size(207, 32)
+        Me.ServiceInvo.TabIndex = 3
+        Me.ServiceInvo.Text = "SERVICE INVOICE"
+        Me.ServiceInvo.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'TextBox6
+        '
+        Me.TextBox6.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextBox6.Font = New System.Drawing.Font("MS PGothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox6.Location = New System.Drawing.Point(184, 200)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.Size = New System.Drawing.Size(148, 24)
+        Me.TextBox6.TabIndex = 1
+        '
+        'TextBox7
+        '
+        Me.TextBox7.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextBox7.Font = New System.Drawing.Font("MS PGothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox7.Location = New System.Drawing.Point(184, 329)
+        Me.TextBox7.Name = "TextBox7"
+        Me.TextBox7.Size = New System.Drawing.Size(148, 24)
+        Me.TextBox7.TabIndex = 1
+        '
+        'Label29
+        '
+        Me.Label29.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label29.AutoSize = True
+        Me.Label29.Font = New System.Drawing.Font("Raleway", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label29.Location = New System.Drawing.Point(32, 372)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(96, 25)
+        Me.Label29.TabIndex = 3
+        Me.Label29.Text = "Worker ID"
+        '
+        'Button6
+        '
+        Me.Button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver
+        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button6.Font = New System.Drawing.Font("Raleway Medium", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button6.Image = CType(resources.GetObject("Button6.Image"), System.Drawing.Image)
+        Me.Button6.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button6.Location = New System.Drawing.Point(184, 520)
+        Me.Button6.Name = "Button6"
+        Me.Button6.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Button6.Size = New System.Drawing.Size(148, 34)
+        Me.Button6.TabIndex = 0
+        Me.Button6.Text = "Load Table"
+        Me.Button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button6.UseVisualStyleBackColor = True
+        '
+        'Label30
+        '
+        Me.Label30.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label30.AutoSize = True
+        Me.Label30.Font = New System.Drawing.Font("Raleway", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label30.Location = New System.Drawing.Point(32, 244)
+        Me.Label30.Name = "Label30"
+        Me.Label30.Size = New System.Drawing.Size(101, 25)
+        Me.Label30.TabIndex = 3
+        Me.Label30.Text = "Serivice ID"
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.PictureBox2.BackgroundImage = Global.WashWorld.My.Resources.Resources.LOGO
+        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.PictureBox2.Location = New System.Drawing.Point(463, 28)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(372, 72)
+        Me.PictureBox2.TabIndex = 13
+        Me.PictureBox2.TabStop = False
         '
         'ServicePanel
         '
@@ -1102,6 +1635,17 @@ Partial Class Form2
         Me.ServicePanel.TabIndex = 17
         Me.ServicePanel.Visible = False
         '
+        'ServTypeComboBox
+        '
+        Me.ServTypeComboBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ServTypeComboBox.FormattingEnabled = True
+        Me.ServTypeComboBox.Items.AddRange(New Object() {"Full Wash", "Body Wash", "Interior Cleaning", "Underchase Wash", "Polishing"})
+        Me.ServTypeComboBox.Location = New System.Drawing.Point(183, 289)
+        Me.ServTypeComboBox.Name = "ServTypeComboBox"
+        Me.ServTypeComboBox.Size = New System.Drawing.Size(149, 24)
+        Me.ServTypeComboBox.TabIndex = 12
+        '
         'ServiceDataGridView
         '
         Me.ServiceDataGridView.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
@@ -1116,6 +1660,16 @@ Partial Class Form2
         Me.ServiceDataGridView.Size = New System.Drawing.Size(686, 567)
         Me.ServiceDataGridView.TabIndex = 2
         '
+        'WorkerIDTextBox2
+        '
+        Me.WorkerIDTextBox2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.WorkerIDTextBox2.Font = New System.Drawing.Font("MS PGothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.WorkerIDTextBox2.Location = New System.Drawing.Point(184, 373)
+        Me.WorkerIDTextBox2.Name = "WorkerIDTextBox2"
+        Me.WorkerIDTextBox2.Size = New System.Drawing.Size(148, 24)
+        Me.WorkerIDTextBox2.TabIndex = 1
+        '
         'ServIDTB
         '
         Me.ServIDTB.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
@@ -1125,6 +1679,20 @@ Partial Class Form2
         Me.ServIDTB.Name = "ServIDTB"
         Me.ServIDTB.Size = New System.Drawing.Size(148, 24)
         Me.ServIDTB.TabIndex = 1
+        '
+        'SeviceChargeInfo
+        '
+        Me.SeviceChargeInfo.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.SeviceChargeInfo.BackgroundImage = Global.WashWorld.My.Resources.Resources.information
+        Me.SeviceChargeInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.SeviceChargeInfo.FlatAppearance.BorderSize = 0
+        Me.SeviceChargeInfo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.SeviceChargeInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.SeviceChargeInfo.Location = New System.Drawing.Point(338, 335)
+        Me.SeviceChargeInfo.Name = "SeviceChargeInfo"
+        Me.SeviceChargeInfo.Size = New System.Drawing.Size(15, 15)
+        Me.SeviceChargeInfo.TabIndex = 11
+        Me.SeviceChargeInfo.UseVisualStyleBackColor = True
         '
         'ServiceTypeInfo
         '
@@ -1204,6 +1772,18 @@ Partial Class Form2
         Me.Label7.TabIndex = 3
         Me.Label7.Text = "Registration No"
         '
+        'Label11
+        '
+        Me.Label11.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Raleway", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(32, 329)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(140, 25)
+        Me.Label11.TabIndex = 3
+        Me.Label11.Text = "Service Charge"
+        '
         'Label8
         '
         Me.Label8.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
@@ -1221,7 +1801,7 @@ Partial Class Form2
         Me.Label9.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Raleway", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(67, 128)
+        Me.Label9.Location = New System.Drawing.Point(80, 128)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(206, 32)
         Me.Label9.TabIndex = 3
@@ -1236,6 +1816,28 @@ Partial Class Form2
         Me.RegNoTB.Name = "RegNoTB"
         Me.RegNoTB.Size = New System.Drawing.Size(148, 24)
         Me.RegNoTB.TabIndex = 1
+        '
+        'ServChargeTB
+        '
+        Me.ServChargeTB.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ServChargeTB.Font = New System.Drawing.Font("MS PGothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ServChargeTB.Location = New System.Drawing.Point(184, 329)
+        Me.ServChargeTB.Name = "ServChargeTB"
+        Me.ServChargeTB.Size = New System.Drawing.Size(148, 24)
+        Me.ServChargeTB.TabIndex = 1
+        '
+        'Label24
+        '
+        Me.Label24.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label24.AutoSize = True
+        Me.Label24.Font = New System.Drawing.Font("Raleway", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label24.Location = New System.Drawing.Point(32, 372)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(96, 25)
+        Me.Label24.TabIndex = 3
+        Me.Label24.Text = "Worker ID"
         '
         'ServTableLoadButton
         '
@@ -1265,71 +1867,372 @@ Partial Class Form2
         Me.Label10.TabIndex = 3
         Me.Label10.Text = "Serivice ID"
         '
-        'ServChargeTB
+        'WorkerPanel
         '
-        Me.ServChargeTB.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.WorkerPanel.Controls.Add(Me.WorkerTableDataGridView)
+        Me.WorkerPanel.Controls.Add(Me.WorkerNameTextBox)
+        Me.WorkerPanel.Controls.Add(Me.WorkerPhonInfo)
+        Me.WorkerPanel.Controls.Add(Me.WokerNameInfo)
+        Me.WorkerPanel.Controls.Add(Me.WorkIDInfo)
+        Me.WorkerPanel.Controls.Add(Me.WAddressRichTextBox)
+        Me.WorkerPanel.Controls.Add(Me.Label12)
+        Me.WorkerPanel.Controls.Add(Me.Label13)
+        Me.WorkerPanel.Controls.Add(Me.Label17)
+        Me.WorkerPanel.Controls.Add(Me.Label14)
+        Me.WorkerPanel.Controls.Add(Me.Label15)
+        Me.WorkerPanel.Controls.Add(Me.JobTextBox)
+        Me.WorkerPanel.Controls.Add(Me.WorkerIDTextBox)
+        Me.WorkerPanel.Controls.Add(Me.WorkerPhoneTextBox)
+        Me.WorkerPanel.Controls.Add(Me.LoadWorkTable)
+        Me.WorkerPanel.Controls.Add(Me.Label16)
+        Me.WorkerPanel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.WorkerPanel.Location = New System.Drawing.Point(0, 49)
+        Me.WorkerPanel.Name = "WorkerPanel"
+        Me.WorkerPanel.Size = New System.Drawing.Size(1120, 699)
+        Me.WorkerPanel.TabIndex = 14
+        Me.WorkerPanel.Visible = False
+        '
+        'WorkerTableDataGridView
+        '
+        Me.WorkerTableDataGridView.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ServChargeTB.Font = New System.Drawing.Font("MS PGothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ServChargeTB.Location = New System.Drawing.Point(184, 329)
-        Me.ServChargeTB.Name = "ServChargeTB"
-        Me.ServChargeTB.Size = New System.Drawing.Size(148, 24)
-        Me.ServChargeTB.TabIndex = 1
+        Me.WorkerTableDataGridView.BackgroundColor = System.Drawing.Color.SkyBlue
+        Me.WorkerTableDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.WorkerTableDataGridView.GridColor = System.Drawing.Color.SkyBlue
+        Me.WorkerTableDataGridView.Location = New System.Drawing.Point(395, 62)
+        Me.WorkerTableDataGridView.Margin = New System.Windows.Forms.Padding(10)
+        Me.WorkerTableDataGridView.Name = "WorkerTableDataGridView"
+        Me.WorkerTableDataGridView.RowHeadersWidth = 51
+        Me.WorkerTableDataGridView.Size = New System.Drawing.Size(686, 567)
+        Me.WorkerTableDataGridView.TabIndex = 2
         '
-        'Label11
+        'WorkerNameTextBox
         '
-        Me.Label11.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.WorkerNameTextBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Raleway", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(32, 329)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(140, 25)
-        Me.Label11.TabIndex = 3
-        Me.Label11.Text = "Service Charge"
+        Me.WorkerNameTextBox.Font = New System.Drawing.Font("MS PGothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.WorkerNameTextBox.Location = New System.Drawing.Point(184, 245)
+        Me.WorkerNameTextBox.Name = "WorkerNameTextBox"
+        Me.WorkerNameTextBox.Size = New System.Drawing.Size(148, 24)
+        Me.WorkerNameTextBox.TabIndex = 1
         '
-        'SeviceChargeInfo
+        'WorkerPhonInfo
         '
-        Me.SeviceChargeInfo.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.SeviceChargeInfo.BackgroundImage = Global.WashWorld.My.Resources.Resources.information
-        Me.SeviceChargeInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.SeviceChargeInfo.FlatAppearance.BorderSize = 0
-        Me.SeviceChargeInfo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.SeviceChargeInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.SeviceChargeInfo.Location = New System.Drawing.Point(338, 335)
-        Me.SeviceChargeInfo.Name = "SeviceChargeInfo"
-        Me.SeviceChargeInfo.Size = New System.Drawing.Size(15, 15)
-        Me.SeviceChargeInfo.TabIndex = 11
-        Me.SeviceChargeInfo.UseVisualStyleBackColor = True
+        Me.WorkerPhonInfo.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.WorkerPhonInfo.BackgroundImage = Global.WashWorld.My.Resources.Resources.information
+        Me.WorkerPhonInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.WorkerPhonInfo.FlatAppearance.BorderSize = 0
+        Me.WorkerPhonInfo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.WorkerPhonInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.WorkerPhonInfo.Location = New System.Drawing.Point(338, 295)
+        Me.WorkerPhonInfo.Name = "WorkerPhonInfo"
+        Me.WorkerPhonInfo.Size = New System.Drawing.Size(15, 15)
+        Me.WorkerPhonInfo.TabIndex = 11
+        Me.WorkerPhonInfo.UseVisualStyleBackColor = True
         '
-        'Label24
+        'WokerNameInfo
         '
-        Me.Label24.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.WokerNameInfo.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.WokerNameInfo.BackgroundImage = Global.WashWorld.My.Resources.Resources.information
+        Me.WokerNameInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.WokerNameInfo.FlatAppearance.BorderSize = 0
+        Me.WokerNameInfo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.WokerNameInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.WokerNameInfo.Location = New System.Drawing.Point(338, 251)
+        Me.WokerNameInfo.Name = "WokerNameInfo"
+        Me.WokerNameInfo.Size = New System.Drawing.Size(15, 15)
+        Me.WokerNameInfo.TabIndex = 11
+        Me.WokerNameInfo.UseVisualStyleBackColor = True
+        '
+        'WorkIDInfo
+        '
+        Me.WorkIDInfo.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.WorkIDInfo.BackgroundImage = Global.WashWorld.My.Resources.Resources.information
+        Me.WorkIDInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.WorkIDInfo.FlatAppearance.BorderSize = 0
+        Me.WorkIDInfo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.WorkIDInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.WorkIDInfo.Location = New System.Drawing.Point(338, 205)
+        Me.WorkIDInfo.Name = "WorkIDInfo"
+        Me.WorkIDInfo.Size = New System.Drawing.Size(15, 15)
+        Me.WorkIDInfo.TabIndex = 11
+        Me.WorkIDInfo.UseVisualStyleBackColor = True
+        '
+        'WAddressRichTextBox
+        '
+        Me.WAddressRichTextBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label24.AutoSize = True
-        Me.Label24.Font = New System.Drawing.Font("Raleway", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label24.Location = New System.Drawing.Point(32, 372)
-        Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(96, 25)
-        Me.Label24.TabIndex = 3
-        Me.Label24.Text = "Worker ID"
+        Me.WAddressRichTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.WAddressRichTextBox.Font = New System.Drawing.Font("MS PGothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.WAddressRichTextBox.Location = New System.Drawing.Point(184, 381)
+        Me.WAddressRichTextBox.Name = "WAddressRichTextBox"
+        Me.WAddressRichTextBox.Size = New System.Drawing.Size(148, 96)
+        Me.WAddressRichTextBox.TabIndex = 4
+        Me.WAddressRichTextBox.Text = ""
         '
-        'WorkerIDTextBox2
+        'Label12
         '
-        Me.WorkerIDTextBox2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.Label12.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.WorkerIDTextBox2.Font = New System.Drawing.Font("MS PGothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.WorkerIDTextBox2.Location = New System.Drawing.Point(184, 373)
-        Me.WorkerIDTextBox2.Name = "WorkerIDTextBox2"
-        Me.WorkerIDTextBox2.Size = New System.Drawing.Size(148, 24)
-        Me.WorkerIDTextBox2.TabIndex = 1
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Raleway", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(32, 378)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(81, 25)
+        Me.Label12.TabIndex = 3
+        Me.Label12.Text = "Address"
         '
-        'ServTypeComboBox
+        'Label13
         '
-        Me.ServTypeComboBox.FormattingEnabled = True
-        Me.ServTypeComboBox.Location = New System.Drawing.Point(183, 289)
-        Me.ServTypeComboBox.Name = "ServTypeComboBox"
-        Me.ServTypeComboBox.Size = New System.Drawing.Size(149, 24)
-        Me.ServTypeComboBox.TabIndex = 12
+        Me.Label13.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Raleway", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Location = New System.Drawing.Point(32, 200)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(96, 25)
+        Me.Label13.TabIndex = 3
+        Me.Label13.Text = "Worker ID"
+        '
+        'Label17
+        '
+        Me.Label17.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label17.AutoSize = True
+        Me.Label17.Font = New System.Drawing.Font("Raleway", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.Location = New System.Drawing.Point(32, 330)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(84, 25)
+        Me.Label17.TabIndex = 3
+        Me.Label17.Text = "Job Title"
+        '
+        'Label14
+        '
+        Me.Label14.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Raleway", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.Location = New System.Drawing.Point(32, 289)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(95, 25)
+        Me.Label14.TabIndex = 3
+        Me.Label14.Text = "Phone No"
+        '
+        'Label15
+        '
+        Me.Label15.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Raleway", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.Location = New System.Drawing.Point(67, 128)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(210, 32)
+        Me.Label15.TabIndex = 3
+        Me.Label15.Text = "WORKER DETAILS"
+        '
+        'JobTextBox
+        '
+        Me.JobTextBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.JobTextBox.Font = New System.Drawing.Font("MS PGothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.JobTextBox.Location = New System.Drawing.Point(184, 330)
+        Me.JobTextBox.Name = "JobTextBox"
+        Me.JobTextBox.Size = New System.Drawing.Size(148, 24)
+        Me.JobTextBox.TabIndex = 1
+        '
+        'WorkerIDTextBox
+        '
+        Me.WorkerIDTextBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.WorkerIDTextBox.Font = New System.Drawing.Font("MS PGothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.WorkerIDTextBox.Location = New System.Drawing.Point(184, 200)
+        Me.WorkerIDTextBox.Name = "WorkerIDTextBox"
+        Me.WorkerIDTextBox.Size = New System.Drawing.Size(148, 24)
+        Me.WorkerIDTextBox.TabIndex = 1
+        '
+        'WorkerPhoneTextBox
+        '
+        Me.WorkerPhoneTextBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.WorkerPhoneTextBox.Font = New System.Drawing.Font("MS PGothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.WorkerPhoneTextBox.Location = New System.Drawing.Point(184, 289)
+        Me.WorkerPhoneTextBox.Name = "WorkerPhoneTextBox"
+        Me.WorkerPhoneTextBox.Size = New System.Drawing.Size(148, 24)
+        Me.WorkerPhoneTextBox.TabIndex = 1
+        '
+        'LoadWorkTable
+        '
+        Me.LoadWorkTable.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver
+        Me.LoadWorkTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.LoadWorkTable.Font = New System.Drawing.Font("Raleway Medium", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LoadWorkTable.Image = CType(resources.GetObject("LoadWorkTable.Image"), System.Drawing.Image)
+        Me.LoadWorkTable.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.LoadWorkTable.Location = New System.Drawing.Point(184, 498)
+        Me.LoadWorkTable.Name = "LoadWorkTable"
+        Me.LoadWorkTable.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.LoadWorkTable.Size = New System.Drawing.Size(148, 34)
+        Me.LoadWorkTable.TabIndex = 0
+        Me.LoadWorkTable.Text = "Load Table"
+        Me.LoadWorkTable.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LoadWorkTable.UseVisualStyleBackColor = True
+        '
+        'Label16
+        '
+        Me.Label16.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label16.AutoSize = True
+        Me.Label16.Font = New System.Drawing.Font("Raleway", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.Location = New System.Drawing.Point(32, 244)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(120, 25)
+        Me.Label16.TabIndex = 3
+        Me.Label16.Text = "WokerName"
+        '
+        'MiniButton2
+        '
+        Me.MiniButton2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.MiniButton2.BackColor = System.Drawing.Color.Transparent
+        Me.MiniButton2.BackgroundImage = Global.WashWorld.My.Resources.Resources.mini
+        Me.MiniButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.MiniButton2.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.MiniButton2.FlatAppearance.BorderSize = 0
+        Me.MiniButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver
+        Me.MiniButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.MiniButton2.Font = New System.Drawing.Font("Microsoft YaHei", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MiniButton2.ForeColor = System.Drawing.Color.Black
+        Me.MiniButton2.Location = New System.Drawing.Point(985, 8)
+        Me.MiniButton2.Name = "MiniButton2"
+        Me.MiniButton2.Size = New System.Drawing.Size(37, 33)
+        Me.MiniButton2.TabIndex = 4
+        Me.MiniButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.MiniButton2.UseVisualStyleBackColor = False
+        '
+        'MaxButton
+        '
+        Me.MaxButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.MaxButton.BackColor = System.Drawing.Color.Transparent
+        Me.MaxButton.BackgroundImage = Global.WashWorld.My.Resources.Resources.max
+        Me.MaxButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.MaxButton.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.MaxButton.FlatAppearance.BorderSize = 0
+        Me.MaxButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver
+        Me.MaxButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.MaxButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MaxButton.ForeColor = System.Drawing.Color.Transparent
+        Me.MaxButton.Location = New System.Drawing.Point(1028, 8)
+        Me.MaxButton.Name = "MaxButton"
+        Me.MaxButton.Size = New System.Drawing.Size(37, 33)
+        Me.MaxButton.TabIndex = 3
+        Me.MaxButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.MaxButton.UseVisualStyleBackColor = False
+        '
+        'CloseButton2
+        '
+        Me.CloseButton2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.CloseButton2.BackColor = System.Drawing.Color.Transparent
+        Me.CloseButton2.BackgroundImage = Global.WashWorld.My.Resources.Resources.Close
+        Me.CloseButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.CloseButton2.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.CloseButton2.FlatAppearance.BorderSize = 0
+        Me.CloseButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
+        Me.CloseButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.CloseButton2.Font = New System.Drawing.Font("Arial Rounded MT Bold", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CloseButton2.ForeColor = System.Drawing.Color.Transparent
+        Me.CloseButton2.Location = New System.Drawing.Point(1071, 8)
+        Me.CloseButton2.Name = "CloseButton2"
+        Me.CloseButton2.Size = New System.Drawing.Size(37, 33)
+        Me.CloseButton2.TabIndex = 2
+        Me.CloseButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.CloseButton2.UseVisualStyleBackColor = False
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.LightBlue
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(1120, 49)
+        Me.Panel1.TabIndex = 5
+        '
+        'PrintPreviewDialog1
+        '
+        Me.PrintPreviewDialog1.AutoScrollMargin = New System.Drawing.Size(0, 0)
+        Me.PrintPreviewDialog1.AutoScrollMinSize = New System.Drawing.Size(0, 0)
+        Me.PrintPreviewDialog1.ClientSize = New System.Drawing.Size(400, 300)
+        Me.PrintPreviewDialog1.Enabled = True
+        Me.PrintPreviewDialog1.Icon = CType(resources.GetObject("PrintPreviewDialog1.Icon"), System.Drawing.Icon)
+        Me.PrintPreviewDialog1.Name = "PrintPreviewDialog1"
+        Me.PrintPreviewDialog1.Visible = False
+        '
+        'PrintDialog1
+        '
+        Me.PrintDialog1.UseEXDialog = True
+        '
+        'CustTableAdapter
+        '
+        Me.CustTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.CarTableAdapter = Nothing
+        Me.TableAdapterManager.CustTableAdapter = Me.CustTableAdapter
+        Me.TableAdapterManager.ServiTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = WashWorld.Database1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.UserTableAdapter = Nothing
+        Me.TableAdapterManager.WorkerTableAdapter = Nothing
+        '
+        'CarTableAdapter
+        '
+        Me.CarTableAdapter.ClearBeforeFill = True
+        '
+        'Button7
+        '
+        Me.Button7.Location = New System.Drawing.Point(86, 620)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(75, 23)
+        Me.Button7.TabIndex = 7
+        Me.Button7.Text = "Button7"
+        Me.Button7.UseVisualStyleBackColor = True
+        '
+        'CarRegNoDataGridViewTextBoxColumn
+        '
+        Me.CarRegNoDataGridViewTextBoxColumn.DataPropertyName = "CarRegNo"
+        Me.CarRegNoDataGridViewTextBoxColumn.HeaderText = "CarRegNo"
+        Me.CarRegNoDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.CarRegNoDataGridViewTextBoxColumn.Name = "CarRegNoDataGridViewTextBoxColumn"
+        Me.CarRegNoDataGridViewTextBoxColumn.Width = 125
+        '
+        'CustIDDataGridViewTextBoxColumn1
+        '
+        Me.CustIDDataGridViewTextBoxColumn1.DataPropertyName = "CustID"
+        Me.CustIDDataGridViewTextBoxColumn1.HeaderText = "CustID"
+        Me.CustIDDataGridViewTextBoxColumn1.MinimumWidth = 6
+        Me.CustIDDataGridViewTextBoxColumn1.Name = "CustIDDataGridViewTextBoxColumn1"
+        Me.CustIDDataGridViewTextBoxColumn1.Width = 125
+        '
+        'CarBrandDataGridViewTextBoxColumn
+        '
+        Me.CarBrandDataGridViewTextBoxColumn.DataPropertyName = "CarBrand"
+        Me.CarBrandDataGridViewTextBoxColumn.HeaderText = "CarBrand"
+        Me.CarBrandDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.CarBrandDataGridViewTextBoxColumn.Name = "CarBrandDataGridViewTextBoxColumn"
+        Me.CarBrandDataGridViewTextBoxColumn.Width = 125
+        '
+        'CarModelDataGridViewTextBoxColumn
+        '
+        Me.CarModelDataGridViewTextBoxColumn.DataPropertyName = "CarModel"
+        Me.CarModelDataGridViewTextBoxColumn.HeaderText = "CarModel"
+        Me.CarModelDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.CarModelDataGridViewTextBoxColumn.Name = "CarModelDataGridViewTextBoxColumn"
+        Me.CarModelDataGridViewTextBoxColumn.Width = 125
+        '
+        'CarTypeDataGridViewTextBoxColumn
+        '
+        Me.CarTypeDataGridViewTextBoxColumn.DataPropertyName = "CarType"
+        Me.CarTypeDataGridViewTextBoxColumn.HeaderText = "CarType"
+        Me.CarTypeDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.CarTypeDataGridViewTextBoxColumn.Name = "CarTypeDataGridViewTextBoxColumn"
+        Me.CarTypeDataGridViewTextBoxColumn.Width = 125
         '
         'Form2
         '
@@ -1353,17 +2256,29 @@ Partial Class Form2
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.CustPanel.ResumeLayout(False)
         Me.CustPanel.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.WorkerPanel.ResumeLayout(False)
-        Me.WorkerPanel.PerformLayout()
-        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CustBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.CustBindingNavigator.ResumeLayout(False)
+        Me.CustBindingNavigator.PerformLayout()
+        CType(Me.CustBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Database1DataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CustTableDataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.VehiclePanel.ResumeLayout(False)
         Me.VehiclePanel.PerformLayout()
+        CType(Me.CarBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.VehicleDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CarTypePB, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PaymentPanel.ResumeLayout(False)
+        Me.PaymentPanel.PerformLayout()
+        CType(Me.PaymentDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.InvoicePanel.ResumeLayout(False)
+        Me.InvoicePanel.PerformLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ServicePanel.ResumeLayout(False)
         Me.ServicePanel.PerformLayout()
         CType(Me.ServiceDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.WorkerPanel.ResumeLayout(False)
+        Me.WorkerPanel.PerformLayout()
+        CType(Me.WorkerTableDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1388,28 +2303,23 @@ Partial Class Form2
     Friend WithEvents Custglow As Panel
     Friend WithEvents VehiButton As Button
     Friend WithEvents ToolTip1 As ToolTip
-    Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents TextBoxCustName As TextBox
     Friend WithEvents PhoneInfo As Button
     Friend WithEvents CustNameInfo As Button
     Friend WithEvents CustIDInfo As Button
-    Friend WithEvents RichTextBoxCustAddress As RichTextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents TextBoxCustID As TextBox
-    Friend WithEvents TextBoxCustPhone As TextBox
-    Friend WithEvents Button11 As Button
+    Friend WithEvents CustTableDataGridView1 As DataGridView
+    Friend WithEvents LoadCustTableButton As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents WorkerPanel As Panel
-    Friend WithEvents DataGridView3 As DataGridView
+    Friend WithEvents WorkerTableDataGridView As DataGridView
     Friend WithEvents WorkerNameTextBox As TextBox
-    Friend WithEvents Button6 As Button
-    Friend WithEvents Button7 As Button
-    Friend WithEvents Button8 As Button
+    Friend WithEvents WorkerPhonInfo As Button
+    Friend WithEvents WokerNameInfo As Button
+    Friend WithEvents WorkIDInfo As Button
     Friend WithEvents WAddressRichTextBox As RichTextBox
     Friend WithEvents Label12 As Label
     Friend WithEvents Label13 As Label
@@ -1423,18 +2333,14 @@ Partial Class Form2
     Friend WithEvents Label16 As Label
     Friend WithEvents VehiclePanel As Panel
     Friend WithEvents VehicleDataGridView As DataGridView
-    Friend WithEvents TextBox1 As TextBox
     Friend WithEvents CarBrandInfo As Button
     Friend WithEvents CarRegInfo As Button
     Friend WithEvents CustIDInfo2 As Button
     Friend WithEvents Label18 As Label
     Friend WithEvents Label19 As Label
-    Friend WithEvents Label20 As Label
+    Friend WithEvents ok As Label
     Friend WithEvents Label21 As Label
     Friend WithEvents Label22 As Label
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox4 As TextBox
     Friend WithEvents Button13 As Button
     Friend WithEvents Label23 As Label
     Friend WithEvents CarTypePB As PictureBox
@@ -1459,4 +2365,88 @@ Partial Class Form2
     Friend WithEvents Label24 As Label
     Friend WithEvents ServTableLoadButton As Button
     Friend WithEvents Label10 As Label
+    Friend WithEvents InvoicePanel As Panel
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Button4 As Button
+    Friend WithEvents Button5 As Button
+    Friend WithEvents RichTextBox1 As RichTextBox
+    Friend WithEvents Label20 As Label
+    Friend WithEvents Label25 As Label
+    Friend WithEvents Label26 As Label
+    Friend WithEvents Label27 As Label
+    Friend WithEvents ServiceInvo As Label
+    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents Label29 As Label
+    Friend WithEvents Button6 As Button
+    Friend WithEvents Label30 As Label
+    Friend WithEvents PrintDocument1 As Printing.PrintDocument
+    Friend WithEvents PrintPreviewDialog1 As PrintPreviewDialog
+    Friend WithEvents PrintDialog1 As PrintDialog
+    Friend WithEvents PaymentPanel As Panel
+    Friend WithEvents PaymentDateTimePicker1 As DateTimePicker
+    Friend WithEvents PaymentTypeComboBox As ComboBox
+    Friend WithEvents PaymentDataGridView As DataGridView
+    Friend WithEvents InvoiceIDTextBox2 As TextBox
+    Friend WithEvents PaymentTypeInfo As Button
+    Friend WithEvents InvoiceIDInfo As Button
+    Friend WithEvents PaymentIDInfo As Button
+    Friend WithEvents RichTextBox2 As RichTextBox
+    Friend WithEvents Label28 As Label
+    Friend WithEvents Label31 As Label
+    Friend WithEvents Label32 As Label
+    Friend WithEvents Label33 As Label
+    Friend WithEvents Label34 As Label
+    Friend WithEvents PaymentIDTextBox As TextBox
+    Friend WithEvents ServiceChargTextBox As TextBox
+    Friend WithEvents Label35 As Label
+    Friend WithEvents LoadPaymentTableButton As Button
+    Friend WithEvents Label36 As Label
+    Friend WithEvents Database1DataSet As Database1DataSet
+    Friend WithEvents CustBindingSource As BindingSource
+    Friend WithEvents CustTableAdapter As Database1DataSetTableAdapters.CustTableAdapter
+    Friend WithEvents TableAdapterManager As Database1DataSetTableAdapters.TableAdapterManager
+    Friend WithEvents CustBindingNavigator As BindingNavigator
+    Friend WithEvents BindingNavigatorAddNewItem As ToolStripButton
+    Friend WithEvents BindingNavigatorCountItem As ToolStripLabel
+    Friend WithEvents BindingNavigatorDeleteItem As ToolStripButton
+    Friend WithEvents BindingNavigatorMoveFirstItem As ToolStripButton
+    Friend WithEvents BindingNavigatorMovePreviousItem As ToolStripButton
+    Friend WithEvents BindingNavigatorSeparator As ToolStripSeparator
+    Friend WithEvents BindingNavigatorPositionItem As ToolStripTextBox
+    Friend WithEvents BindingNavigatorSeparator1 As ToolStripSeparator
+    Friend WithEvents BindingNavigatorMoveNextItem As ToolStripButton
+    Friend WithEvents BindingNavigatorMoveLastItem As ToolStripButton
+    Friend WithEvents BindingNavigatorSeparator2 As ToolStripSeparator
+    Friend WithEvents CustBindingNavigatorSaveItem As ToolStripButton
+    Friend WithEvents CustIDTextBox As TextBox
+    Friend WithEvents CustNameTextBox As TextBox
+    Friend WithEvents CustPhoneTextBox As TextBox
+    Friend WithEvents CustIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents CustNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents CustPhoneDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents CustAddressDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
+    Friend WithEvents CustAddressTextBox As RichTextBox
+    Friend WithEvents CarBindingSource As BindingSource
+    Friend WithEvents CarTableAdapter As Database1DataSetTableAdapters.CarTableAdapter
+    Friend WithEvents CarRegNoTextBox As TextBox
+    Friend WithEvents CustIDTextBox1 As TextBox
+    Friend WithEvents CarBrandTextBox As TextBox
+    Friend WithEvents CarModelTextBox As TextBox
+    Friend WithEvents CarTypeComboBox As ComboBox
+    Friend WithEvents CustDeleteBut As Button
+    Friend WithEvents CustAddNewButt As Button
+    Friend WithEvents CustSaveBUT As Button
+    Friend WithEvents Button7 As Button
+    Friend WithEvents CarRegNoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents CustIDDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents CarBrandDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents CarModelDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents CarTypeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class
