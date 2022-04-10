@@ -92,8 +92,8 @@ Partial Class Form1
         'SplitContainer1.Panel2
         '
         Me.SplitContainer1.Panel2.BackColor = System.Drawing.Color.SkyBlue
-        Me.SplitContainer1.Panel2.Controls.Add(Me.PasswordResetPanel)
         Me.SplitContainer1.Panel2.Controls.Add(Me.LoginPanel)
+        Me.SplitContainer1.Panel2.Controls.Add(Me.PasswordResetPanel)
         Me.SplitContainer1.Size = New System.Drawing.Size(900, 309)
         Me.SplitContainer1.SplitterDistance = 310
         Me.SplitContainer1.TabIndex = 0
@@ -285,7 +285,7 @@ Partial Class Form1
         Me.PassInfo.FlatAppearance.BorderSize = 0
         Me.PassInfo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.PassInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.PassInfo.Location = New System.Drawing.Point(362, 154)
+        Me.PassInfo.Location = New System.Drawing.Point(362, 152)
         Me.PassInfo.Name = "PassInfo"
         Me.PassInfo.Size = New System.Drawing.Size(15, 15)
         Me.PassInfo.TabIndex = 10
@@ -298,7 +298,7 @@ Partial Class Form1
         Me.PINInfo.FlatAppearance.BorderSize = 0
         Me.PINInfo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.PINInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.PINInfo.Location = New System.Drawing.Point(362, 56)
+        Me.PINInfo.Location = New System.Drawing.Point(362, 54)
         Me.PINInfo.Name = "PINInfo"
         Me.PINInfo.Size = New System.Drawing.Size(15, 15)
         Me.PINInfo.TabIndex = 10
@@ -338,7 +338,7 @@ Partial Class Form1
         Me.BackButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCyan
         Me.BackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BackButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BackButton.Location = New System.Drawing.Point(418, 172)
+        Me.BackButton.Location = New System.Drawing.Point(418, 160)
         Me.BackButton.Name = "BackButton"
         Me.BackButton.Size = New System.Drawing.Size(101, 38)
         Me.BackButton.TabIndex = 7
@@ -361,31 +361,31 @@ Partial Class Form1
         '
         'NewPassTextBox
         '
-        Me.NewPassTextBox.Font = New System.Drawing.Font("Raleway", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NewPassTextBox.Font = New System.Drawing.Font("MS PGothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.NewPassTextBox.Location = New System.Drawing.Point(198, 148)
         Me.NewPassTextBox.MaxLength = 16
         Me.NewPassTextBox.Name = "NewPassTextBox"
         Me.NewPassTextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.NewPassTextBox.Size = New System.Drawing.Size(162, 27)
+        Me.NewPassTextBox.Size = New System.Drawing.Size(162, 24)
         Me.NewPassTextBox.TabIndex = 3
         '
         'UsernameTextBox
         '
-        Me.UsernameTextBox.Font = New System.Drawing.Font("Raleway", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.UsernameTextBox.Font = New System.Drawing.Font("MS PGothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UsernameTextBox.Location = New System.Drawing.Point(198, 95)
         Me.UsernameTextBox.MaxLength = 16
         Me.UsernameTextBox.Name = "UsernameTextBox"
-        Me.UsernameTextBox.Size = New System.Drawing.Size(162, 27)
+        Me.UsernameTextBox.Size = New System.Drawing.Size(162, 24)
         Me.UsernameTextBox.TabIndex = 2
         '
         'PINTextBox
         '
-        Me.PINTextBox.Font = New System.Drawing.Font("Raleway", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PINTextBox.Font = New System.Drawing.Font("MS PGothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PINTextBox.Location = New System.Drawing.Point(198, 50)
         Me.PINTextBox.MaxLength = 4
         Me.PINTextBox.Name = "PINTextBox"
         Me.PINTextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.PINTextBox.Size = New System.Drawing.Size(162, 27)
+        Me.PINTextBox.Size = New System.Drawing.Size(162, 24)
         Me.PINTextBox.TabIndex = 1
         '
         'Label10
@@ -402,12 +402,12 @@ Partial Class Form1
         '
         'ConfPassTextBox
         '
-        Me.ConfPassTextBox.Font = New System.Drawing.Font("Raleway", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ConfPassTextBox.Font = New System.Drawing.Font("MS PGothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ConfPassTextBox.Location = New System.Drawing.Point(198, 197)
         Me.ConfPassTextBox.MaxLength = 16
         Me.ConfPassTextBox.Name = "ConfPassTextBox"
         Me.ConfPassTextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.ConfPassTextBox.Size = New System.Drawing.Size(162, 27)
+        Me.ConfPassTextBox.Size = New System.Drawing.Size(162, 24)
         Me.ConfPassTextBox.TabIndex = 4
         '
         'Label9
@@ -452,7 +452,7 @@ Partial Class Form1
         Me.ClearButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCyan
         Me.ClearButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ClearButton2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ClearButton2.Location = New System.Drawing.Point(418, 113)
+        Me.ClearButton2.Location = New System.Drawing.Point(418, 101)
         Me.ClearButton2.Name = "ClearButton2"
         Me.ClearButton2.Size = New System.Drawing.Size(101, 38)
         Me.ClearButton2.TabIndex = 6
@@ -469,7 +469,7 @@ Partial Class Form1
         Me.ResetButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ResetButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ResetButton.ForeColor = System.Drawing.SystemColors.GrayText
-        Me.ResetButton.Location = New System.Drawing.Point(418, 55)
+        Me.ResetButton.Location = New System.Drawing.Point(418, 46)
         Me.ResetButton.Name = "ResetButton"
         Me.ResetButton.Size = New System.Drawing.Size(101, 37)
         Me.ResetButton.TabIndex = 5

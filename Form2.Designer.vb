@@ -41,16 +41,13 @@ Partial Class Form2
         Me.CustButton = New System.Windows.Forms.Button()
         Me.CustPanel = New System.Windows.Forms.Panel()
         Me.CustDeleteBut = New System.Windows.Forms.Button()
-        Me.CustAddNewButt = New System.Windows.Forms.Button()
+        Me.CustUpdateButt = New System.Windows.Forms.Button()
         Me.CustSaveBUT = New System.Windows.Forms.Button()
         Me.CustBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.CustBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Database1DataSet = New WashWorld.Database1DataSet()
         Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
@@ -64,10 +61,10 @@ Partial Class Form2
         Me.CustPhoneTextBox = New System.Windows.Forms.TextBox()
         Me.CustAddressTextBox = New System.Windows.Forms.RichTextBox()
         Me.CustTableDataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.CustIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CustNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CustPhoneDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CustAddressDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CustID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CustName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CustPhone = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CustAddress = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PhoneInfo = New System.Windows.Forms.Button()
         Me.CustNameInfo = New System.Windows.Forms.Button()
         Me.CustIDInfo = New System.Windows.Forms.Button()
@@ -78,8 +75,8 @@ Partial Class Form2
         Me.LoadCustTableButton = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.VehiclePanel = New System.Windows.Forms.Panel()
+        Me.Button7 = New System.Windows.Forms.Button()
         Me.CarRegNoTextBox = New System.Windows.Forms.TextBox()
-        Me.CarBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.CustIDTextBox1 = New System.Windows.Forms.TextBox()
         Me.CarBrandTextBox = New System.Windows.Forms.TextBox()
         Me.CarModelTextBox = New System.Windows.Forms.TextBox()
@@ -97,6 +94,23 @@ Partial Class Form2
         Me.Button13 = New System.Windows.Forms.Button()
         Me.Label23 = New System.Windows.Forms.Label()
         Me.CarTypePB = New System.Windows.Forms.PictureBox()
+        Me.WorkerPanel = New System.Windows.Forms.Panel()
+        Me.WorkerTableDataGridView = New System.Windows.Forms.DataGridView()
+        Me.WorkerNameTextBox = New System.Windows.Forms.TextBox()
+        Me.WorkerPhonInfo = New System.Windows.Forms.Button()
+        Me.WokerNameInfo = New System.Windows.Forms.Button()
+        Me.WorkIDInfo = New System.Windows.Forms.Button()
+        Me.WAddressRichTextBox = New System.Windows.Forms.RichTextBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.JobTextBox = New System.Windows.Forms.TextBox()
+        Me.WorkerIDTextBox = New System.Windows.Forms.TextBox()
+        Me.WorkerPhoneTextBox = New System.Windows.Forms.TextBox()
+        Me.LoadWorkTable = New System.Windows.Forms.Button()
+        Me.Label16 = New System.Windows.Forms.Label()
         Me.PaymentPanel = New System.Windows.Forms.Panel()
         Me.PaymentDateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.PaymentTypeComboBox = New System.Windows.Forms.ComboBox()
@@ -156,23 +170,6 @@ Partial Class Form2
         Me.Label24 = New System.Windows.Forms.Label()
         Me.ServTableLoadButton = New System.Windows.Forms.Button()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.WorkerPanel = New System.Windows.Forms.Panel()
-        Me.WorkerTableDataGridView = New System.Windows.Forms.DataGridView()
-        Me.WorkerNameTextBox = New System.Windows.Forms.TextBox()
-        Me.WorkerPhonInfo = New System.Windows.Forms.Button()
-        Me.WokerNameInfo = New System.Windows.Forms.Button()
-        Me.WorkIDInfo = New System.Windows.Forms.Button()
-        Me.WAddressRichTextBox = New System.Windows.Forms.RichTextBox()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.JobTextBox = New System.Windows.Forms.TextBox()
-        Me.WorkerIDTextBox = New System.Windows.Forms.TextBox()
-        Me.WorkerPhoneTextBox = New System.Windows.Forms.TextBox()
-        Me.LoadWorkTable = New System.Windows.Forms.Button()
-        Me.Label16 = New System.Windows.Forms.Label()
         Me.MiniButton2 = New System.Windows.Forms.Button()
         Me.MaxButton = New System.Windows.Forms.Button()
         Me.CloseButton2 = New System.Windows.Forms.Button()
@@ -181,15 +178,6 @@ Partial Class Form2
         Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
         Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
         Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
-        Me.CustTableAdapter = New WashWorld.Database1DataSetTableAdapters.CustTableAdapter()
-        Me.TableAdapterManager = New WashWorld.Database1DataSetTableAdapters.TableAdapterManager()
-        Me.CarTableAdapter = New WashWorld.Database1DataSetTableAdapters.CarTableAdapter()
-        Me.Button7 = New System.Windows.Forms.Button()
-        Me.CarRegNoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CustIDDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CarBrandDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CarModelDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CarTypeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -198,21 +186,18 @@ Partial Class Form2
         Me.CustPanel.SuspendLayout()
         CType(Me.CustBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.CustBindingNavigator.SuspendLayout()
-        CType(Me.CustBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Database1DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CustTableDataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.VehiclePanel.SuspendLayout()
-        CType(Me.CarBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VehicleDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CarTypePB, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.WorkerPanel.SuspendLayout()
+        CType(Me.WorkerTableDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PaymentPanel.SuspendLayout()
         CType(Me.PaymentDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.InvoicePanel.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ServicePanel.SuspendLayout()
         CType(Me.ServiceDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.WorkerPanel.SuspendLayout()
-        CType(Me.WorkerTableDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button1
@@ -257,8 +242,8 @@ Partial Class Form2
         '
         'SplitContainer1.Panel2
         '
-        Me.SplitContainer1.Panel2.Controls.Add(Me.VehiclePanel)
         Me.SplitContainer1.Panel2.Controls.Add(Me.CustPanel)
+        Me.SplitContainer1.Panel2.Controls.Add(Me.VehiclePanel)
         Me.SplitContainer1.Panel2.Controls.Add(Me.WorkerPanel)
         Me.SplitContainer1.Panel2.Controls.Add(Me.PaymentPanel)
         Me.SplitContainer1.Panel2.Controls.Add(Me.InvoicePanel)
@@ -434,7 +419,7 @@ Partial Class Form2
         'CustPanel
         '
         Me.CustPanel.Controls.Add(Me.CustDeleteBut)
-        Me.CustPanel.Controls.Add(Me.CustAddNewButt)
+        Me.CustPanel.Controls.Add(Me.CustUpdateButt)
         Me.CustPanel.Controls.Add(Me.CustSaveBUT)
         Me.CustPanel.Controls.Add(Me.CustBindingNavigator)
         Me.CustPanel.Controls.Add(Me.CustIDTextBox)
@@ -471,28 +456,28 @@ Partial Class Form2
         Me.CustDeleteBut.Text = "Delete"
         Me.CustDeleteBut.UseVisualStyleBackColor = True
         '
-        'CustAddNewButt
+        'CustUpdateButt
         '
-        Me.CustAddNewButt.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.CustAddNewButt.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
-        Me.CustAddNewButt.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.CustAddNewButt.Font = New System.Drawing.Font("Raleway Medium", 8.999999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CustAddNewButt.Location = New System.Drawing.Point(147, 515)
-        Me.CustAddNewButt.Name = "CustAddNewButt"
-        Me.CustAddNewButt.Size = New System.Drawing.Size(91, 34)
-        Me.CustAddNewButt.TabIndex = 22
-        Me.CustAddNewButt.Text = "Add New"
-        Me.CustAddNewButt.UseVisualStyleBackColor = True
+        Me.CustUpdateButt.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
+        Me.CustUpdateButt.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.CustUpdateButt.Font = New System.Drawing.Font("Raleway Medium", 8.999999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CustUpdateButt.Location = New System.Drawing.Point(35, 515)
+        Me.CustUpdateButt.Name = "CustUpdateButt"
+        Me.CustUpdateButt.Size = New System.Drawing.Size(91, 34)
+        Me.CustUpdateButt.TabIndex = 22
+        Me.CustUpdateButt.Text = "Update"
+        Me.CustUpdateButt.UseVisualStyleBackColor = True
         '
         'CustSaveBUT
         '
+        Me.CustSaveBUT.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.CustSaveBUT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.CustSaveBUT.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
         Me.CustSaveBUT.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.CustSaveBUT.Font = New System.Drawing.Font("Raleway Medium", 8.999999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CustSaveBUT.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.CustSaveBUT.Location = New System.Drawing.Point(36, 515)
+        Me.CustSaveBUT.Location = New System.Drawing.Point(149, 515)
         Me.CustSaveBUT.Name = "CustSaveBUT"
         Me.CustSaveBUT.Size = New System.Drawing.Size(91, 34)
         Me.CustSaveBUT.TabIndex = 22
@@ -502,21 +487,20 @@ Partial Class Form2
         'CustBindingNavigator
         '
         Me.CustBindingNavigator.AddNewItem = Me.BindingNavigatorAddNewItem
-        Me.CustBindingNavigator.BindingSource = Me.CustBindingSource
         Me.CustBindingNavigator.CountItem = Me.BindingNavigatorCountItem
         Me.CustBindingNavigator.DeleteItem = Me.BindingNavigatorDeleteItem
         Me.CustBindingNavigator.Dock = System.Windows.Forms.DockStyle.None
         Me.CustBindingNavigator.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.CustBindingNavigator.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.CustBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorDeleteItem, Me.BindingNavigatorAddNewItem, Me.CustBindingNavigatorSaveItem, Me.ToolStripSeparator1})
+        Me.CustBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorDeleteItem, Me.BindingNavigatorAddNewItem, Me.CustBindingNavigatorSaveItem, Me.ToolStripSeparator1})
         Me.CustBindingNavigator.Location = New System.Drawing.Point(25, 62)
         Me.CustBindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
         Me.CustBindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem
         Me.CustBindingNavigator.MoveNextItem = Me.BindingNavigatorMoveNextItem
-        Me.CustBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
+        Me.CustBindingNavigator.MovePreviousItem = Nothing
         Me.CustBindingNavigator.Name = "CustBindingNavigator"
         Me.CustBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.CustBindingNavigator.Size = New System.Drawing.Size(327, 27)
+        Me.CustBindingNavigator.Size = New System.Drawing.Size(337, 27)
         Me.CustBindingNavigator.TabIndex = 5
         Me.CustBindingNavigator.Text = "BindingNavigator1"
         '
@@ -528,16 +512,6 @@ Partial Class Form2
         Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
         Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(29, 24)
         Me.BindingNavigatorAddNewItem.Text = "Add new"
-        '
-        'CustBindingSource
-        '
-        Me.CustBindingSource.DataMember = "Cust"
-        Me.CustBindingSource.DataSource = Me.Database1DataSet
-        '
-        'Database1DataSet
-        '
-        Me.Database1DataSet.DataSetName = "Database1DataSet"
-        Me.Database1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'BindingNavigatorCountItem
         '
@@ -564,15 +538,6 @@ Partial Class Form2
         Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(29, 24)
         Me.BindingNavigatorMoveFirstItem.Text = "Move first"
         '
-        'BindingNavigatorMovePreviousItem
-        '
-        Me.BindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
-        Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(29, 24)
-        Me.BindingNavigatorMovePreviousItem.Text = "Move previous"
-        '
         'BindingNavigatorSeparator
         '
         Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
@@ -582,6 +547,7 @@ Partial Class Form2
         '
         Me.BindingNavigatorPositionItem.AccessibleName = "Position"
         Me.BindingNavigatorPositionItem.AutoSize = False
+        Me.BindingNavigatorPositionItem.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
         Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 27)
         Me.BindingNavigatorPositionItem.Text = "0"
@@ -632,18 +598,17 @@ Partial Class Form2
         '
         Me.CustIDTextBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.CustIDTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CustBindingSource, "CustID", True))
         Me.CustIDTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CustIDTextBox.Location = New System.Drawing.Point(183, 205)
         Me.CustIDTextBox.Name = "CustIDTextBox"
         Me.CustIDTextBox.Size = New System.Drawing.Size(148, 27)
         Me.CustIDTextBox.TabIndex = 15
+        Me.CustIDTextBox.TabStop = False
         '
         'CustNameTextBox
         '
         Me.CustNameTextBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.CustNameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CustBindingSource, "CustName", True))
         Me.CustNameTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CustNameTextBox.Location = New System.Drawing.Point(183, 245)
         Me.CustNameTextBox.Name = "CustNameTextBox"
@@ -654,7 +619,6 @@ Partial Class Form2
         '
         Me.CustPhoneTextBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.CustPhoneTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CustBindingSource, "CustPhone", True))
         Me.CustPhoneTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CustPhoneTextBox.Location = New System.Drawing.Point(183, 291)
         Me.CustPhoneTextBox.MaxLength = 10
@@ -667,7 +631,6 @@ Partial Class Form2
         Me.CustAddressTextBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.CustAddressTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.CustAddressTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CustBindingSource, "CustAddress", True))
         Me.CustAddressTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CustAddressTextBox.Location = New System.Drawing.Point(184, 343)
         Me.CustAddressTextBox.Name = "CustAddressTextBox"
@@ -680,11 +643,9 @@ Partial Class Form2
         Me.CustTableDataGridView1.AllowUserToOrderColumns = True
         Me.CustTableDataGridView1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.CustTableDataGridView1.AutoGenerateColumns = False
         Me.CustTableDataGridView1.BackgroundColor = System.Drawing.Color.SkyBlue
         Me.CustTableDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.CustTableDataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CustIDDataGridViewTextBoxColumn, Me.CustNameDataGridViewTextBoxColumn, Me.CustPhoneDataGridViewTextBoxColumn, Me.CustAddressDataGridViewTextBoxColumn})
-        Me.CustTableDataGridView1.DataSource = Me.CustBindingSource
+        Me.CustTableDataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CustID, Me.CustName, Me.CustPhone, Me.CustAddress})
         Me.CustTableDataGridView1.GridColor = System.Drawing.Color.SkyBlue
         Me.CustTableDataGridView1.Location = New System.Drawing.Point(395, 62)
         Me.CustTableDataGridView1.Margin = New System.Windows.Forms.Padding(10)
@@ -693,37 +654,33 @@ Partial Class Form2
         Me.CustTableDataGridView1.Size = New System.Drawing.Size(686, 567)
         Me.CustTableDataGridView1.TabIndex = 2
         '
-        'CustIDDataGridViewTextBoxColumn
+        'CustID
         '
-        Me.CustIDDataGridViewTextBoxColumn.DataPropertyName = "CustID"
-        Me.CustIDDataGridViewTextBoxColumn.HeaderText = "CustID"
-        Me.CustIDDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.CustIDDataGridViewTextBoxColumn.Name = "CustIDDataGridViewTextBoxColumn"
-        Me.CustIDDataGridViewTextBoxColumn.Width = 125
+        Me.CustID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.CustID.HeaderText = "Customer ID"
+        Me.CustID.MinimumWidth = 6
+        Me.CustID.Name = "CustID"
         '
-        'CustNameDataGridViewTextBoxColumn
+        'CustName
         '
-        Me.CustNameDataGridViewTextBoxColumn.DataPropertyName = "CustName"
-        Me.CustNameDataGridViewTextBoxColumn.HeaderText = "CustName"
-        Me.CustNameDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.CustNameDataGridViewTextBoxColumn.Name = "CustNameDataGridViewTextBoxColumn"
-        Me.CustNameDataGridViewTextBoxColumn.Width = 125
+        Me.CustName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.CustName.HeaderText = "Customer Name"
+        Me.CustName.MinimumWidth = 6
+        Me.CustName.Name = "CustName"
         '
-        'CustPhoneDataGridViewTextBoxColumn
+        'CustPhone
         '
-        Me.CustPhoneDataGridViewTextBoxColumn.DataPropertyName = "CustPhone"
-        Me.CustPhoneDataGridViewTextBoxColumn.HeaderText = "CustPhone"
-        Me.CustPhoneDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.CustPhoneDataGridViewTextBoxColumn.Name = "CustPhoneDataGridViewTextBoxColumn"
-        Me.CustPhoneDataGridViewTextBoxColumn.Width = 125
+        Me.CustPhone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.CustPhone.HeaderText = "Customer Phone No"
+        Me.CustPhone.MinimumWidth = 6
+        Me.CustPhone.Name = "CustPhone"
         '
-        'CustAddressDataGridViewTextBoxColumn
+        'CustAddress
         '
-        Me.CustAddressDataGridViewTextBoxColumn.DataPropertyName = "CustAddress"
-        Me.CustAddressDataGridViewTextBoxColumn.HeaderText = "CustAddress"
-        Me.CustAddressDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.CustAddressDataGridViewTextBoxColumn.Name = "CustAddressDataGridViewTextBoxColumn"
-        Me.CustAddressDataGridViewTextBoxColumn.Width = 125
+        Me.CustAddress.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.CustAddress.HeaderText = "Customer Address"
+        Me.CustAddress.MinimumWidth = 6
+        Me.CustAddress.Name = "CustAddress"
         '
         'PhoneInfo
         '
@@ -870,27 +827,29 @@ Partial Class Form2
         Me.VehiclePanel.TabIndex = 16
         Me.VehiclePanel.Visible = False
         '
+        'Button7
+        '
+        Me.Button7.Location = New System.Drawing.Point(86, 620)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(75, 23)
+        Me.Button7.TabIndex = 7
+        Me.Button7.Text = "Button7"
+        Me.Button7.UseVisualStyleBackColor = True
+        '
         'CarRegNoTextBox
         '
         Me.CarRegNoTextBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.CarRegNoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CarBindingSource, "CarRegNo", True))
         Me.CarRegNoTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CarRegNoTextBox.Location = New System.Drawing.Point(184, 244)
         Me.CarRegNoTextBox.Name = "CarRegNoTextBox"
         Me.CarRegNoTextBox.Size = New System.Drawing.Size(149, 27)
         Me.CarRegNoTextBox.TabIndex = 2
         '
-        'CarBindingSource
-        '
-        Me.CarBindingSource.DataMember = "Car"
-        Me.CarBindingSource.DataSource = Me.Database1DataSet
-        '
         'CustIDTextBox1
         '
         Me.CustIDTextBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.CustIDTextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CarBindingSource, "CustID", True))
         Me.CustIDTextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CustIDTextBox1.Location = New System.Drawing.Point(184, 199)
         Me.CustIDTextBox1.Name = "CustIDTextBox1"
@@ -901,7 +860,6 @@ Partial Class Form2
         '
         Me.CarBrandTextBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.CarBrandTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CarBindingSource, "CarBrand", True))
         Me.CarBrandTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CarBrandTextBox.Location = New System.Drawing.Point(184, 286)
         Me.CarBrandTextBox.Name = "CarBrandTextBox"
@@ -912,7 +870,6 @@ Partial Class Form2
         '
         Me.CarModelTextBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.CarModelTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CarBindingSource, "CarModel", True))
         Me.CarModelTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CarModelTextBox.Location = New System.Drawing.Point(184, 331)
         Me.CarModelTextBox.Name = "CarModelTextBox"
@@ -923,7 +880,6 @@ Partial Class Form2
         '
         Me.CarTypeComboBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.CarTypeComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CarBindingSource, "CarType", True))
         Me.CarTypeComboBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CarTypeComboBox.ItemHeight = 18
         Me.CarTypeComboBox.Items.AddRange(New Object() {"MICRO", "SEDAN", "HATCHBACK", "ROADSTER", "COUPE", "CUV", "SUV", " "})
@@ -937,11 +893,8 @@ Partial Class Form2
         Me.VehicleDataGridView.AllowUserToOrderColumns = True
         Me.VehicleDataGridView.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.VehicleDataGridView.AutoGenerateColumns = False
         Me.VehicleDataGridView.BackgroundColor = System.Drawing.Color.SkyBlue
         Me.VehicleDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.VehicleDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CarRegNoDataGridViewTextBoxColumn, Me.CustIDDataGridViewTextBoxColumn1, Me.CarBrandDataGridViewTextBoxColumn, Me.CarModelDataGridViewTextBoxColumn, Me.CarTypeDataGridViewTextBoxColumn})
-        Me.VehicleDataGridView.DataSource = Me.CarBindingSource
         Me.VehicleDataGridView.GridColor = System.Drawing.Color.SkyBlue
         Me.VehicleDataGridView.Location = New System.Drawing.Point(395, 62)
         Me.VehicleDataGridView.Margin = New System.Windows.Forms.Padding(10)
@@ -1104,6 +1057,226 @@ Partial Class Form2
         Me.CarTypePB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.CarTypePB.TabIndex = 27
         Me.CarTypePB.TabStop = False
+        '
+        'WorkerPanel
+        '
+        Me.WorkerPanel.Controls.Add(Me.WorkerTableDataGridView)
+        Me.WorkerPanel.Controls.Add(Me.WorkerNameTextBox)
+        Me.WorkerPanel.Controls.Add(Me.WorkerPhonInfo)
+        Me.WorkerPanel.Controls.Add(Me.WokerNameInfo)
+        Me.WorkerPanel.Controls.Add(Me.WorkIDInfo)
+        Me.WorkerPanel.Controls.Add(Me.WAddressRichTextBox)
+        Me.WorkerPanel.Controls.Add(Me.Label12)
+        Me.WorkerPanel.Controls.Add(Me.Label13)
+        Me.WorkerPanel.Controls.Add(Me.Label17)
+        Me.WorkerPanel.Controls.Add(Me.Label14)
+        Me.WorkerPanel.Controls.Add(Me.Label15)
+        Me.WorkerPanel.Controls.Add(Me.JobTextBox)
+        Me.WorkerPanel.Controls.Add(Me.WorkerIDTextBox)
+        Me.WorkerPanel.Controls.Add(Me.WorkerPhoneTextBox)
+        Me.WorkerPanel.Controls.Add(Me.LoadWorkTable)
+        Me.WorkerPanel.Controls.Add(Me.Label16)
+        Me.WorkerPanel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.WorkerPanel.Location = New System.Drawing.Point(0, 49)
+        Me.WorkerPanel.Name = "WorkerPanel"
+        Me.WorkerPanel.Size = New System.Drawing.Size(1120, 699)
+        Me.WorkerPanel.TabIndex = 14
+        Me.WorkerPanel.Visible = False
+        '
+        'WorkerTableDataGridView
+        '
+        Me.WorkerTableDataGridView.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.WorkerTableDataGridView.BackgroundColor = System.Drawing.Color.SkyBlue
+        Me.WorkerTableDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.WorkerTableDataGridView.GridColor = System.Drawing.Color.SkyBlue
+        Me.WorkerTableDataGridView.Location = New System.Drawing.Point(395, 62)
+        Me.WorkerTableDataGridView.Margin = New System.Windows.Forms.Padding(10)
+        Me.WorkerTableDataGridView.Name = "WorkerTableDataGridView"
+        Me.WorkerTableDataGridView.RowHeadersWidth = 51
+        Me.WorkerTableDataGridView.Size = New System.Drawing.Size(686, 567)
+        Me.WorkerTableDataGridView.TabIndex = 2
+        '
+        'WorkerNameTextBox
+        '
+        Me.WorkerNameTextBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.WorkerNameTextBox.Font = New System.Drawing.Font("MS PGothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.WorkerNameTextBox.Location = New System.Drawing.Point(184, 245)
+        Me.WorkerNameTextBox.Name = "WorkerNameTextBox"
+        Me.WorkerNameTextBox.Size = New System.Drawing.Size(148, 24)
+        Me.WorkerNameTextBox.TabIndex = 1
+        '
+        'WorkerPhonInfo
+        '
+        Me.WorkerPhonInfo.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.WorkerPhonInfo.BackgroundImage = Global.WashWorld.My.Resources.Resources.information
+        Me.WorkerPhonInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.WorkerPhonInfo.FlatAppearance.BorderSize = 0
+        Me.WorkerPhonInfo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.WorkerPhonInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.WorkerPhonInfo.Location = New System.Drawing.Point(338, 295)
+        Me.WorkerPhonInfo.Name = "WorkerPhonInfo"
+        Me.WorkerPhonInfo.Size = New System.Drawing.Size(15, 15)
+        Me.WorkerPhonInfo.TabIndex = 11
+        Me.WorkerPhonInfo.UseVisualStyleBackColor = True
+        '
+        'WokerNameInfo
+        '
+        Me.WokerNameInfo.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.WokerNameInfo.BackgroundImage = Global.WashWorld.My.Resources.Resources.information
+        Me.WokerNameInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.WokerNameInfo.FlatAppearance.BorderSize = 0
+        Me.WokerNameInfo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.WokerNameInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.WokerNameInfo.Location = New System.Drawing.Point(338, 251)
+        Me.WokerNameInfo.Name = "WokerNameInfo"
+        Me.WokerNameInfo.Size = New System.Drawing.Size(15, 15)
+        Me.WokerNameInfo.TabIndex = 11
+        Me.WokerNameInfo.UseVisualStyleBackColor = True
+        '
+        'WorkIDInfo
+        '
+        Me.WorkIDInfo.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.WorkIDInfo.BackgroundImage = Global.WashWorld.My.Resources.Resources.information
+        Me.WorkIDInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.WorkIDInfo.FlatAppearance.BorderSize = 0
+        Me.WorkIDInfo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.WorkIDInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.WorkIDInfo.Location = New System.Drawing.Point(338, 205)
+        Me.WorkIDInfo.Name = "WorkIDInfo"
+        Me.WorkIDInfo.Size = New System.Drawing.Size(15, 15)
+        Me.WorkIDInfo.TabIndex = 11
+        Me.WorkIDInfo.UseVisualStyleBackColor = True
+        '
+        'WAddressRichTextBox
+        '
+        Me.WAddressRichTextBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.WAddressRichTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.WAddressRichTextBox.Font = New System.Drawing.Font("MS PGothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.WAddressRichTextBox.Location = New System.Drawing.Point(184, 381)
+        Me.WAddressRichTextBox.Name = "WAddressRichTextBox"
+        Me.WAddressRichTextBox.Size = New System.Drawing.Size(148, 96)
+        Me.WAddressRichTextBox.TabIndex = 4
+        Me.WAddressRichTextBox.Text = ""
+        '
+        'Label12
+        '
+        Me.Label12.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Raleway", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(32, 378)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(81, 25)
+        Me.Label12.TabIndex = 3
+        Me.Label12.Text = "Address"
+        '
+        'Label13
+        '
+        Me.Label13.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Raleway", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Location = New System.Drawing.Point(32, 200)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(96, 25)
+        Me.Label13.TabIndex = 3
+        Me.Label13.Text = "Worker ID"
+        '
+        'Label17
+        '
+        Me.Label17.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label17.AutoSize = True
+        Me.Label17.Font = New System.Drawing.Font("Raleway", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.Location = New System.Drawing.Point(32, 330)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(84, 25)
+        Me.Label17.TabIndex = 3
+        Me.Label17.Text = "Job Title"
+        '
+        'Label14
+        '
+        Me.Label14.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Raleway", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.Location = New System.Drawing.Point(32, 289)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(95, 25)
+        Me.Label14.TabIndex = 3
+        Me.Label14.Text = "Phone No"
+        '
+        'Label15
+        '
+        Me.Label15.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Raleway", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.Location = New System.Drawing.Point(67, 128)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(210, 32)
+        Me.Label15.TabIndex = 3
+        Me.Label15.Text = "WORKER DETAILS"
+        '
+        'JobTextBox
+        '
+        Me.JobTextBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.JobTextBox.Font = New System.Drawing.Font("MS PGothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.JobTextBox.Location = New System.Drawing.Point(184, 330)
+        Me.JobTextBox.Name = "JobTextBox"
+        Me.JobTextBox.Size = New System.Drawing.Size(148, 24)
+        Me.JobTextBox.TabIndex = 1
+        '
+        'WorkerIDTextBox
+        '
+        Me.WorkerIDTextBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.WorkerIDTextBox.Font = New System.Drawing.Font("MS PGothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.WorkerIDTextBox.Location = New System.Drawing.Point(184, 200)
+        Me.WorkerIDTextBox.Name = "WorkerIDTextBox"
+        Me.WorkerIDTextBox.Size = New System.Drawing.Size(148, 24)
+        Me.WorkerIDTextBox.TabIndex = 1
+        '
+        'WorkerPhoneTextBox
+        '
+        Me.WorkerPhoneTextBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.WorkerPhoneTextBox.Font = New System.Drawing.Font("MS PGothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.WorkerPhoneTextBox.Location = New System.Drawing.Point(184, 289)
+        Me.WorkerPhoneTextBox.Name = "WorkerPhoneTextBox"
+        Me.WorkerPhoneTextBox.Size = New System.Drawing.Size(148, 24)
+        Me.WorkerPhoneTextBox.TabIndex = 1
+        '
+        'LoadWorkTable
+        '
+        Me.LoadWorkTable.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver
+        Me.LoadWorkTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.LoadWorkTable.Font = New System.Drawing.Font("Raleway Medium", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LoadWorkTable.Image = CType(resources.GetObject("LoadWorkTable.Image"), System.Drawing.Image)
+        Me.LoadWorkTable.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.LoadWorkTable.Location = New System.Drawing.Point(184, 498)
+        Me.LoadWorkTable.Name = "LoadWorkTable"
+        Me.LoadWorkTable.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.LoadWorkTable.Size = New System.Drawing.Size(148, 34)
+        Me.LoadWorkTable.TabIndex = 0
+        Me.LoadWorkTable.Text = "Load Table"
+        Me.LoadWorkTable.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LoadWorkTable.UseVisualStyleBackColor = True
+        '
+        'Label16
+        '
+        Me.Label16.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label16.AutoSize = True
+        Me.Label16.Font = New System.Drawing.Font("Raleway", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.Location = New System.Drawing.Point(32, 244)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(120, 25)
+        Me.Label16.TabIndex = 3
+        Me.Label16.Text = "WokerName"
         '
         'PaymentPanel
         '
@@ -1867,226 +2040,6 @@ Partial Class Form2
         Me.Label10.TabIndex = 3
         Me.Label10.Text = "Serivice ID"
         '
-        'WorkerPanel
-        '
-        Me.WorkerPanel.Controls.Add(Me.WorkerTableDataGridView)
-        Me.WorkerPanel.Controls.Add(Me.WorkerNameTextBox)
-        Me.WorkerPanel.Controls.Add(Me.WorkerPhonInfo)
-        Me.WorkerPanel.Controls.Add(Me.WokerNameInfo)
-        Me.WorkerPanel.Controls.Add(Me.WorkIDInfo)
-        Me.WorkerPanel.Controls.Add(Me.WAddressRichTextBox)
-        Me.WorkerPanel.Controls.Add(Me.Label12)
-        Me.WorkerPanel.Controls.Add(Me.Label13)
-        Me.WorkerPanel.Controls.Add(Me.Label17)
-        Me.WorkerPanel.Controls.Add(Me.Label14)
-        Me.WorkerPanel.Controls.Add(Me.Label15)
-        Me.WorkerPanel.Controls.Add(Me.JobTextBox)
-        Me.WorkerPanel.Controls.Add(Me.WorkerIDTextBox)
-        Me.WorkerPanel.Controls.Add(Me.WorkerPhoneTextBox)
-        Me.WorkerPanel.Controls.Add(Me.LoadWorkTable)
-        Me.WorkerPanel.Controls.Add(Me.Label16)
-        Me.WorkerPanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.WorkerPanel.Location = New System.Drawing.Point(0, 49)
-        Me.WorkerPanel.Name = "WorkerPanel"
-        Me.WorkerPanel.Size = New System.Drawing.Size(1120, 699)
-        Me.WorkerPanel.TabIndex = 14
-        Me.WorkerPanel.Visible = False
-        '
-        'WorkerTableDataGridView
-        '
-        Me.WorkerTableDataGridView.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.WorkerTableDataGridView.BackgroundColor = System.Drawing.Color.SkyBlue
-        Me.WorkerTableDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.WorkerTableDataGridView.GridColor = System.Drawing.Color.SkyBlue
-        Me.WorkerTableDataGridView.Location = New System.Drawing.Point(395, 62)
-        Me.WorkerTableDataGridView.Margin = New System.Windows.Forms.Padding(10)
-        Me.WorkerTableDataGridView.Name = "WorkerTableDataGridView"
-        Me.WorkerTableDataGridView.RowHeadersWidth = 51
-        Me.WorkerTableDataGridView.Size = New System.Drawing.Size(686, 567)
-        Me.WorkerTableDataGridView.TabIndex = 2
-        '
-        'WorkerNameTextBox
-        '
-        Me.WorkerNameTextBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.WorkerNameTextBox.Font = New System.Drawing.Font("MS PGothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.WorkerNameTextBox.Location = New System.Drawing.Point(184, 245)
-        Me.WorkerNameTextBox.Name = "WorkerNameTextBox"
-        Me.WorkerNameTextBox.Size = New System.Drawing.Size(148, 24)
-        Me.WorkerNameTextBox.TabIndex = 1
-        '
-        'WorkerPhonInfo
-        '
-        Me.WorkerPhonInfo.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.WorkerPhonInfo.BackgroundImage = Global.WashWorld.My.Resources.Resources.information
-        Me.WorkerPhonInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.WorkerPhonInfo.FlatAppearance.BorderSize = 0
-        Me.WorkerPhonInfo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.WorkerPhonInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.WorkerPhonInfo.Location = New System.Drawing.Point(338, 295)
-        Me.WorkerPhonInfo.Name = "WorkerPhonInfo"
-        Me.WorkerPhonInfo.Size = New System.Drawing.Size(15, 15)
-        Me.WorkerPhonInfo.TabIndex = 11
-        Me.WorkerPhonInfo.UseVisualStyleBackColor = True
-        '
-        'WokerNameInfo
-        '
-        Me.WokerNameInfo.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.WokerNameInfo.BackgroundImage = Global.WashWorld.My.Resources.Resources.information
-        Me.WokerNameInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.WokerNameInfo.FlatAppearance.BorderSize = 0
-        Me.WokerNameInfo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.WokerNameInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.WokerNameInfo.Location = New System.Drawing.Point(338, 251)
-        Me.WokerNameInfo.Name = "WokerNameInfo"
-        Me.WokerNameInfo.Size = New System.Drawing.Size(15, 15)
-        Me.WokerNameInfo.TabIndex = 11
-        Me.WokerNameInfo.UseVisualStyleBackColor = True
-        '
-        'WorkIDInfo
-        '
-        Me.WorkIDInfo.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.WorkIDInfo.BackgroundImage = Global.WashWorld.My.Resources.Resources.information
-        Me.WorkIDInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.WorkIDInfo.FlatAppearance.BorderSize = 0
-        Me.WorkIDInfo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.WorkIDInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.WorkIDInfo.Location = New System.Drawing.Point(338, 205)
-        Me.WorkIDInfo.Name = "WorkIDInfo"
-        Me.WorkIDInfo.Size = New System.Drawing.Size(15, 15)
-        Me.WorkIDInfo.TabIndex = 11
-        Me.WorkIDInfo.UseVisualStyleBackColor = True
-        '
-        'WAddressRichTextBox
-        '
-        Me.WAddressRichTextBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.WAddressRichTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.WAddressRichTextBox.Font = New System.Drawing.Font("MS PGothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.WAddressRichTextBox.Location = New System.Drawing.Point(184, 381)
-        Me.WAddressRichTextBox.Name = "WAddressRichTextBox"
-        Me.WAddressRichTextBox.Size = New System.Drawing.Size(148, 96)
-        Me.WAddressRichTextBox.TabIndex = 4
-        Me.WAddressRichTextBox.Text = ""
-        '
-        'Label12
-        '
-        Me.Label12.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Raleway", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(32, 378)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(81, 25)
-        Me.Label12.TabIndex = 3
-        Me.Label12.Text = "Address"
-        '
-        'Label13
-        '
-        Me.Label13.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Raleway", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(32, 200)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(96, 25)
-        Me.Label13.TabIndex = 3
-        Me.Label13.Text = "Worker ID"
-        '
-        'Label17
-        '
-        Me.Label17.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label17.AutoSize = True
-        Me.Label17.Font = New System.Drawing.Font("Raleway", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(32, 330)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(84, 25)
-        Me.Label17.TabIndex = 3
-        Me.Label17.Text = "Job Title"
-        '
-        'Label14
-        '
-        Me.Label14.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Raleway", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(32, 289)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(95, 25)
-        Me.Label14.TabIndex = 3
-        Me.Label14.Text = "Phone No"
-        '
-        'Label15
-        '
-        Me.Label15.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Raleway", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(67, 128)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(210, 32)
-        Me.Label15.TabIndex = 3
-        Me.Label15.Text = "WORKER DETAILS"
-        '
-        'JobTextBox
-        '
-        Me.JobTextBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.JobTextBox.Font = New System.Drawing.Font("MS PGothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.JobTextBox.Location = New System.Drawing.Point(184, 330)
-        Me.JobTextBox.Name = "JobTextBox"
-        Me.JobTextBox.Size = New System.Drawing.Size(148, 24)
-        Me.JobTextBox.TabIndex = 1
-        '
-        'WorkerIDTextBox
-        '
-        Me.WorkerIDTextBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.WorkerIDTextBox.Font = New System.Drawing.Font("MS PGothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.WorkerIDTextBox.Location = New System.Drawing.Point(184, 200)
-        Me.WorkerIDTextBox.Name = "WorkerIDTextBox"
-        Me.WorkerIDTextBox.Size = New System.Drawing.Size(148, 24)
-        Me.WorkerIDTextBox.TabIndex = 1
-        '
-        'WorkerPhoneTextBox
-        '
-        Me.WorkerPhoneTextBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.WorkerPhoneTextBox.Font = New System.Drawing.Font("MS PGothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.WorkerPhoneTextBox.Location = New System.Drawing.Point(184, 289)
-        Me.WorkerPhoneTextBox.Name = "WorkerPhoneTextBox"
-        Me.WorkerPhoneTextBox.Size = New System.Drawing.Size(148, 24)
-        Me.WorkerPhoneTextBox.TabIndex = 1
-        '
-        'LoadWorkTable
-        '
-        Me.LoadWorkTable.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver
-        Me.LoadWorkTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.LoadWorkTable.Font = New System.Drawing.Font("Raleway Medium", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LoadWorkTable.Image = CType(resources.GetObject("LoadWorkTable.Image"), System.Drawing.Image)
-        Me.LoadWorkTable.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.LoadWorkTable.Location = New System.Drawing.Point(184, 498)
-        Me.LoadWorkTable.Name = "LoadWorkTable"
-        Me.LoadWorkTable.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.LoadWorkTable.Size = New System.Drawing.Size(148, 34)
-        Me.LoadWorkTable.TabIndex = 0
-        Me.LoadWorkTable.Text = "Load Table"
-        Me.LoadWorkTable.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.LoadWorkTable.UseVisualStyleBackColor = True
-        '
-        'Label16
-        '
-        Me.Label16.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label16.AutoSize = True
-        Me.Label16.Font = New System.Drawing.Font("Raleway", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(32, 244)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(120, 25)
-        Me.Label16.TabIndex = 3
-        Me.Label16.Text = "WokerName"
-        '
         'MiniButton2
         '
         Me.MiniButton2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -2167,73 +2120,6 @@ Partial Class Form2
         '
         Me.PrintDialog1.UseEXDialog = True
         '
-        'CustTableAdapter
-        '
-        Me.CustTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.CarTableAdapter = Nothing
-        Me.TableAdapterManager.CustTableAdapter = Me.CustTableAdapter
-        Me.TableAdapterManager.ServiTableAdapter = Nothing
-        Me.TableAdapterManager.UpdateOrder = WashWorld.Database1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        Me.TableAdapterManager.UserTableAdapter = Nothing
-        Me.TableAdapterManager.WorkerTableAdapter = Nothing
-        '
-        'CarTableAdapter
-        '
-        Me.CarTableAdapter.ClearBeforeFill = True
-        '
-        'Button7
-        '
-        Me.Button7.Location = New System.Drawing.Point(86, 620)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(75, 23)
-        Me.Button7.TabIndex = 7
-        Me.Button7.Text = "Button7"
-        Me.Button7.UseVisualStyleBackColor = True
-        '
-        'CarRegNoDataGridViewTextBoxColumn
-        '
-        Me.CarRegNoDataGridViewTextBoxColumn.DataPropertyName = "CarRegNo"
-        Me.CarRegNoDataGridViewTextBoxColumn.HeaderText = "CarRegNo"
-        Me.CarRegNoDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.CarRegNoDataGridViewTextBoxColumn.Name = "CarRegNoDataGridViewTextBoxColumn"
-        Me.CarRegNoDataGridViewTextBoxColumn.Width = 125
-        '
-        'CustIDDataGridViewTextBoxColumn1
-        '
-        Me.CustIDDataGridViewTextBoxColumn1.DataPropertyName = "CustID"
-        Me.CustIDDataGridViewTextBoxColumn1.HeaderText = "CustID"
-        Me.CustIDDataGridViewTextBoxColumn1.MinimumWidth = 6
-        Me.CustIDDataGridViewTextBoxColumn1.Name = "CustIDDataGridViewTextBoxColumn1"
-        Me.CustIDDataGridViewTextBoxColumn1.Width = 125
-        '
-        'CarBrandDataGridViewTextBoxColumn
-        '
-        Me.CarBrandDataGridViewTextBoxColumn.DataPropertyName = "CarBrand"
-        Me.CarBrandDataGridViewTextBoxColumn.HeaderText = "CarBrand"
-        Me.CarBrandDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.CarBrandDataGridViewTextBoxColumn.Name = "CarBrandDataGridViewTextBoxColumn"
-        Me.CarBrandDataGridViewTextBoxColumn.Width = 125
-        '
-        'CarModelDataGridViewTextBoxColumn
-        '
-        Me.CarModelDataGridViewTextBoxColumn.DataPropertyName = "CarModel"
-        Me.CarModelDataGridViewTextBoxColumn.HeaderText = "CarModel"
-        Me.CarModelDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.CarModelDataGridViewTextBoxColumn.Name = "CarModelDataGridViewTextBoxColumn"
-        Me.CarModelDataGridViewTextBoxColumn.Width = 125
-        '
-        'CarTypeDataGridViewTextBoxColumn
-        '
-        Me.CarTypeDataGridViewTextBoxColumn.DataPropertyName = "CarType"
-        Me.CarTypeDataGridViewTextBoxColumn.HeaderText = "CarType"
-        Me.CarTypeDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.CarTypeDataGridViewTextBoxColumn.Name = "CarTypeDataGridViewTextBoxColumn"
-        Me.CarTypeDataGridViewTextBoxColumn.Width = 125
-        '
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(120.0!, 120.0!)
@@ -2259,14 +2145,14 @@ Partial Class Form2
         CType(Me.CustBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.CustBindingNavigator.ResumeLayout(False)
         Me.CustBindingNavigator.PerformLayout()
-        CType(Me.CustBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Database1DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CustTableDataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.VehiclePanel.ResumeLayout(False)
         Me.VehiclePanel.PerformLayout()
-        CType(Me.CarBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.VehicleDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CarTypePB, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.WorkerPanel.ResumeLayout(False)
+        Me.WorkerPanel.PerformLayout()
+        CType(Me.WorkerTableDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PaymentPanel.ResumeLayout(False)
         Me.PaymentPanel.PerformLayout()
         CType(Me.PaymentDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2276,9 +2162,6 @@ Partial Class Form2
         Me.ServicePanel.ResumeLayout(False)
         Me.ServicePanel.PerformLayout()
         CType(Me.ServiceDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.WorkerPanel.ResumeLayout(False)
-        Me.WorkerPanel.PerformLayout()
-        CType(Me.WorkerTableDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -2407,16 +2290,12 @@ Partial Class Form2
     Friend WithEvents Label35 As Label
     Friend WithEvents LoadPaymentTableButton As Button
     Friend WithEvents Label36 As Label
-    Friend WithEvents Database1DataSet As Database1DataSet
-    Friend WithEvents CustBindingSource As BindingSource
-    Friend WithEvents CustTableAdapter As Database1DataSetTableAdapters.CustTableAdapter
-    Friend WithEvents TableAdapterManager As Database1DataSetTableAdapters.TableAdapterManager
+
     Friend WithEvents CustBindingNavigator As BindingNavigator
     Friend WithEvents BindingNavigatorAddNewItem As ToolStripButton
     Friend WithEvents BindingNavigatorCountItem As ToolStripLabel
     Friend WithEvents BindingNavigatorDeleteItem As ToolStripButton
     Friend WithEvents BindingNavigatorMoveFirstItem As ToolStripButton
-    Friend WithEvents BindingNavigatorMovePreviousItem As ToolStripButton
     Friend WithEvents BindingNavigatorSeparator As ToolStripSeparator
     Friend WithEvents BindingNavigatorPositionItem As ToolStripTextBox
     Friend WithEvents BindingNavigatorSeparator1 As ToolStripSeparator
@@ -2427,21 +2306,15 @@ Partial Class Form2
     Friend WithEvents CustIDTextBox As TextBox
     Friend WithEvents CustNameTextBox As TextBox
     Friend WithEvents CustPhoneTextBox As TextBox
-    Friend WithEvents CustIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents CustNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents CustPhoneDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents CustAddressDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
     Friend WithEvents CustAddressTextBox As RichTextBox
-    Friend WithEvents CarBindingSource As BindingSource
-    Friend WithEvents CarTableAdapter As Database1DataSetTableAdapters.CarTableAdapter
     Friend WithEvents CarRegNoTextBox As TextBox
     Friend WithEvents CustIDTextBox1 As TextBox
     Friend WithEvents CarBrandTextBox As TextBox
     Friend WithEvents CarModelTextBox As TextBox
     Friend WithEvents CarTypeComboBox As ComboBox
     Friend WithEvents CustDeleteBut As Button
-    Friend WithEvents CustAddNewButt As Button
+    Friend WithEvents CustUpdateButt As Button
     Friend WithEvents CustSaveBUT As Button
     Friend WithEvents Button7 As Button
     Friend WithEvents CarRegNoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
@@ -2449,4 +2322,8 @@ Partial Class Form2
     Friend WithEvents CarBrandDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents CarModelDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents CarTypeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents CustID As DataGridViewTextBoxColumn
+    Friend WithEvents CustName As DataGridViewTextBoxColumn
+    Friend WithEvents CustPhone As DataGridViewTextBoxColumn
+    Friend WithEvents CustAddress As DataGridViewTextBoxColumn
 End Class

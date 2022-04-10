@@ -8,6 +8,8 @@ Public Class Form2
     Dim dTable As New DataTable
     Dim bs As New BindingSource
     Dim prevBut As Button
+    Dim dr As SqlDataReader
+
 
     Private Sub ChangeButColor(sender As Object, e As EventArgs) Handles CustButton.Click, VehiButton.Click, WorkerButton.Click, ServiceButton.Click, InvoiceButton.Click, PayButton.Click
         prevBut.BackColor = Color.FromArgb(0, 0, 0, 0)
@@ -15,18 +17,11 @@ Public Class Form2
         prevBut = sender
     End Sub
 
-    'Form Load
+    '************** FORM 2 LOAD ************
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-        'TODO: This line of code loads data into the 'Database1DataSet.Car' table. You can move, or remove it, as needed.
-        Me.CarTableAdapter.Fill(Me.Database1DataSet.Car)
-
-        'TODO: This line of code loads data into the 'Database1DataSet.Cust' table. You can move, or remove it, as needed.
-        Me.CustTableAdapter.Fill(Me.Database1DataSet.Cust)
-
-        con.ConnectionString = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\abhim\Desktop\WashWorld\Database1.mdf;Integrated Security=True"
+        con.ConnectionString = My.Settings.WWDBConnString
         CustPanel.Visible = False
-        ToolTip1.SetToolTip(CustIDInfo, "Enter the customer ID")
+        ToolTip1.SetToolTip(CustIDInfo, "Enter the customer ID only for Updation and Deletion")
         ToolTip1.SetToolTip(CustNameInfo, "Full name of the customer")
         ToolTip1.SetToolTip(PhoneInfo, "Phone Number without ISD code.")
         ToolTip1.SetToolTip(WorkerPhonInfo, "Phone Number without ISD code.")
@@ -84,25 +79,156 @@ Public Class Form2
 
 
 
-    'Cust Panel
+    '*************** CUSTOMER PANEL ******************
 
-    'Private Sub Loadform_Click(sender As Object, e As EventArgs) Handles LoadCustTableButton.Click
-    'Try
-    '       con.Open()
-    '      cmd = New SqlCommand("select * from [Cust]", con)
-    '     sda.SelectCommand = cmd
-    '    sda.Fill(dTable)
-    '   bs.DataSource = dTable
-    '  CustTableDataGridView1.DataSource = bs
-    ' sda.Update(dTable)
-    '       con.Close()
-    'Catch ex As Exception
-    '       MsgBox(ex.Message)
-    '
-    'End Try
-    'End Sub
+    'load table button
+    Private Sub Loadform_Click(sender As Object, e As EventArgs) Handles LoadCustTableButton.Click
+        CustTableload()
+        ClearCustTB()
+    End Sub
 
+    'load Table function
+    Private Sub CustTableload()
+        Dim CustDGV As DataGridView = Me.CustTableDataGridView1
+        Try
+            con.Open()
+            cmd = New SqlCommand("select * from [Cust]", con)
+            dr = cmd.ExecuteReader(CommandBehavior.CloseConnection)
+            CustDGV.Rows.Clear()
+            Do While dr.Read = True
+                CustDGV.Rows.Add(dr(0), dr(1), dr(2), dr(3))
+            Loop
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            cmd.Dispose()
+            con.Close()
+        End Try
+
+    End Sub
+
+    'Save Button
+    Private Sub CustSaveBUT_Click(sender As Object, e As EventArgs) Handles CustSaveBUT.Click
+        Try
+            If (CustNameTextBox.Text = "" Or CustPhoneTextBox.Text = "") Then
+                MsgBox("Please enter the Customer Details", MsgBoxStyle.Information, "Data Updation Unsuccessful")
+            Else
+                con.Open()
+                cmd.Connection = con
+                cmd.CommandType = CommandType.Text
+                cmd = New SqlCommand("INSERT INTO [Cust](CustName,CustPhone,CustAddress) Values('" & CustNameTextBox.Text & "','" & CustPhoneTextBox.Text & "','" & CustAddressTextBox.Text & "')", con)
+                cmd.ExecuteNonQuery()
+                con.Close()
+                MsgBox("Customer " + CustNameTextBox.Text + " is Successfully added to Customer Databse", MsgBoxStyle.Information, "Data Updation Successful")
+                ClearCustTB()
+                CustTableload()
+
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+        ' Try
+        'CustBindingSource.EndEdit()
+        'CustTableAdapter.Update(Database1DataSet.Cust)
+        'MsgBox("Saved Successfully")
+        'Catch ex As Exception
+        'MsgBox(ex, 0, "Message")
+
+        'End Try
+    End Sub
+
+
+    'Upadte Button
+    Private Sub CustUpdateButt_Click(sender As Object, e As EventArgs) Handles CustUpdateButt.Click
+        CustIDTextBox.ReadOnly = False
+        Try
+            If (CustIDTextBox.Text = "" Or CustNameTextBox.Text = "" Or CustPhoneTextBox.Text = "") Then
+                MsgBox("Please enter the details for updation")
+            Else
+                con.Open()
+                cmd = New SqlCommand("UPDATE [Cust] SET CustName = '" & CustNameTextBox.Text & "' , CustPhone= '" & CustPhoneTextBox.Text & "',  CustAddress = '" & CustAddressTextBox.Text & "'  WHERE CustID = '" & CustIDTextBox.Text & "'", con)
+                Dim i As Integer
+                i = cmd.ExecuteNonQuery
+                If i > 0 Then
+                    MsgBox("Updated the Custmer deatils Successfully", MsgBoxStyle.Information, "Data Updation Successful")
+                Else
+                    MsgBox("Failed in Updating data", MsgBoxStyle.Information, "Data Updation Unsuccessful")
+                End If
+                con.Close()
+                CustTableload()
+                ClearCustTB()
+
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            cmd.Dispose()
+            con.Close()
+        End Try
+    End Sub
+
+
+    'Delete Button
+    Private Sub CustDeleteBut_Click(sender As Object, e As EventArgs) Handles CustDeleteBut.Click
+        Dim CustDGV As DataGridView = Me.CustTableDataGridView1
+        CustIDTextBox.ReadOnly = False
+        Try
+            If (CustNameTextBox.Text = "" Or CustPhoneTextBox.Text = "") Then
+                MsgBox("Please enter the Customer ID to Delete")
+            Else
+                con.Open()
+                cmd = New SqlCommand("DELETE FROM [Cust] WHERE CustID = '" & CustIDTextBox.Text & "'", con)
+                dr = cmd.ExecuteReader(CommandBehavior.CloseConnection)
+                MsgBox("Customer " & CustNameTextBox.Text & " Deleted Successfully", MsgBoxStyle.Information, "Data Updation")
+                con.Close()
+                ClearCustTB()
+                CustTableload()
+
+                ' Do While dr.Read = True
+                'CustDGV.Rows.Add(dr(0), dr(1), dr(2), dr(3))
+                'Loop
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            cmd.Dispose()
+            con.Close()
+        End Try
+
+    End Sub
+
+    'TextBox AutoFill
+    Private Sub CustIDTextBox_KeyPress(sender As Object, e As KeyPressEventArgs) Handles CustIDTextBox.KeyPress
+        Try
+            If e.KeyChar = Microsoft.VisualBasic.ChrW(Keys.Return) Or e.KeyChar = Microsoft.VisualBasic.ChrW(Keys.Space) Then
+                con.Open()
+                sda = New SqlDataAdapter("SELECT CustID, CustName, CustPhone, CustAddress FROM [Cust] WHERE CustID ='" & CustIDTextBox.Text & "'", con)
+                Dim table As New DataTable()
+                sda.Fill(table)
+                CustNameTextBox.Text = table(0)(1)
+                CustPhoneTextBox.Text = table(0)(2)
+                CustAddressTextBox.Text = table(0)(3)
+                con.Close()
+
+            End If
+        Catch ex As Exception
+            MsgBox("Invalid User ID, Please check the User ID")
+        End Try
+
+    End Sub
+
+
+    'clear textbox
+    Private Sub ClearCustTB()
+        CustIDTextBox.Text = ""
+        CustNameTextBox.Text = ""
+        CustPhoneTextBox.Text = ""
+        CustAddressTextBox.Text = ""
+    End Sub
+
+    'Pannel Layout and colour
     Private Sub Cust_Click(sender As Object, e As EventArgs) Handles CustButton.Click
+        CustTableload()
         CustPanel.Visible = True
         VehiclePanel.Visible = False
         WorkerPanel.Visible = False
@@ -119,8 +245,12 @@ Public Class Form2
 
     End Sub
 
-    'Vehicle Panel
 
+
+
+
+
+    '*********************VEHICLE PANEL*************************
     Private Sub Load_Click(sender As Object, e As EventArgs)
 
     End Sub
@@ -248,43 +378,10 @@ Public Class Form2
 
     Private Sub CustBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs) Handles CustBindingNavigatorSaveItem.Click
         Me.Validate()
-        Me.CustBindingSource.EndEdit()
-        Me.TableAdapterManager.UpdateAll(Me.Database1DataSet)
+        ' Me.CustBindingSource.EndEdit()
+        'Me.TableAdapterManager.UpdateAll(Me.Database1DataSet)
 
     End Sub
 
-    Private Sub CustSaveBUT_Click(sender As Object, e As EventArgs) Handles CustSaveBUT.Click
-        Try
-            CustBindingSource.EndEdit()
-            CustTableAdapter.Update(Database1DataSet.Cust)
-            MsgBox("Saved Successfully")
-        Catch ex As Exception
-            MsgBox(ex, 0, "Message")
 
-        End Try
-    End Sub
-
-    Private Sub CustAddNewButt_Click(sender As Object, e As EventArgs) Handles CustAddNewButt.Click
-        CustBindingSource.AddNew()
-    End Sub
-
-    Private Sub CustDeleteBut_Click(sender As Object, e As EventArgs) Handles CustDeleteBut.Click
-        CustBindingSource.RemoveCurrent()
-
-    End Sub
-
-    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
-        Try
-            CarBindingSource.EndEdit()
-            CarTableAdapter.Update(Database1DataSet.Car)
-            MsgBox("Saved Successfully")
-        Catch ex As Exception
-            MsgBox(ex, 0, "Message")
-
-        End Try
-    End Sub
-
-    Private Sub VehicleDataGridView_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles VehicleDataGridView.CellContentClick
-
-    End Sub
 End Class

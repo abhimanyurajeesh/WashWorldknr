@@ -8,7 +8,7 @@ Public Class Form1
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ProgressBar1.Visible = False
-        con.ConnectionString = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\abhim\Desktop\WashWorld\Database1.mdf;Integrated Security=True"
+        con.ConnectionString = My.Settings.WWDBConnString
         PasswordResetPanel.Visible = False
         ToolTip1.SetToolTip(CloseButton, "Click to Close")
         ToolTip1.SetToolTip(MiniButton, "Click to Minimize")
@@ -21,7 +21,7 @@ Public Class Form1
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles LoginButton.Click
         Cursor = Cursors.WaitCursor
         UseWaitCursor = True
-        Threading.Thread.Sleep(110)
+        Threading.Thread.Sleep(1000)
 
         'Login
         If CheckLoginCredentials() Then
@@ -33,8 +33,8 @@ Public Class Form1
                 ProgressBar1.Value = a
                 Threading.Thread.Sleep(5)
             Next
-            Threading.Thread.Sleep(50)
-            'MessageBox.Show(TextBoxUsername.Text + ", you have logined in successfully", "Welcome :)", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Threading.Thread.Sleep(100)
+            MessageBox.Show(TextBoxUsername.Text + ", you have logined in successfully", "Welcome :)", MessageBoxButtons.OK, MessageBoxIcon.Information)
             ProgressBar1.Visible = False
             Threading.Thread.Sleep(100)
             Form2.Show()
@@ -135,6 +135,10 @@ Public Class Form1
     'Back button for Password Reset
     Private Sub Back_Click(sender As Object, e As EventArgs) Handles BackButton.Click
         ToolTip1.SetToolTip(BackButton, "Back to Login Page")
+        UsernameTextBox.Text = ""
+        PINTextBox.Text = ""
+        ConfPassTextBox.Text = ""
+        NewPassTextBox.Text = ""
         LoginPanel.Visible = True
         PasswordResetPanel.Visible = False
     End Sub
@@ -165,9 +169,22 @@ Public Class Form1
             MessageBox.Show("The passwords doesnt match", "", 0, MessageBoxIcon.Error)
 
         ElseIf CheckResetCredentials() And NewPassTextBox.Text = ConfPassTextBox.Text Then
-            con.Open()
-            cmd.Connection = con
-            cmd = New SqlCommand("UPDATE User SET Password = @pass", con)
+            Dim dr1 As SqlDataReader
+            Try
+                con.Open()
+                cmd.Connection = con
+                cmd.CommandText = "UPDATE [User] SET Password ='" + ConfPassTextBox.Text + "' WHERE Username ='" + UsernameTextBox.Text + "'"
+                dr1 = cmd.ExecuteReader
+                MessageBox.Show("Password Updated Sucessfully", "", 0, MessageBoxIcon.Information)
+                UsernameTextBox.Text = ""
+                PINTextBox.Text = ""
+                ConfPassTextBox.Text = ""
+                NewPassTextBox.Text = ""
+                con.Close()
+
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
 
         End If
 
@@ -178,20 +195,24 @@ Public Class Form1
         Dim UnameInput As String = UsernameTextBox.Text
         Dim PINInput As String = PINTextBox.Text
         Dim Answer As Boolean = False
-        con.Open()
-        cmd.Connection = con
-        cmd.CommandText = "SELECT Username,UserPIN FROM [User];"
-        Dim dr1 As SqlDataReader
-        dr1 = cmd.ExecuteReader
-        While dr1.Read()
-            Username = dr1("Username")
-            Pass = dr1("UserPIN")
-            If Username = UnameInput And Pass = PINInput Then
-                Answer = True
-            End If
-        End While
-        con.Close()
-        Return Answer
+        Try
+            con.Open()
+            cmd.Connection = con
+            cmd.CommandText = "SELECT Username,UserPIN FROM [User];"
+            Dim dr1 As SqlDataReader
+            dr1 = cmd.ExecuteReader
+            While dr1.Read()
+                Username = dr1("Username")
+                Pass = dr1("UserPIN")
+                If Username = UnameInput And Pass = PINInput Then
+                    Answer = True
+                End If
+            End While
+            con.Close()
+            Return Answer
+        Catch ex As Exception
+            MsgBox("ERROR")
+        End Try
     End Function
 
     Private Sub PINTextBox_keypress(sender As Object, e As KeyPressEventArgs) Handles PINTextBox.KeyPress
